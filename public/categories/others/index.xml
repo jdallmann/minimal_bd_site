@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>others on Minimo</title>
+    <title>others on Propaganda</title>
     <link>/categories/others/</link>
-    <description>Recent content in others on Minimo</description>
+    <description>Recent content in others on Propaganda</description>
     <generator>Hugo -- gohugo.io</generator>
     <lastBuildDate>Mon, 25 Sep 2017 08:00:00 +0600</lastBuildDate>
     
@@ -17,7 +17,7 @@
       
       <guid>/docs/config-file/</guid>
       <description>This is the Minimo&#39;s configuration file ( config.toml ) file of this site:
-baseURL = &amp;#34;http://www.example.com&amp;#34; title = &amp;#34;Minimo&amp;#34; # for smart copyright line, leave this blank and check [params.copyright] copyright = &amp;#34;&amp;#34; theme = &amp;#34;minimo&amp;#34; disqusShortname = &amp;#34;&amp;#34; googleAnalytics = &amp;#34;&amp;#34; Paginate = 5 preserveTaxonomyNames = true enableRobotsTXT = true # generate robots.txt # Syntax Highlighting ( https://gohugo.io/content-management/syntax-highlighting/ ) pygmentsCodefences = true enableEmoji = true # Missing translations will default to this content language defaultContentLanguage = &amp;#34;en&amp;#34; [params.</description>
+baseURL = &amp;#34;http://www.example.com&amp;#34; title = &amp;#34;Propaganda&amp;#34; # for smart copyright line, leave this blank and check [params.copyright] copyright = &amp;#34;&amp;#34; theme = &amp;#34;minimo&amp;#34; disqusShortname = &amp;#34;&amp;#34; googleAnalytics = &amp;#34;&amp;#34; Paginate = 5 preserveTaxonomyNames = true enableRobotsTXT = true # generate robots.txt # Syntax Highlighting ( https://gohugo.io/content-management/syntax-highlighting/ ) pygmentsCodefences = true enableEmoji = true # Missing translations will default to this content language defaultContentLanguage = &amp;#34;en&amp;#34; ignoreFiles = [&amp;#34;\\.</description>
     </item>
     
   </channel>

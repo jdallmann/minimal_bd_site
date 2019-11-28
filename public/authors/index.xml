@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Authors on Minimo</title>
+    <title>Authors on Propaganda</title>
     <link>/authors/</link>
-    <description>Recent content in Authors on Minimo</description>
+    <description>Recent content in Authors on Propaganda</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sun, 12 Aug 2018 12:30:00 +0600</lastBuildDate>
+    <lastBuildDate>Thu, 28 Sep 2017 08:00:00 +0600</lastBuildDate>
     
 	<atom:link href="/authors/index.xml" rel="self" type="application/rss+xml" />
     
@@ -13,9 +13,18 @@
     <item>
       <title>muniftanjim</title>
       <link>/authors/muniftanjim/</link>
-      <pubDate>Sun, 12 Aug 2018 12:30:00 +0600</pubDate>
+      <pubDate>Thu, 28 Sep 2017 08:00:00 +0600</pubDate>
       
       <guid>/authors/muniftanjim/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>jdallmann</title>
+      <link>/authors/jdallmann/</link>
+      <pubDate>Thu, 23 Jul 2015 21:13:14 -0500</pubDate>
+      
+      <guid>/authors/jdallmann/</guid>
       <description></description>
     </item>
     
