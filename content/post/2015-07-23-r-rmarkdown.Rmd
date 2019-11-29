@@ -4,7 +4,10 @@ authors: ["jdallmann"]
 menu: 
     main: 
         name: Posts
+    sidebar:
+        name: Posts
 date: 2015-07-23T21:13:14-05:00
+weight: -200
 categories: ["R"]
 tags: ["R Markdown", "plot", "regression"]
 ---

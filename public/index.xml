@@ -11,6 +11,17 @@
     
     
     <item>
+      <title>Hello R Markdown</title>
+      <link>/post/2015-07-23-r-rmarkdown/</link>
+      <pubDate>Thu, 23 Jul 2015 21:13:14 -0500</pubDate>
+      
+      <guid>/post/2015-07-23-r-rmarkdown/</guid>
+      <description>R Markdown This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see http://rmarkdown.rstudio.com.
+You can embed an R code chunk like this:
+summary(cars) ## speed dist ## Min. : 4.0 Min. : 2 ## 1st Qu.:12.0 1st Qu.: 26 ## Median :15.0 Median : 36 ## Mean :15.4 Mean : 43 ## 3rd Qu.</description>
+    </item>
+    
+    <item>
       <title>Research</title>
       <link>/research/</link>
       <pubDate>Thu, 28 Nov 2019 00:00:00 +0000</pubDate>
@@ -27,17 +38,6 @@
       <guid>/about/</guid>
       <description>I am currently a data scientist for the City of Winnipeg, working with each area of the City to promote data driven decision-making; reducing costs and improving the services the City delivers.
 Before that, I worked in the private sector as the Retail Business Intelligence, Analytics and Machine Learning Lead for the Dufresne Group, where I was responsible for (i) building an analytics department, (ii) shaping data governance strategy, (iii) advising CEO and management team by generating key insights contributing to organizational growth, and (iv) implementing advanced data projects for the organization.</description>
-    </item>
-    
-    <item>
-      <title>Hello R Markdown</title>
-      <link>/post/2015-07-23-r-rmarkdown/</link>
-      <pubDate>Thu, 23 Jul 2015 21:13:14 -0500</pubDate>
-      
-      <guid>/post/2015-07-23-r-rmarkdown/</guid>
-      <description>R Markdown This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see http://rmarkdown.rstudio.com.
-You can embed an R code chunk like this:
-summary(cars) ## speed dist ## Min. : 4.0 Min. : 2 ## 1st Qu.:12.0 1st Qu.: 26 ## Median :15.0 Median : 36 ## Mean :15.4 Mean : 43 ## 3rd Qu.</description>
     </item>
     
     <item>

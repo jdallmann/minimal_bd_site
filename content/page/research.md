@@ -7,7 +7,7 @@ menu:
     sidebar:
 slug: research
 title: Research
-weight: -230
+weight: -100
 ---
 
 ## publications
