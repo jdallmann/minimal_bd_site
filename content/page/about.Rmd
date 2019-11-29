@@ -1,0 +1,32 @@
+---
+description: Some stuff about me...
+menu: main
+title: About
+weight: -210
+---
+
+
+I am currently a data scientist for the City of Winnipeg, working with each area of the City to promote data driven decision-making; reducing costs and improving the services the City delivers. 
+
+Before that, I worked in the private sector as the Retail Business Intelligence, Analytics and Machine Learning Lead for the Dufresne Group, where I was responsible for (i) building an analytics department, (ii) shaping data governance strategy, (iii) advising CEO and management team by generating key insights contributing to organizational growth, and (iv) implementing advanced data projects for the organization.
+
+Even before that I was a postdoctoral researcher at the University of Toronto working with [Jonathan Weisberg](http://www.utm.utoronto.ca/~weisber3/). I received my doctorate in philosophy at the University of Southern California in 2015, working with [Kenny Easwaran](http://www.kennyeaswaran.org/), [Ralph Wedgwood](http://www-bcf.usc.edu/~wedgwood/), [Jacob Ross](http://www-bcf.usc.edu/~jacobmro/), and [Richard Arratia](http://dornsife.usc.edu/cf/faculty-and-staff/faculty.cfm?pid=1003062) (mathematics).
+
+<!--       </p>
+      <p>
+        I continue to actively pursue research in epistemology, the foundations of uncertain inference, cognitive science, and the ethics of machine learning. This research comes together over questions like:
+      </p>
+      <ul>
+        <li>"What should we believe in light of our evidence?",</li>
+        <li>"What is evidence and what is evidential impact?",</li>
+        <li>"How should we respond to information given our cognitive limitations?"</li>
+        <li>"How does our believing a proposition relate to our confidence that that proposition obtains?", and </li>
+        <li>"How are accurate predictions related to rational belief and action?</li>
+      </ul> -->
+
+I have an MA in Philosophy from the University of Manitoba on Bayesian measures of confirmation---the theory of what evidentially impacts what---under [Rhonda Martens](http://umanitoba.ca/faculties/arts/departments/philosophy/facstaff/martens.html), [Chris Tillman](https://sites.google.com/site/christillman/home), and [Brad C. Johnson](http://www.umanitoba.ca/statistics/people/bjohnson/) (statistics). I received an honors degree in Philosophy with undeclared majors in mathematics and statistics at the University of Manitoba. Every now and then I also sit a Society of Actuaries exam.
+
+You can find my CV [here](DataScientistCV-2019.05.pdf) and 
+four generations of my academic genealogy [here](https://philosophyfamilytree.wikispaces.com/Malcolm+Forster):
+
+![four generations of my academic genealogy](/images/Genealogy.jpeg)

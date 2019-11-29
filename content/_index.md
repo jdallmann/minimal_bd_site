@@ -5,5 +5,6 @@ menu:
 title: Home
 weight: -270
 ---
-> Minimalism is not a lack of something. It’s simply the perfect amount of something.
-> — Nicholas Burroughs
+> A blog dedicated to sometimes serious, mostly not-so-serious, 
+> data analysis---with soft spots for R & using openly available 
+> City of Winnipeg data.

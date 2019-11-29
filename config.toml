@@ -6,7 +6,7 @@ copyright = ""
 theme = "minimo"
 
 disqusShortname = ""
-googleAnalytics = ""
+googleAnalytics = "UA-34468019-2"
 
 Paginate = 5
 preserveTaxonomyNames = true
@@ -93,7 +93,7 @@ dataAttrs = "" # "data-isso='https://isso.example.com' data-isso-require-author=
 enable = true
 apiEndpoint = "https://api.staticman.net/v2/entry"
 maxDepth = 2
-username = "MunifTanjim"
+username = "jdallmann"
 repository = "minimo"
 
 # Utterances: https://utteranc.es

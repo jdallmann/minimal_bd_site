@@ -5,20 +5,18 @@
     <link>/page/</link>
     <description>Recent content in Pages on Propaganda</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Thu, 28 Sep 2017 08:00:00 +0600</lastBuildDate>
+    <lastBuildDate>Thu, 28 Nov 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/page/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>Typography</title>
-      <link>/typography/</link>
-      <pubDate>Thu, 28 Sep 2017 08:00:00 +0600</pubDate>
+      <title>Research</title>
+      <link>/research/</link>
+      <pubDate>Thu, 28 Nov 2019 00:00:00 +0000</pubDate>
       
-      <guid>/typography/</guid>
-      <description>Here is a paragraph. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-Heading 2 Another one. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-Heading 4  First item Second item   Nested unordered item  Third item Nested ordered item 1 Nested ordered item 2  Heading 5 Where are the quotes!</description>
+      <guid>/research/</guid>
+      <description>publications  &amp;ldquo;When Obstinacy is a Better (Cognitive) Policy,&amp;quot; Philosophers&amp;rsquo; Imprint, 2017. Associated Mathematica notebook &amp;ldquo;Confirmation,&amp;rdquo; with Franz Huber, in Oxford Bibliographies Online, 2017. DOI: 10.1093/OBO/9780195396577-0024 &amp;ldquo;Understanding Probability: A Review of Darrell Rowbottom&#39;s &amp;lsquo;Probability&amp;rsquo;,&amp;rdquo; Metascience, 25(2):331-333, 2016. DOI: 10.1007/s11016-016-0073-x. &amp;ldquo;A Normatively Adequate Credal Reductivism,&amp;rdquo; Synthese, 191(10):2301-2313, 2014. DOI: 10.1007/s11229-014-0402-9. Historicist Theories of Scientific Rationality with Carl Matheson, in Edward Zalta (ed.), The Stanford Encyclopedia of Philosophy, Fall 2014 edition.  selected presentation activity (2018) &amp;ldquo;Becoming an Insight-driven Organization&amp;rdquo; (with primary guest speaker Mark Dufresne).</description>
     </item>
     
     <item>
@@ -27,9 +25,8 @@ Heading 4  First item Second item   Nested unordered item  Third item Nested ord
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/about/</guid>
-      <description>Mínimo is a Spanish word that roughly translate to Minimal.
-Minimo is a minimalist theme for Hugo.
-Minimo keeps the focus on your content and lets it shine!</description>
+      <description>I am currently a data scientist for the City of Winnipeg, working with each area of the City to promote data driven decision-making; reducing costs and improving the services the City delivers.
+Before that, I worked in the private sector as the Retail Business Intelligence, Analytics and Machine Learning Lead for the Dufresne Group, where I was responsible for (i) building an analytics department, (ii) shaping data governance strategy, (iii) advising CEO and management team by generating key insights contributing to organizational growth, and (iv) implementing advanced data projects for the organization.</description>
     </item>
     
     <item>
