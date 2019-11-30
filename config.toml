@@ -1,5 +1,5 @@
 baseURL = "http://www.example.com"
-title = "Propaganda"
+title = "winnipegr"
 # for smart copyright line, leave this blank and check [params.copyright]
 copyright = ""
 
@@ -24,7 +24,7 @@ defaultContentLanguage = "en"
 ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
 
 [params.info]
-description = "Only works if someone reads it!!"
+description = "Propaganda: It only works if someone reads it!!!"
 title404 = "Nothing's here!"
 
 [params.assets]
