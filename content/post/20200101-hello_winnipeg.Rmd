@@ -20,7 +20,7 @@ I'm kicking off 2020 with a data blogging experiment, centered on exploring open
 
 Why?
 
-First, as a early career data scientist, I've been spending a bunch of time working through data on Winnipeg and other Canadian cities. More of it turned out to be interesting than I initially expected, so I thought I'd start sharing some of it here. Plus, a blog seems like a good venue to try out (and record, for my future self) some new analytic techniques. If other data nerds might benefit, all the better.
+First, as a early career data scientist, I've been spending a bunch of time working through data on Winnipeg and other Canadian cities. More of it turned out to be interesting than I initially expected, so I thought I'd start sharing some of it here. Plus, a blog seems like a good venue to try out (and record, for my future self) some new analysis techniques. If other data nerds might benefit, all the better.
 
 Second, I'm kind of attached to this city. I've left it for larger (and obviously warmer) cities before, but it has a way of  [charming you into returning](https://www.youtube.com/watch?v=8L4cttwNaDs)...
 
