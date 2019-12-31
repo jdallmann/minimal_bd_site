@@ -3,56 +3,88 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://jdallmann.org/</loc>
+    <loc>/</loc>
+    <lastmod>2020-01-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/post/20200101-hello_winnipeg/</loc>
+    <lastmod>2020-01-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/research/</loc>
     <lastmod>2019-11-28T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://jdallmann.org/research/</loc>
+    <loc>/tags/about/</loc>
+    <lastmod>2020-01-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/authors/</loc>
+    <lastmod>2020-01-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/categories/</loc>
+    <lastmod>2020-01-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/categories/housekeeping/</loc>
+    <lastmod>2020-01-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/authors/jdallmann/</loc>
+    <lastmod>2020-01-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/kickoff/</loc>
+    <lastmod>2020-01-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/open-data/</loc>
+    <lastmod>2020-01-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/post/</loc>
+    <lastmod>2020-01-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/</loc>
+    <lastmod>2020-01-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/page/</loc>
     <lastmod>2019-11-28T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://jdallmann.org/authors/</loc>
-    <lastmod>2019-11-28T00:00:00+00:00</lastmod>
+    <loc>/about/</loc>
   </url>
   
   <url>
-    <loc>https://jdallmann.org/authors/jdallmann/</loc>
-    <lastmod>2019-11-28T00:00:00+00:00</lastmod>
+    <loc>/tags/config/</loc>
   </url>
   
   <url>
-    <loc>https://jdallmann.org/page/</loc>
-    <lastmod>2019-11-28T00:00:00+00:00</lastmod>
+    <loc>/tags/og/</loc>
   </url>
   
   <url>
-    <loc>https://jdallmann.org/about/</loc>
+    <loc>/search/</loc>
   </url>
   
   <url>
-    <loc>https://jdallmann.org/categories/</loc>
-  </url>
-  
-  <url>
-    <loc>https://jdallmann.org/tags/config/</loc>
-  </url>
-  
-  <url>
-    <loc>https://jdallmann.org/tags/og/</loc>
-  </url>
-  
-  <url>
-    <loc>https://jdallmann.org/search/</loc>
-  </url>
-  
-  <url>
-    <loc>https://jdallmann.org/series/</loc>
-  </url>
-  
-  <url>
-    <loc>https://jdallmann.org/tags/</loc>
+    <loc>/series/</loc>
   </url>
   
 </urlset>
