@@ -6,7 +6,7 @@ menu:
         name: Posts
     sidebar:
         name: Posts
-date: 2020-01-01
+date: 2019-12-01
 weight: -200
 categories: ["Housekeeping"]
 tags: ["about", "open data", "kickoff"]
