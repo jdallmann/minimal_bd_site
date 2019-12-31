@@ -5,6 +5,6 @@ menu:
 title: Home
 weight: -270
 ---
-> **CURRENTLY UNDER CONSTRUCTION!!!** A blog dedicated to sometimes serious, mostly not-so-serious, 
-> data analysis---often using R & openly available 
-> City of Winnipeg data.
+> A blog dedicated to sometimes serious, mostly not-so-serious, 
+> data analysis concerning the City of Winnipeg---often using R & 
+> openly available data.
