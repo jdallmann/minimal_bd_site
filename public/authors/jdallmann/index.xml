@@ -2,20 +2,31 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>jdallmann on winnipegR</title>
-    <link>http://www.example.com/authors/jdallmann/</link>
+    <link>/authors/jdallmann/</link>
     <description>Recent content in jdallmann on winnipegR</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Thu, 28 Nov 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 01 Jan 2020 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="http://www.example.com/authors/jdallmann/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/authors/jdallmann/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
+      <title>Hello Winnipeg &amp; Winnipeg Data Nerds</title>
+      <link>/post/20200101-hello_winnipeg/</link>
+      <pubDate>Wed, 01 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/post/20200101-hello_winnipeg/</guid>
+      <description>Hi Winnipeg, ManitobaI’m kicking off 2020 with a data blogging experiment, centered on exploring openly available data on Winnipeg.
+Why? Mostly because it lines up well with my current interests and activities.
+First, as a early career data scientist, I’ve been spending a bunch of time working through data on Winnipeg and other Canadian cities. More of it turned out to be interesting than I initially expected, so I thought I’d start sharing some of it here.</description>
+    </item>
+    
+    <item>
       <title>Research</title>
-      <link>http://www.example.com/research/</link>
+      <link>/research/</link>
       <pubDate>Thu, 28 Nov 2019 00:00:00 +0000</pubDate>
       
-      <guid>http://www.example.com/research/</guid>
+      <guid>/research/</guid>
       <description>publications  &amp;ldquo;When Obstinacy is a Better (Cognitive) Policy,&amp;quot; Philosophers&amp;rsquo; Imprint, 2017. Associated Mathematica notebook &amp;ldquo;Confirmation,&amp;rdquo; with Franz Huber, in Oxford Bibliographies Online, 2017. DOI: 10.1093/OBO/9780195396577-0024 &amp;ldquo;Understanding Probability: A Review of Darrell Rowbottom&#39;s &amp;lsquo;Probability&amp;rsquo;,&amp;rdquo; Metascience, 25(2):331-333, 2016. DOI: 10.1007/s11016-016-0073-x. &amp;ldquo;A Normatively Adequate Credal Reductivism,&amp;rdquo; Synthese, 191(10):2301-2313, 2014. DOI: 10.1007/s11229-014-0402-9. Historicist Theories of Scientific Rationality with Carl Matheson, in Edward Zalta (ed.), The Stanford Encyclopedia of Philosophy, Fall 2014 edition.  selected presentation activity (2018) &amp;ldquo;Becoming an Insight-driven Organization&amp;rdquo; (with primary guest speaker Mark Dufresne).</description>
     </item>
     

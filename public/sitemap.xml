@@ -3,56 +3,88 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>http://www.example.com/</loc>
+    <loc>/</loc>
+    <lastmod>2020-01-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/post/20200101-hello_winnipeg/</loc>
+    <lastmod>2020-01-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/research/</loc>
     <lastmod>2019-11-28T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://www.example.com/research/</loc>
+    <loc>/tags/about/</loc>
+    <lastmod>2020-01-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/authors/</loc>
+    <lastmod>2020-01-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/categories/</loc>
+    <lastmod>2020-01-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/categories/housekeeping/</loc>
+    <lastmod>2020-01-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/authors/jdallmann/</loc>
+    <lastmod>2020-01-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/kickoff/</loc>
+    <lastmod>2020-01-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/open-data/</loc>
+    <lastmod>2020-01-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/post/</loc>
+    <lastmod>2020-01-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/</loc>
+    <lastmod>2020-01-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/page/</loc>
     <lastmod>2019-11-28T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://www.example.com/authors/</loc>
-    <lastmod>2019-11-28T00:00:00+00:00</lastmod>
+    <loc>/about/</loc>
   </url>
   
   <url>
-    <loc>http://www.example.com/authors/jdallmann/</loc>
-    <lastmod>2019-11-28T00:00:00+00:00</lastmod>
+    <loc>/tags/config/</loc>
   </url>
   
   <url>
-    <loc>http://www.example.com/page/</loc>
-    <lastmod>2019-11-28T00:00:00+00:00</lastmod>
+    <loc>/tags/og/</loc>
   </url>
   
   <url>
-    <loc>http://www.example.com/about/</loc>
+    <loc>/search/</loc>
   </url>
   
   <url>
-    <loc>http://www.example.com/categories/</loc>
-  </url>
-  
-  <url>
-    <loc>http://www.example.com/tags/config/</loc>
-  </url>
-  
-  <url>
-    <loc>http://www.example.com/tags/og/</loc>
-  </url>
-  
-  <url>
-    <loc>http://www.example.com/search/</loc>
-  </url>
-  
-  <url>
-    <loc>http://www.example.com/series/</loc>
-  </url>
-  
-  <url>
-    <loc>http://www.example.com/tags/</loc>
+    <loc>/series/</loc>
   </url>
   
 </urlset>
