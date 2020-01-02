@@ -7,7 +7,7 @@ title: About
 weight: 0
 ---
 
-I currently work as a data scientist and consultant. I work on a broad range of topics, but recurring themes include: marketing, merchandising, and sales modeling, forecasting, GIS, geo-statistics, spatial statistics, and data visualization.
+I'm currently employed as a data scientist and consultant. I work on a broad range of topics, but recurring themes include: marketing, merchandising, and sales modeling, forecasting, GIS, geostatistics, spatial statistics, and data visualization.
 
 Before that, I worked on modeling rational norms and cognitive limitations as a postdoctoral researcher at the University of Toronto with [Jonathan Weisberg](http://www.utm.utoronto.ca/~weisber3/). I received my doctorate from the University of Southern California in 2015, working on silimar themes with [Kenny Easwaran](http://www.kennyeaswaran.org/), [Ralph Wedgwood](http://www-bcf.usc.edu/~wedgwood/), [Jacob Ross](http://www-bcf.usc.edu/~jacobmro/), and [Richard Arratia](http://dornsife.usc.edu/cf/faculty-and-staff/faculty.cfm?pid=1003062) (mathematics).
 
