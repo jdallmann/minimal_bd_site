@@ -2,7 +2,6 @@
 description: Some stuff about me...
 menu: 
     main:
-    sidebar:
 title: About
 weight: 0
 ---

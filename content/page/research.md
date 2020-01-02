@@ -4,7 +4,6 @@ authors:
 date: "2019-11-28"
 menu: 
     main:
-    sidebar:
 slug: research
 title: Research
 weight: -100
