@@ -24,7 +24,7 @@ defaultContentLanguage = "en"
 ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
 
 [params.info]
-description = "Propaganda: It only works if someone reads it!!!"
+description = "A blog about open data analysis and Winnipeg."
 title404 = "Nothing's here!"
 
 [params.assets]
