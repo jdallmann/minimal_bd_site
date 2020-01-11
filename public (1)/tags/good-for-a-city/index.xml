@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>good for a city on winnipegR</title>
+    <link>/tags/good-for-a-city/</link>
+    <description>Recent content in good for a city on winnipegR</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Fri, 10 Jan 2020 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/good-for-a-city/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>What is good for a city?</title>
+      <link>/post/20200110-prioritization/</link>
+      <pubDate>Fri, 10 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/post/20200110-prioritization/</guid>
+      <description>What is “good for a city”?I’ve been in a few “green feild” data science positions now—positions where orgs know they need to “leverage data” to avoid falling behind, but aren’t quite sure how they should make use of their data or what potential ends data sceince can be directed towards.
+I’m not really interested in writing another post about whether or when orgs should invest in data science.</description>
+    </item>
+    
+  </channel>
+</rss>

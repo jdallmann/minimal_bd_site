@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>kickoff on winnipegR</title>
+    <link>/tags/kickoff/</link>
+    <description>Recent content in kickoff on winnipegR</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Tue, 31 Dec 2019 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/kickoff/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Hello Winnipeg &amp; Winnipeg Data Nerds</title>
+      <link>/post/20200101-hello_winnipeg/</link>
+      <pubDate>Tue, 31 Dec 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/post/20200101-hello_winnipeg/</guid>
+      <description>Hi Winnipeg, ManitobaI’m kicking off 2020 with a data blogging experiment, centered on exploring openly available Winnipeg data.
+Why?
+First, as a early career data scientist, I’ve been spending a bunch of time working through data on Winnipeg and other Canadian cities. More of it turned out to be interesting than I initially expected, so I thought I’d start sharing some of it here. Plus, a blog seems like a good venue to try out (and record, for my future self) some new analysis techniques.</description>
+    </item>
+    
+  </channel>
+</rss>

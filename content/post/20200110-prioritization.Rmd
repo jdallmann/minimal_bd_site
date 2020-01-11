@@ -1,0 +1,290 @@
+---
+title: "I. What is Good for a City?"
+description: "Analysis prioritization: city costs & expenditures"
+authors: ["jdallmann"]
+date: 2020-01-10
+weight: -200
+categories:  ["budget", "capex", "commentary", "financials", "prioritization", "Winnipeg"]
+tags: ["good for a city", "semi-serious", "analysis_prioritization"]
+editor_options: 
+  chunk_output_type: console
+---
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+knitr::opts_chunk$set(message = FALSE)
+knitr::opts_chunk$set(warning = FALSE)
+knitr::opts_chunk$set(error = FALSE)
+library(tidyverse)
+library(magrittr)
+library(lubridate)
+library(ggthemes)
+# Dataset drived from 'prioritization_eda.R' linked in post
+load("../../static/data/prioritization_data-202001.RData")
+```
+
+
+
+## square one
+I have now been hired into two "green field" data science positions---roles that orgs spin up because they know they need to "leverage data" to avoid falling behind, but aren't quite sure *how* they should make use of their data or *what* potential ends data science can be directed towards.
+
+I'm not really interested in writing another post about whether or when orgs should invest in data science; there are lots of them out there. But, I think it is worth talking about *what to do* when starting with a blank slate in data analysis... especially since we're kind of in that state with this blog!
+<br><br><br>
+
+
+
+## a "good" start
+A common, but unhelpful, first request in these types of roles is to quickly "generate value".^[Ugh. I think I just vomited up some of the "low hanging fruit" I had earlier.] In private/for profit orgs, this is usually amounts to increasing profits (duh). Starting with this assumption, good "green-field" data science requires quickly figuring out which levers affect profitability, and then facilitates moving those levers---though discovering them is already great progress!
+
+In my experience, a good way to start in this context is to perform *exploratory data analysis* on the financials and the factors that directly contribute to line items on the financials (we'll do some of this for Winnipeg below). Looking at which line items are most predictive of profitability, but also how much *controlable variance* there is in those high-impact items. What is "controllable" variance? Unlike seasonal effects, which aren't easily changed,^[Though there are some cases where you can create seasonality through marketing efforts.] often this is variance due to human actions & processes. It isn't always easy to tease out, but modeling and hypothesis testing can help. High, initially *non-explainable*, variance can also sometimes point in this direction.
+
+As a quick example, in retail orgs I've worked for, the financials revealed that variations in sales make a way bigger difference to profitability than variations in supply chain costs, or labor, or margins... So, it made sense to dig into what influenced sales first over factors for other areas of the org. (Of course, this might be different in other orgs, say if sales had very little controllable variability compared to some of those other things.)
+<br><br><br>
+
+
+## good for a city?
+Alright, so while this approach is a rough approximation at good "green-field" data science in the private sphere, what does that look like for a city? To go through the same exercise would require knowing what counts as "good for a city"... That's not a super easy question to answer.^[A first problem is that it is not clear whether there is any unified thing that counts as a city. Whatever it is, is it really the kind of thing that could do better or worse? What is good from my point of view, an inhabitant of the City, is often different than what is good from my neighbour's point of view. Worse, it is even less clear whether there is one measure---like "profitability", in the private case---that can be analyzed and optimized for as an analyst.]
+
+I'm going to assume that there is some sense in which things can go better or worse for a city by furthering the interests of it's inhabitants which overlap the most---things like: having clean drinking water, being able to efficiently get where they want to go, etc.^[An interesting take on what is rational for a city that parallels this by Kenny Easwaran can be found behind a paywall [here](https://link.springer.com/article/10.1007/s11245-019-09645-6).] So, a good "green-field" city analysis would round up the foundational things its inhabitants care about, and see where we (or people with real power) stand to make the most impactful change.
+
+As it happens, there is a City of Winnipeg document that is meant to track this kind of thing, that takes input from community meetings and is agreed to by City departments and Council: [Our Winnipeg](https://www.winnipeg.ca/interhom/CityHall/OurWinnipeg/). Unfortunately, it hasn't been updated in a decade. Fortunately, it is slated to be updated in 2020, so public discussion like this could stand to influence the direction our city takes! (See, I told you we were interested in high impact analyses...)
+
+At a high level, *Our Winnipeg* sets out these goals:
+
+> The "basics" matter: public safety, water
+> quality, wastewater and transportation infrastructure,
+> and public amenities and facilities are the essentials to
+> keeping people healthy. But quality of life goes beyond
+> the basics. Our communities need to support various
+> lifestyles, providing a range of options for living, working
+> and playing. A variety of housing styles for residents to
+> choose from are required, as are transportation choices
+> for residents and businesses alike. The whole system has
+> to work together efficiently and sustainably. (Our Winnipeg, 2010, p. 2)
+
+This list is a reasonable starting point... But, it's not perfect for what we are trying to do here: it's long, but more importantly it doesn't tell us how to trade off the listed items. So, where to now? The easiest place to look for a high level overview is... you guessed it, *the financials*. How Winnipeg actually spends its money tells you how the City actually traded off the common goods listed in Our Winnipeg.^[Trading non-locally fungibles is kind of what money is for, after all.] Assuming they were effectively aiming at those lofty goals (a *big* assumption), it should give us an idea of where the biggest opportunities for optimization lie. Or, at very least, will allow us to ask whether we think that where we spend our money lines up with the things *we* value in a city.
+<br><br><br>
+
+
+## some **E**xploratory **D**ata **A**nalysis
+Let's look at some data. The [City of Winnipeg Open Data portal](data.winnipeg.ca) has info on [operating budgets](https://data.winnipeg.ca/Assessment-Taxation-Corporate/Adopted-Operating-Budget-All-Services-unconsolidat/8mu8-qtp8) (up to 2018), and [large capital expenditures](https://data.winnipeg.ca/Assessment-Taxation-Corporate/Capital-Expenditures/8xrn-n992) (updated monthly, and with a minimum budget of 5 million). We don't have actual total operating expenditures, which would be ideal and the actual capital expenditures are limited to "big" projects. But, the operating budget should roughly line up with the City's actual operating expenditures, and as long as there aren't too many small capital expenditures, we will get an approximate picture. Either way, we'll take what we can get. (As an aside, operating expenses are the "keep the lights on and employees paid" type expenses. The capital expenses are funds spent on major projects like building bridges, libraries, road renewal, and bus rapid transit (BRT).)
+
+Summarizing the open data, we get these top areas of operating expenditure and net operating:^[We will consider the revenue side of the equation in the next post.]
+```{r operating_budgets}
+budget_sum <- op_budget %>%
+    filter(year == 2018,
+           service != "Assessment, Tax & Corporate") %>%
+    group_by(service, category) %>%
+    summarise(budget = sum(budget_year)) %>%
+    ungroup()
+
+budget_sum <- rbind(
+    budget_sum %>%
+        mutate(budget = abs(budget)),
+    budget_sum %>% 
+        group_by(service) %>% 
+        summarise(budget = sum(budget)) %>%
+        mutate(category = "NET COST",
+               budget = budget) %>%
+        ungroup()
+    ) %>%
+    mutate(category = factor(category, 
+                             levels = c("EXPENDITURES", "REVENUE", "NET COST")),
+           budget = budget)
+
+top_5_by_cat <- budget_sum %>% 
+    arrange(desc(budget)) %>% 
+    filter(category != "REVENUE") %>%
+    group_by(category) %>% 
+    top_n(5) %>%
+    ungroup() %$%
+    unique(service)
+ 
+budget_sum %>% 
+    filter(service %in% top_5_by_cat) %>%
+    ggplot(aes(x = reorder(sub(service,pattern = "(.{21}).*",replacement = "\\1..."), budget), y = budget)) +
+    geom_bar(stat = "identity") +
+    coord_flip() +
+    facet_wrap(facet = vars(category), nrow = 1, scales = "free_x") +
+    theme_fivethirtyeight() +
+    theme(axis.text.x = element_text(angle = 45)) +
+    scale_y_continuous(labels=scales::label_comma(scale = .000001, suffix = "M")) +
+    geom_text(
+        aes(label = scales::label_comma(scale = .000001, 
+                                        suffix = "M")(budget)),
+        hjust="inward", color = viridisLite::viridis(3)[1]) +
+    labs(title = "OPPERATING BUDGET TOP 5")
+```
+
+So far so good... the top 5 look pretty important to me. How about on the capital expenditures side:
+```{r capital_expenses}
+cap_ex_sum <- cap_ex %>%
+    filter(date == "2018-12-31") %>%
+    select(actual_costs_to_report_date, project_id,
+           department, category, subcategory,
+           project_description) %>%
+    left_join(
+        cap_ex %>%
+            filter(date == "2017-12-31") %>%
+            select(project_id, 
+                   initial_costs = actual_costs_to_report_date)
+    ) %>%
+    mutate(initial_costs = as.numeric(initial_costs),
+           actual_costs_to_report_date = as.numeric(
+               actual_costs_to_report_date),
+           cap_ex_2018 = ifelse(!is.na(initial_costs),
+                                actual_costs_to_report_date -
+                                    initial_costs,
+                                actual_costs_to_report_date)
+    )
+cap_top_5 <- cap_ex_sum %>% 
+    group_by(department) %>%
+    summarise(cap_ex = sum(cap_ex_2018)) %>%
+    ungroup() %>%
+    arrange(desc(cap_ex)) %>%
+    top_n(5) %$%
+    unique(department)
+
+top_5_cap_ex <- cap_ex_sum %>% 
+    group_by(department) %>%
+    summarise(cap_ex = sum(cap_ex_2018)) %>%
+    ungroup() %>%
+    filter(department %in% cap_top_5 | 
+           department %in% c("Fire Paramedic Service",
+                             "Winnipeg Police Service",
+                             "Corporate Support Services",
+                             "Winnipeg Police Service",
+                             "Winnipeg Police Service/Fire Paramedic Service"))
+
+finalists <- top_5_cap_ex$department %>% unique()
+
+top_5_cap_ex %>%
+    top_n(5) %>%
+    ggplot(aes(x = reorder(sub(department, pattern = "(.{21}).*",replacement = "\\1..."), cap_ex), y = cap_ex)) +
+    geom_bar(stat = "identity") +
+    coord_flip() +
+    theme_fivethirtyeight() +
+    theme(axis.text.x = element_text(angle = 45)) +
+    scale_y_continuous(labels=scales::label_comma(scale = .000001, suffix = "M")) +
+    geom_text(
+        aes(label = scales::label_comma(scale = .000001, 
+                                        suffix = "M")(cap_ex)),
+        hjust="inward", color = viridisLite::viridis(3)[1]) +
+    labs(title = "CAP EX (> 5M) TOP 5")
+```
+
+Putting both together we get:
+```{r total_expenses}
+op_cap_map <- read_csv("../../static/data/top_5_map.csv")
+    
+top_5 <- budget_sum %>% 
+    left_join(op_cap_map) %>%
+    filter(department %in% finalists) %>%
+    left_join(top_5_cap_ex) %>%
+    mutate(budget = ifelse(category != "REVENUE",
+                           budget + cap_ex,
+                           budget))
+# The final 5 are not affected by whether we look at 
+# Capex or Operating Budget
+finalists <- top_5 %>%
+    filter(category == "EXPENDITURES") %>%
+    top_n(5, wt=budget) %$%
+    unique(service)
+    
+
+top_5 %>% 
+    filter(service %in% finalists) %>%
+    ggplot(aes(x = reorder(sub(department, pattern = "(.{21}).*",replacement = "\\1..."), budget), y = budget)) +
+    geom_bar(stat = "identity") +
+    coord_flip() +
+    facet_wrap(facet = vars(category), nrow = 1, scales = "free_x") +
+    theme_fivethirtyeight() +
+    theme(axis.text.x = element_text(angle = 45)) +
+    scale_y_continuous(labels=scales::label_comma(scale = .000001, suffix = "M")) +
+    geom_text(
+        aes(label = scales::label_comma(scale = .000001, 
+                                        suffix = "M")(budget)),
+        hjust="inward", color = viridisLite::viridis(3)[1]) +
+    labs(title = "TOP 5 COMBINED EXPENDITURES")
+```
+
+This gives us a pretty good idea of the main cost-centers for the City. Whether we want to look at department expenses alone or net, after revenue from those departments, the top three are:
+
+1. Public works (the department responsible for infrastructure like roads, bridges, etc.), 
+2. Transit, and
+3. The Winnipeg Police Service.
+
+Digging in to these three a bit further, on the operating side the expenditures break out as follows: 
+```{r budget_breakdown}
+op_budget %>% 
+    filter(year=="2018", category == "EXPENDITURES",
+           service %in% c("Police Response", "Public Transit", 
+                          "Roadway Consruction and Mtce")) %>%
+    left_join(op_cap_map) %>%
+    group_by(department, category = sub_service) %>%
+    summarise(opex = sum(budget_year)) %>%
+    ungroup() %>%
+    arrange(desc(opex)) %>%
+    mutate(opex = scales::dollar_format(suffix = "M", 
+                                         scale = .000001,
+                                         digits = 2)(opex)) %>%
+    # View()
+    DT::datatable(
+        options = list(
+            pageLength = 5,
+            lengthMenu = c(5, 10, 15, 20)
+        )
+    )
+```
+
+
+
+On the capex side, the heavy hitters were:
+
+```{r capex_breakdown}
+cap_ex_sum %>%
+    mutate(subcategory = ifelse(subcategory == "Streets Renewals", "Street Renewals", subcategory)) %>%
+    group_by(department, category = subcategory) %>% 
+           # description = project_description) %>%
+    summarise(capex = sum(cap_ex_2018, na.rm = T)) %>%
+    ungroup() %>%
+    filter(department %in% c("Public Works", "Transit")) %>%
+    arrange(desc(capex)) %>%
+    top_n(20) %>%
+    mutate(capex = scales::dollar_format(suffix = "M", 
+                                         scale = .000001,
+                                         digits = 2)(capex)) %>%
+    # View()
+    DT::datatable(
+        options = list(
+            pageLength = 5,
+            lengthMenu = c(5, 10, 15, 20)
+        )
+    )
+```
+<br><br><br>
+
+
+## summing up
+Alright, so we've laid out some first steps on the "green-field" analysis problem, working on the City of Winnipeg's open data as a working example. 
+
+Using the City's financials as a guide to where the value/highest return potential is, we summed up the main cost centers for the City of Winnipeg. Then we took a very superficial look at how those costs break down based on openly available data. 
+
+While the analysis is superficial, it does give a first idea of which departments could benefit the City most through optimization. In brief, we spend our money on roads & buses---or *transportation*---on the one hand, and *pubic safety & emergency response* represented by policing, fire and paramedic services on the other. Sewage disposal from Water and Waste gets honorable mention.
+
+Those are pretty core services, so nothing too surprising yet---though it was cool to see the breakdown using data from Winnipeg's open data initiative. Next time we will take a look at how efficiently we do these things compared to similar cities (again using open data). For me at least, this was a bit more surprising!
+
+Talk soon.
+
+
+
+<small>
+
+*All of the views expressed on this blog are my own opinions, all data is openly available, and all analyses coded using reproducible research methods posted publicly. *
+
+- *The eda script is available [here](https://github.com/jdallmann/minimal_bd_site/tree/master/static/eda). *
+- *The open data used in this analysis was obtained via the [winnipegr](https://github.com/jdallmann/winnipegr) package.*
+- *The code for this post is available [here](https://github.com/jdallmann/minimal_bd_site/tree/master/content/post).*
+
+</small>
