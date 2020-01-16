@@ -251,7 +251,6 @@ cap_ex_sum %>%
     ungroup() %>%
     filter(department %in% c("Public Works", "Transit")) %>%
     arrange(desc(capex)) %>%
-    top_n(20) %>%
     mutate(capex = scales::dollar_format(suffix = "M", 
                                          scale = .000001,
                                          digits = 2)(capex)) %>%
