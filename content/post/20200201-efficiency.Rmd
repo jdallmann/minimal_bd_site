@@ -1,0 +1,952 @@
+---
+title: "II. What is Good for a City?"
+description: "Efficiency & effectiveness measures"
+authors: ["jdallmann"]
+date: 2020-02-01
+weight: -200
+categories:  ["winnipeg", "budget", "city comparison", "efficiency", "effectiveness"]
+tags: ["good for a city", "semi-serious", "efficiency", "effectiveness"]
+editor_options: 
+    chunk_output_type: console
+---
+    
+    
+    ```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+knitr::opts_chunk$set(message = FALSE)
+knitr::opts_chunk$set(warning = FALSE)
+knitr::opts_chunk$set(error = FALSE)
+library(tidyverse)
+library(magrittr)
+library(lubridate)
+library(ggthemes)
+library(scales)
+# Dataset drived from MBNC tidily widened for analysis
+mbnc_long <- winnipegr::mbnc
+mbnc <- mbnc_long %>%
+    select(municipality, fiscal_year, measure, result) %>%
+    pivot_wider(names_from = measure, values_from = result) %>%
+    janitor::clean_names()
+```
+
+
+
+# from financial impact to efficiency
+Hi folks,
+
+In our [last post](https://jdallmann.org/post/20200110-prioritization/), we looked at the departments where Winnipeg spends the most money. This was the first step to figuring out (i) what we care about as a city, and (ii) the most likely places we could make a difference to the things that we care about as a city. As a reminder, the top three departments where the City spends money are:
+
+1. Public Works (the department responsible for infrastructure like roads, bridges, etc.),
+2. Transit, and
+3. The Winnipeg Police Service. 
+
+We ended up breaking it down into the next level of more specific spends. But, being a big number on the financials doesn't necessarily tell us much about whether the processes generating that number can be optimized. To set the baseline, I'd like to look at how Winnipeg stacks up on delivery of these services by comparing it to other cities in these areas. Fortunately, the [Municipal Benchmarking Network Canada](http://mbncanada.ca/) provides a good, and open, data source on just these kinds of measures. MBNC was originally created to track Ontario cities performance, but has since been expanded to other provinces and, luckily, Winnipeg is one of the cities that signed on.^[While going through these examples, it is important to remember [not all cities are created equally](https://winnipeg.ca/finance/NotAllCitiesCreatedEqual.stm). MBNC does a good job at flagging how they differ on different measures, and I'll be adding that info here. But, it's always a good idea to ask whether there are gotchas when comparing measures compiled by different individuals, especially across differently structured orgs.]
+
+
+Here are some of the highest level descriptive statistics collected for the participating cities in 2018:
+```{r high_level_ex}
+overview <- mbnc %>%
+    select(municipality, fiscal_year,
+           population_mun001, #households_mun002,
+           geographic_area_sq_km_mun005, population_density_mun008,
+           total_budgeted_municipal_fte_mun010,
+           municipal_expenses_operating_and_capital_mun025,
+           municipal_purchases_operating_and_capital_mun030)
+
+overview <- data.frame(municipality = overview$municipality, 
+                       lapply(overview[,2:8], function(x) as.numeric(x)),
+                       stringsAsFactors = F)
+
+overview <- overview %>%
+    mutate(employees_per_100_capita = 
+               total_budgeted_municipal_fte_mun010 * 100 / population_mun001,
+           employee_density = 
+               total_budgeted_municipal_fte_mun010 / geographic_area_sq_km_mun005) %>%
+    drop_na()
+
+wpg_2018 <- overview %>% filter(municipality == "Winnipeg", fiscal_year == "2018")
+
+overview %>%
+    filter(fiscal_year == "2018") %>%
+    select(-fiscal_year) %>%
+    mutate(municipal_expenses_operating_and_capital_mun025 = 
+               scales::dollar(municipal_expenses_operating_and_capital_mun025,
+                              accuracy = 1,
+                              suffix = "M",
+                              scale = .000001),
+           municipal_purchases_operating_and_capital_mun030 = 
+               scales::dollar(municipal_purchases_operating_and_capital_mun030,
+                              accuracy = 1,
+                              suffix = "M",
+                              scale = .000001),
+           population_density_mun008 = round(population_density_mun008, 0)) %>%
+    set_colnames(c("municipality", "population", "area km^2", 
+                   "population density", "budgeted full-time employees", 
+                   "operating and capital expenses", "municipal purchases", 
+                   "employees per 100 pop", "employee density")) %>%
+    DT::datatable(options = list(
+        pageLength = 5,
+        lengthMenu = c(5, 10, 15),
+        scrollX = TRUE,
+        autoWidth = TRUE,
+        width = 300
+    )) %>%
+    DT::formatRound(c("employees per 100 pop", "employee density"), 2) %>%
+    DT::formatRound(c("area km^2", "budgeted full-time employees",
+                      "population"), 0) 
+    
+```
+
+
+In order to have a baseline, let's use these overview stats to find "similar" cities. First a quick "k-means" clustering.^[I won't go through all of the detail, but basically k-means is a technique where you (i) transform all measurements to put them on a common unit scale and "plot" them in space, (ii) start with *k* random evaluation points in the space (often starting on points from the data set) and group each point in the data set to the nearest of these *k* points, (iii) move the *k* points to the center of its nearest points, (iv) repeat until you get a more or less stable clustering, where the data points associated with the k points stays the same, or close. For a more in-depth explanation, [this guy](https://www.youtube.com/watch?v=4b5d3muPQmA) is usually pretty good. Here is an [explanatory GIF](https://en.wikipedia.org/wiki/File:K-means_convergence.gif) if you don't have 5 minutes.] We would like somewhere between 3 and 6 comparables, so we should use between 3 and 6 groups. After clustering each city's yearly data, we get the following groups (which were pretty stable for Winnipeg's cohort):
+
+```{r kmeans_overview}
+normalized_overview <- overview %>% 
+    select(-municipality) %>% 
+    scale() %>%
+    as.data.frame() %>%
+    mutate(fiscal_year = overview$fiscal_year, 
+           municipality = overview$municipality)
+# k-means
+set.seed(123)
+clusters <- kmeans(normalized_overview[,2:9], 6)
+
+overview <- overview %>% 
+    mutate(k_cluster = clusters$cluster)
+
+overview %>% count(municipality, k_cluster) %>%
+    arrange(desc(k_cluster)) %>%
+    DT::datatable(options = list(
+        pageLength = 5,
+        lengthMenu = c(5, 10, 20)
+    ))
+
+```
+<br>
+
+With 6 clusters (displayed), Winnipeg ended up grouped together with Hamilton, London, Regina, and Windsor in cluster 4. If we break it into 5 clusters, Calgary gets included in Winnipeg's group. 
+
+This seems pretty plausible, but to validate, let's try another method and see what we get.
+
+Using a bottom-up hierarchical clustering analysis we get the following:^[This analysis takes each point and finds it's closest point and clusters them, then it takes the average of the attributes for those clusters and tries to find the next closest cluster, etc. It keeps iterating until you have a complete hierarchy. For a clear explanation with some of the choice-points you can make in this type of clustering using R see [this datacamp article](https://www.datacamp.com/community/tutorials/hierarchical-clustering-R).]
+```{r HCA_overview}
+# HAC/bottom up hierarchical clustering
+
+dend_colors <- viridisLite::viridis(n = length(unique(normalized_overview$municipality)))
+normalized_overview %<>% mutate(dend_color = dend_colors[as.factor(municipality)]) %>%
+    filter(fiscal_year == 2018)
+
+library(dendextend)
+dendogram <- normalized_overview %>%
+    select(-municipality, -fiscal_year) %>%
+    dist() %>%
+    hclust(method = 'average') %>%
+    as.dendrogram() 
+
+# label_cols <- normalized_overview$dend_color[order.dendrogram(dendogram)]
+labels(dendogram) <- normalized_overview$municipality[order.dendrogram(dendogram)]
+# labels_colors(dendogram) <- label_cols
+
+dendogram %<>%
+    set("branches_k_color",  k = 8.5) %>%
+    set("labels_colors", k = 8.5)
+
+gg_dend <- as.ggdend(dendogram)
+ggplot(gg_dend, horiz = T) +
+    theme_fivethirtyeight() +
+    theme(axis.text = element_blank(),
+          axis.ticks = element_blank()) +
+    geom_rect(mapping=aes(xmin=4.35, xmax=8.45, 
+                          ymin=-2, ymax=1.75), 
+              color="black", size = 1, linetype = 2,
+              alpha=.10,
+              fill = gg_dend$labels[gg_dend$labels$label=="Winnipeg","col"]) +
+    labs(title = "MBNC HIERARCHICAL CLUSTER ANALYSIS", x = "", y = "distance")
+
+```
+
+The results are pretty similar (which is good). This method groups Winnipeg with London, Regina and Windsor as comparables. Since this is a sub-grouping of the first method, we will keep these as comparables but keep an eye on Calgary and Hamilton as other possible comparables to baseline-set against.
+<br><br><br>
+
+
+## general gov measures
+Before hitting on the "big three" expenditure areas identified in the [previous post](https://jdallmann.org/post/20200110-prioritization/), the MBNC data also takes a look at general municipal metrics that would be interesting for baseline-setting. 
+
+The first is the operating cost for governance & corporate management as a percent of total municipal operating cost.^[For "single-tier" municipalities] According to the MBNC, "This measure includes operating costs relating to Governance, i.e. Mayor, Council, Council support and election management; and costs related to Corporate Management, i.e. CAO/City Manager, finance, communication, legal, real estate, etc." (p. 89).^[One thing to keep in mind here is that this depends on how distributed the central services are across municipal departments. These things are pretty central for Winnipeg, so it should be fairly conservative to compare. But, further research would be required to say for sure.]
+
+Across all relevant cities, Winnipeg is just below the median here: 
+```{r gov_cost}
+single_tier <- c("Calgary", "Hamilton", "Halifax",
+                 "London", "Montreal", "Regina",
+                 "Thunder Bay", "Toronto", "Windsor",
+                 "Winnipeg")
+
+mbnc_long %>% 
+    filter(measure_number == "GENG301",
+           fiscal_year %in% c("2016", "2017", "2018"),
+           municipality %in% single_tier) %>%
+    mutate(gov_cost_ratio = as.numeric(result)) %>%
+    ggplot(aes(fill=fiscal_year, y=gov_cost_ratio, 
+               x=reorder(municipality, -gov_cost_ratio))) + 
+    geom_hline(aes(yintercept = median(gov_cost_ratio, na.rm = T)),
+               size = 1, color = "red3") +
+    geom_bar(position="dodge", stat="identity") +
+    geom_text(aes(x = "Hamilton", y = median(gov_cost_ratio, na.rm = T) + .0025, 
+                  label = "median"), color = "red3", 
+               angle = 0, position = position_dodge(width = 0.7), 
+               size = 4.2, check_overlap = T, inherit.aes = F) +
+    theme_fivethirtyeight() +
+    scale_y_continuous(labels = scales::percent_format()) +
+    scale_fill_viridis_d(alpha = .8) +
+    theme(axis.text.x = element_text(angle = 45, hjust = 1)) +
+    labs(title = "% OPPERATING COST FOR\nGOVERNANCE & CORP MANAGEMENT", fill = "fiscal year")
+```
+
+
+The result is similar if we look only at the closest comparables (moving right to the median if we include Hamilton, and back down if we include Calgary):
+```{r gov_cost_comp}
+cohort <- c("London", "Regina",
+            "Windsor", "Winnipeg")
+
+mbnc_long %>% 
+    filter(measure_number == "GENG301",
+           fiscal_year %in% c("2016", "2017", "2018"),
+           municipality %in% cohort) %>%
+    mutate(gov_cost_ratio = as.numeric(result)) %>%
+    ggplot(aes(fill=fiscal_year, y=gov_cost_ratio, x=municipality)) + 
+    geom_hline(aes(yintercept = median(gov_cost_ratio, na.rm = T)),
+               size = 1) +
+    geom_bar(position="dodge", stat="identity") +
+    geom_text(aes(x = "Winnipeg", y = median(gov_cost_ratio, na.rm = T) + .0025, 
+                  label = "cohort median"),
+               angle = 0, position = position_dodge(width = 0.7), size = 4.2, check_overlap = T, inherit.aes = F) +
+    geom_text(aes(label = scales::percent(gov_cost_ratio, accuracy = .01, suffix = " "), group = fiscal_year),
+               angle = 90,  size = 4.2,  position = position_dodge2(width = .9),  hjust = "right") +
+    theme_fivethirtyeight() +
+    scale_y_continuous(labels = scales::percent_format()) +
+    scale_fill_viridis_d(alpha = .8) +
+    labs(title = "% OPP COST FOR GOVERNANCE &\nCOPRPORATE MANAGEMENT", fill = "fiscal year")
+```
+
+
+This seems good, but maybe expected since labor costs are pretty low in Winnipeg. 
+
+Another interesting general fact is that we have one of the highest city employee turnover rates out there:
+```{r churn}
+churn<- mbnc_long %>% 
+    filter(measure_number %in% c("HMRS406", "HMRS800", "HMRS801"),
+           fiscal_year %in% c("2016", "2017", "2018")) %>%
+    select(municipality, fiscal_year, measure, denominator, result) %>%
+    pivot_wider(names_from = measure, values_from = c(result, denominator)) %>%
+    janitor::clean_names() %>%
+    select(1:6)
+names(churn) <- c("municipality", "fiscal_year", "turnover_rate", 
+                  "resignations", "retirements", "employee_count")
+churn_all <- churn %>%
+    mutate(resignations = as.numeric(resignations),
+           retirements = as.numeric(retirements),
+           turnover_rate = as.numeric(turnover_rate),
+           employee_count = as.numeric(employee_count),
+           resignations = resignations / employee_count,
+           retirements = retirements / employee_count) 
+
+churn <- churn_all %>%
+    mutate(med_churn_overall = median(churn_all$turnover_rate, na.rm = T),
+           med_resig_overall = median(churn_all$resignations, na.rm = T)) %>%
+     filter(municipality %in% cohort)
+
+churn %<>%
+    mutate(med_churn_cohort = median(churn$turnover_rate, na.rm = T),
+           med_resig_cohort = median(churn$resignations, na.rm = T))
+
+churn %<>%
+    select(-employee_count, -turnover_rate) %>%
+    pivot_longer(cols = c(resignations, retirements), names_to = "turnover_reason")
+
+
+churn %>%
+    ggplot(aes(fill=turnover_reason, y=value, x=fiscal_year)) + 
+    geom_hline(aes(yintercept = med_churn_cohort),
+               size = 1) +
+    geom_hline(aes(yintercept = med_churn_overall),
+               size = 1, color = "red3") +
+    geom_bar(position="stack", stat="identity") +
+    facet_wrap(vars(municipality), nrow = 1) +
+    geom_text(aes(label = scales::percent(value, accuracy = .01)),
+               angle = 90, position = position_stack(vjust = 0.5), size = 4.2) + 
+    theme_fivethirtyeight() +
+    scale_y_continuous(labels = scales::percent_format()) +
+    scale_fill_viridis_d(alpha = .8) +
+    labs(title = "PERMANENT VOLUNTARY EMPLOYEE\nTURNOVER RATE", fill = "fiscal year")
+```
+
+Again, Winnipeg would do better if we include Hamilton and worse if we include Calgary for a wash on the broader comparison. Notably, if you look at all municipalities, it looks like Winnipeg's cohort members all do pretty bad for churn...the black line is the median within the cohort and the red line is median outside of cohort/overall.
+
+Churn is a huge cost in business, since new employees tend to be initially inefficient, require time to train from those who are more efficient---thus making them less efficient, and hiring talent is itself costly, requiring job posting assessment, interviews with senior staff, etc. It all adds up pretty quickly.
+
+The graph also reveals a lot more: 
+
+Winnipeg has the highest in-cohort churn in 2018, it has been trending upward over the past three years. Yet, Winnipeg has one of the lowest retirement rates! This means that the churn Winnipeg is seeing is due to *resignations*. Presenting just the resignation data makes it even clearer:
+
+```{r resignation}
+churn_all %>%
+    filter(fiscal_year == "2018",
+           municipality != "Saskatoon") %>%
+    mutate(municipality = ifelse(municipality == "Sudbury (Greater)", "Sudbury", municipality)) %>%
+    ggplot(aes(x=reorder(municipality, -resignations), y=resignations)) + 
+    geom_hline(aes(yintercept = churn$med_resig_cohort[1]),
+               size = 1, color = "red3") +
+    geom_hline(aes(yintercept = churn$med_resig_overall[1]),
+               size = 1) +
+    geom_bar(stat="identity") +
+    geom_text(aes(x = "Montreal", y = churn$med_resig_cohort[1] + .005, label = "cohort median"), size = 4.2, 
+              check_overlap = T) +
+    geom_text(aes(x = "Montreal", y = churn$med_resig_overall[1] - .004, label = "overall median"), 
+              color = "red3", size = 4.2, check_overlap = T) +
+    geom_text(aes(label = scales::percent(resignations, accuracy = .01)),
+               angle = 90, position = position_stack(vjust = 0.5), size = 4.2,
+              color = "white") + 
+    theme_fivethirtyeight() +
+    scale_y_continuous(labels = scales::percent_format()) +
+    scale_fill_viridis_d(alpha = .8) +
+    theme(axis.text.x = element_text(angle = 45, hjust = 1)) +
+    labs(title = "PERMANENT VOLUNTARY EMPLOYEE\nRESIGNATION RATE")
+```
+
+
+This is really surprising and a great "green field" data science insight. Churn due to resignation is controllable by human intervention. That it has been climbing/varies year over year, suggests it could be reversed. Plus, there are lots of ways to model churn and predict which factors influence it using familiar data science techniques.^[Maybe we'll take a look at churn analysis in a future post.] Plus, because of the number of employees, it is potentially a huge area of opportunity.^[For the sake of breadth of opinion, another hypothesis is that HR is really good at attracting top talent in Winnipeg, which naturally has a higher churn rate---you can hope, right? If the Winnipeg Open data portal updated it's [HR data](https://data.winnipeg.ca/Organizational-Support-Services/Human-Resources-Report/44n7-8bfe), we could potentially dig in further. Another unexplained standout for me here that might be worth looking into is that large cities---where competition should be the highest---have been really good when it comes to keeping their employees.]
+
+By some quick "back of the napkin" math:
+
+- We have `r scales::comma(wpg_2018$total_budgeted_municipal_fte_mun010, accuracy = 1)` employees (from the above data).
+- Say new employees make \$40k/yr and are only 70% efficient in their first 4 months---that's a loss of \$40k / 12 x 4 x (1 - .7) = `r dollar(40000 / 12 * 4 * .3, scale = .001, suffix = " k/yr")` whenever a new employee has to take the place of an seasoned one.
+- These employees also have to be trained. Lets ball-park assume that their trainers can only be 90% effective while training them, and that they make \$60k/yr on average. By the same math, we lose an additional `r dollar(60000/ 12 * 4 * .1, scale = .001, suffix = " k/yr")`.
+- Then there is the cost of HR to write and post the job, screen, and interview. A friend in HR ball-parks this at $5,000 per employee.
+
+Putting it all together, given that we have a resignation rate of 4.59% (ignoring retirements, which we will treat as non-controllable), we are losing 9,118 employees x 0.0495 x (4k new employee time + 2k seasoned employee time + 5k HR cost) = `r dollar(9118 * .0495 * (4+2+5) * 1000, scale = .000001, accuracy = .1, suffix =  " M/yr")` to churn as a city each year.
+
+Five million, not bad!
+
+Realistically though, there are lots of cities performing around 1.5% resignation, so a $4M savings should be possible if this was targeted.
+
+<br><br><br>
+
+
+## roads
+Okay, on to the three areas highlighted by our financial analysis, starting with Public Works and roads. 
+
+Winnipeg's roads are well-traveled:^["A lane km is defined as a kilometer-long segment of roadway that is a single lane in width. For example, a one km stretch of a standard two lane road represents two lane km." (MNBC *Performance Report*), p. 183)]
+```{r road_use}
+roads <- mbnc_long %>% 
+    filter(measure_number == "ROAD112",
+           fiscal_year %in% c("2016", "2017", "2018"),
+           municipality %in% single_tier) %>%
+     mutate(result = as.numeric(result))
+
+roads %<>% mutate(med_overall = median(result, na.rm = T)) %>%
+    filter(municipality %in% cohort)
+
+roads %<>% mutate(med_cohort = median(result, na.rm = T))
+
+
+roads %>%
+    ggplot(aes(fill=fiscal_year, y=result, x=municipality)) + 
+    geom_hline(aes(yintercept = med_cohort),
+               size = 1) +
+    geom_text(aes(x = "Regina", y = med_cohort + 200000, label = "cohort median"), 
+              angle = 0, position = position_dodge(width = 0.7), size = 4.2, 
+              check_overlap = T, inherit.aes = F) +
+    geom_hline(aes(yintercept = med_overall),
+               size = 1, color = "red3") +
+    geom_text(aes(x = "Regina", y = med_overall - 150000, label = "overall median"), 
+              angle = 0, position = position_dodge(width = 0.7), 
+              color = "red3", size = 4.2, 
+              check_overlap = T, inherit.aes = F) +
+    geom_bar(position="dodge", stat="identity") +
+    geom_text(aes(label = scales::comma(result, accuracy = 1, scale = .001, suffix = " "), 
+                  group = fiscal_year),
+               angle = 90, size = 4.55,  position = position_dodge2(width = .9),  hjust = "right") +
+    theme_fivethirtyeight() +
+    scale_y_continuous(labels = scales::dollar_format()) +
+    scale_fill_viridis_d(alpha = .8) +
+    labs(title = "VEHICLE Km TRAVELLED / LANE Km\n(thousands)", fill = "fiscal year")
+```
+
+
+And we don't spend a lot of money repairing them, compared to similar cities or overall:
+```{r road_repair}
+roads <- mbnc_long %>% 
+    filter(measure_number == "ROAD307T",
+           fiscal_year %in% c("2016", "2017", "2018"),
+           municipality %in% single_tier) %>%
+     mutate(result = as.numeric(result))
+
+roads %<>% mutate(med_overall = median(result, na.rm = T)) %>%
+    filter(municipality %in% cohort)
+
+roads %<>% mutate(med_cohort = median(result, na.rm = T))
+
+
+roads %>%
+    ggplot(aes(fill=fiscal_year, y=result, x=municipality)) + 
+    geom_hline(aes(yintercept = med_cohort),
+               size = 1) +
+    geom_text(aes(x = "Regina", y = med_cohort + 2000, label = "cohort median"), 
+              angle = 0, position = position_dodge(width = 0.7), size = 4.2, 
+              check_overlap = T, inherit.aes = F) +
+    geom_hline(aes(yintercept = med_overall),
+               size = 1, color = "red3") +
+    geom_text(aes(x = "Regina", y = med_cohort - 2000, label = "overall median"), 
+              angle = 0, position = position_dodge(width = 0.7), 
+              color = "red3", size = 4.2, 
+              check_overlap = T, inherit.aes = F) +
+    geom_bar(position="dodge", stat="identity") +
+    geom_text(aes(label = scales::dollar(result, accuracy = 1, scale = .001, suffix = " "), 
+                  group = fiscal_year),
+               angle = 90, size = 4.55,  position = position_dodge2(width = .9),  hjust = "right") +
+    theme_fivethirtyeight() +
+    scale_y_continuous(labels = scales::dollar_format()) +
+    scale_fill_viridis_d(alpha = .8) +
+    labs(title = "TOTAL COST FOR HARD TOP / LANE Km\n(thousands)", fill = "fiscal year")
+```
+
+What about when we factor in other things like snow removal, something other municipalities (Regina excluded) wouldn't have to deal with to the same extent?:^[In particular, "this measure represents the total cost of all functions related to road maintenance. This includes operating costs and amortization associated with capital costs for paved and unpaved roads, bridges and culverts, traffic operations, roadside maintenance, and winter control for roadways, sidewalks, and parking lots. " (p. 184)]
+
+```{r road_maintenance}
+roads <- mbnc_long %>% 
+    filter(measure_number == "ROAD308T",
+           fiscal_year %in% c("2016", "2017", "2018"),
+           municipality %in% single_tier) %>%
+     mutate(result = as.numeric(result))
+
+roads %<>% mutate(med_overall = median(result, na.rm = T)) %>%
+    filter(municipality %in% cohort)
+
+roads %<>% mutate(med_cohort = median(result, na.rm = T))
+
+
+roads %>%
+    ggplot(aes(fill=fiscal_year, y=result, x=municipality)) + 
+    geom_hline(aes(yintercept = med_cohort),
+               size = 1) +
+    geom_text(aes(x = "Regina", y = med_cohort + 2000, label = "cohort median"), 
+              angle = 0, position = position_dodge(width = 0.7), size = 4.2, 
+              check_overlap = T, inherit.aes = F) +
+    geom_hline(aes(yintercept = med_overall),
+               size = 1, color = "red3") +
+    geom_text(aes(x = "Regina", y = med_cohort - 2000, label = "overall median"), 
+              angle = 0, position = position_dodge(width = 0.7), 
+              color = "red3", size = 4.2, 
+              check_overlap = T, inherit.aes = F) +
+    geom_bar(position="dodge", stat="identity") +
+    geom_text(aes(label = scales::dollar(result, accuracy = 1, scale = .001, suffix = " "), 
+                  group = fiscal_year),
+               angle = 90, size = 4.55,  position = position_dodge2(width = .9),  hjust = "right") +
+    theme_fivethirtyeight() +
+    scale_y_continuous(labels = scales::dollar_format()) +
+    scale_fill_viridis_d(alpha = .8) +
+    labs(title = "TOTAL COST FOR ROADS PER LANE Km w/ MAINTENANCE\n(thousands)", fill = "fiscal year")
+```
+
+
+Here we spend a fair bit more. 
+
+That we spend more than Regina, and that it represents more of an increase (\$15 vs \$9), indicates that we are paying a lot for snow removal. Regina aside, snow removal has other implications too. 
+
+Both of the previous graphs include amortization, or how long we can spread the cost over at the going rate of interest. Since snow entails more wear and tear on roads, Winnipeg probably can't amortize it's roads as long, driving up cost. This should further accentuate how little Winnipeg spends on road repair in the first graph.
+
+This goes some way to explaining the condition of our roads... along with the possibly benefiting from pretty cheap labor and material costs in Winnipeg and/or managing them well. Snow removal optimization could potentially be another interesting data science project to dig into. Tracking objects in space, and optimizing routes are not new GIS or data science problems. In fact, other cities like [New](https://benwellington.carto.com/builder/6fd59f3f-8082-48ba-8149-b0e85b8ebe2d/embed) [York](https://iquantny.tumblr.com/post/180300705249/data-shows-no-increase-in-nyc-plowing-as-storm) already seem to have this capacity (despite getting less snow). Unfortunately, I could not find any info on plow coordinates on the City's website or open data.
+
+
+Moving on, given that we seem pretty lean on road repair, but heavy on snow clearing, you would expect road condition assessment numbers to be bad right? 
+
+The MBNC data was a bit surprising here:
+
+```{r road_condition}
+roads <- mbnc_long %>% 
+    filter(measure_number == "ROAD405",
+           fiscal_year %in% c("2016", "2017", "2018"),
+           municipality %in% single_tier) %>%
+     mutate(result = as.numeric(result))
+
+roads %<>% mutate(med_overall = median(result, na.rm = T)) %>%
+    filter(municipality %in% cohort)
+
+roads %<>% mutate(med_cohort = median(result, na.rm = T))
+
+
+roads %>%
+    ggplot(aes(fill=fiscal_year, y=result, x=municipality)) + 
+    geom_hline(aes(yintercept = med_cohort),
+               size = 1) +
+    geom_text(aes(x = "Regina", y = med_cohort - .04, label = "cohort median"), 
+              angle = 0, position = position_dodge(width = 0.7), size = 4.2, 
+              check_overlap = T, inherit.aes = F) +
+    geom_hline(aes(yintercept = med_overall),
+               size = 1, color = "red3") +
+    geom_text(aes(x = "Regina", y = med_cohort + .05, label = "overall median"), 
+              angle = 0, position = position_dodge(width = 0.7), 
+              color = "red3", size = 4.2, 
+              check_overlap = T, inherit.aes = F) +
+    geom_bar(position="dodge", stat="identity") +
+    geom_text(aes(label = scales::percent(result, accuracy = .1, suffix = "% "), 
+                  group = fiscal_year),
+               angle = 90, size = 4.55,  position = position_dodge2(width = .9),  hjust = "right") +
+    theme_fivethirtyeight() +
+    scale_y_continuous(labels = scales::percent_format()) +
+    scale_fill_viridis_d(alpha = .8) +
+    labs(title = "PERCENT OF ROADS WHICH ARE IN\nGOOD/VERY GOOD CONDITION ", fill = "fiscal year")
+```
+
+Umm...not quite what I would have expected. Are we even measuring the same thing? How is "good condition" for a road defined, you ask? Great question:
+
+> This measure reflects the percent of paved lane km where no maintenance or rehabilitation action is required except for minor surface maintenance. Municipalities may use different approaches to assess and rate road condition. (p. 186)
+
+Ahh. That helps. Given this definition, if we don't think we need to repair our roads, and the cost figures in the first graph suggest we let things slide, we get better condition roads by this measure---and, it seems like this is even enough to outweigh the fact that our environment is harder on our roads than those of most cities! 
+
+There are other clues that the data set might be good for trending cities against themselves but not across each other. For example, the MBNC comment on the Toronto data is: "In 2017, Toronto changed from manual data collection methods to a network wide automated pavement data collection system and reassessed its trigger values for good-fair-poor condition ranges. The 2017 and 2018 results cannot be directly compared to previous years' results" (p. 186). 
+
+Okay, so an overall picture is starting to form. It looks like we are fairly efficient (or at least, can't tease out inefficiency), in road repair but might not be setting ourselves up well for the future. In terms of getting what we care about right, it looks like we would need to spend *even more* on infrastructure building than we currently do just to keep up.^[The guy over at [dearwinnipeg.com](dearwinnipeg.com) would be proud!] 
+
+Assuming we keep a similar standard for non-road infrastructure, things really start to look dire:
+
+```{r infrastructure_condition}
+roads <- mbnc_long %>% 
+    filter(measure_number == "ROAD415",
+           fiscal_year %in% c("2016", "2017", "2018"),
+           municipality %in% single_tier) %>%
+     mutate(result = as.numeric(result))
+
+roads %<>% mutate(med_overall = median(result, na.rm = T)) %>%
+    filter(municipality %in% cohort)
+
+roads %<>% mutate(med_cohort = median(result, na.rm = T))
+
+
+roads %>%
+    ggplot(aes(fill=fiscal_year, y=result, x=municipality)) + 
+    geom_hline(aes(yintercept = med_cohort),
+               size = 1) +
+    geom_text(aes(x = "Winnipeg", y = med_cohort - .035, label = "cohort median"), 
+              angle = 0, position = position_dodge(width = 0.7), size = 4.2, 
+              check_overlap = T, inherit.aes = F) +
+    geom_hline(aes(yintercept = med_overall),
+               size = 1, color = "red3") +
+    geom_text(aes(x = "Winnipeg", y = med_overall + .05, label = "overall median"), 
+              angle = 0, position = position_dodge(width = 0.7), 
+              color = "red3", size = 4.2, 
+              check_overlap = T, inherit.aes = F) +
+    geom_bar(position="dodge", stat="identity") +
+    geom_text(aes(label = scales::percent(result, accuracy = .1, suffix = "% "), 
+                  group = fiscal_year),
+               angle = 90, size = 4.55,  position = position_dodge2(width = .9),  hjust = "right") +
+    theme_fivethirtyeight() +
+    scale_y_continuous(labels = scales::percent_format()) +
+    scale_fill_viridis_d(alpha = .8) +
+    labs(title = "PERCENT OF BRIDGES, CULVERTS, AND\nVIADUCTS IN GOOD/VERY GOOD CONDITION ", fill = "fiscal year")
+```
+
+
+### a detour to infrastructure planning
+Okay, so if we are arguably pretty efficient over at Public Works and we spend most of our money there, why are we coming up short at budget (forcing [major service cuts](https://winnipeg.ca/interhom/Budget/2020Budget/default.stm) over the next four years)? I think a look at another measure in MBNC gives us a clue:^[
+As a note on the MBNC data, the *Performance Report* says that one influencing factor of planning cost is that "Many municipalities are undertaking growth management studies, which impact workload and cost" (p. 154).]
+
+
+```{r planning}
+planning <- mbnc_long %>% 
+    filter(measure_number == "PLNG250T",
+           fiscal_year %in% c("2016", "2017", "2018"),
+           municipality %in% c("Calgary", "Hamilton", "Halifax",
+                               "London", "Regina", "Sudbury (Greater)",
+                               "Thunder Bay", "Toronto",
+                               "Windsor", "Winnipeg")) %>%
+    mutate(result = as.numeric(result))
+
+planning %<>% mutate(med_overall = median(result, na.rm = T))
+
+
+planning %<>% mutate(med_cohort = (
+                         filter(planning, municipality %in% cohort) %$%
+                         median(result, na.rm = T)))
+
+planning %>%
+    ggplot(aes(fill=fiscal_year, y=result, x=municipality)) + 
+    geom_hline(aes(yintercept = med_cohort),  size = 1) +
+    geom_text(aes(x = "Windsor", y = med_cohort + 5, 
+                  label = paste("cohort median:", scales::dollar(planning$med_cohort[1]))), 
+              angle = 0, position = position_dodge(width = 0.7), size = 4.2, 
+              check_overlap = T, inherit.aes = F) +
+    geom_hline(aes(yintercept = med_overall),
+               size = 1, color = "red3") +
+    geom_text(aes(x = "Windsor", y = med_overall + 8), 
+                  label = paste("overall median:", scales::dollar(planning$med_overall[1])), 
+              angle = 0, position = position_dodge(width = 0.7), 
+              color = "red3", size = 4.2, 
+              check_overlap = T, inherit.aes = F) +
+    geom_bar(position="dodge", stat="identity") +
+    geom_text(aes(label = scales::dollar(result, accuracy = .1, suffix = " "), 
+                  group = fiscal_year), angle = 90, size = 4.55, 
+              position = position_dodge2(width = .9),  hjust = "right") +
+    theme_fivethirtyeight() +
+    scale_y_continuous(labels = scales::dollar_format()) +
+    scale_fill_viridis_d(alpha = .8) +
+    labs(title = "PLANNING COST PER CAPITA", fill = "fiscal year")
+```
+ 
+We spend less than anyone in the data on planning---we spend `r scales::percent(8.7 / planning$med_cohort[1])` of cohort median and `r scales::percent(8.7 / planning$med_overall[1])` of overall median! But, planning is maybe the most important thing to do in a resource constrained environment. 
+
+To paraphrase some guy paraphrasing a quote from an anonymous guy^[[Not Einstein!](https://quoteinvestigator.com/2014/05/22/solve/)] that another guy misattributed to a famous guy:^[This time Einstein.]
+
+> Given one hour to solve a life-or-death problem, I would spend 30 minutes analyzing the problem, 20 minutes planning the solution, and ten minutes executing the solution.
+
+...this may be part of our financial issues.^[More fodder for the [DearWinnipeg](dearwinnipeg.com) guy. You're welcome!] The old example of driving for 30 minutes to save 30 cents on gas comes to mind.
+<br><br><br>
+
+
+## transit
+Moving on to the second major area of City spending reveals other surprises. In this data set we narrow down to "bus only" municipalities for an apples-to-apples comparison. To get a broader picture, let's include Hamilton in the cohort since London didn't report (and Calgary has light rail, so isn't comparable).
+
+First, some use statistics. Does anyone ride the bus in this frigid tundra?:
+```{r transit_trips}
+bus_only <- c("Durham", "Hamilton", "Regina",
+              "Sudbury", "Thunder Bay", "Waterloo",
+              "Windsor", "Winnipeg", "York")
+transit <- mbnc_long %>% 
+    filter(measure_number == "TRNT106",
+           fiscal_year %in% c("2016", "2017", "2018"),
+           municipality %in% bus_only) %>%
+     mutate(result = as.numeric(result))
+
+transit %<>% mutate(med_overall = median(result, na.rm = T)) %>%
+    filter(municipality %in% c(cohort, "Hamilton"))
+
+transit %<>% mutate(med_cohort = median(result, na.rm = T))
+
+
+transit %>%
+    ggplot(aes(fill=fiscal_year, y=result, x=municipality)) + 
+    geom_hline(aes(yintercept = med_cohort),
+               size = 1) +
+    geom_text(aes(x = "Regina", y = med_cohort + 5, label = "cohort median"), 
+              angle = 0, position = position_dodge(width = 0.7), size = 4.2, 
+              check_overlap = T, inherit.aes = F) +
+    geom_hline(aes(yintercept = med_overall),
+               size = 1, color = "red3") +
+    geom_text(aes(x = "Regina", y = med_overall - 3, label = "bus only median"), 
+              angle = 0, position = position_dodge(width = 0.7), 
+              color = "red3", size = 4.2, 
+              check_overlap = T, inherit.aes = F) +
+    geom_bar(position="dodge", stat="identity") +
+    geom_text(aes(label = scales::comma(result, accuracy = 1, suffix = " "), 
+                  group = fiscal_year),
+               angle = 90, size = 4.55,  position = position_dodge2(width = .9),  hjust = "right") +
+    theme_fivethirtyeight() +
+    scale_y_continuous(labels = scales::comma_format()) +
+    scale_fill_viridis_d(alpha = .8) +
+    labs(title = "NUMBER OF REGULAR SERVICE PASSERNGER TRIPS\nPER CAPITA IN SERVICE AREA", fill = "fiscal year")
+```
+
+Comparatively, ... yes, as it turns out. 
+
+And, our buses actually have a pretty high per capita time on our roads comparatively:^[A note on hours of service: "This measure is as the annual vehicle hours operated by active revenue vehicles (buses, trains, etc.) in regular passenger revenue service including scheduled and non-scheduled service. It does not include auxiliary passenger services (e.g. school contracts, charters, crossboundary services to adjacent municipalities), deadheading, training, road tests, or maintenance. The population used in this measure is based on the service area population as reported to CUTA (Canadian Urban Transit Association)." (p. 213)]
+
+```{r transit_hours}
+transit <- mbnc_long %>% 
+    filter(measure_number == "TRNT210",
+           fiscal_year %in% c("2016", "2017", "2018"),
+           municipality %in% bus_only) %>%
+     mutate(result = as.numeric(result))
+
+transit %<>% mutate(med_overall = median(result, na.rm = T)) %>%
+    filter(municipality %in% c(cohort, "Hamilton"))
+
+transit %<>% mutate(med_cohort = median(result, na.rm = T))
+
+
+transit %>%
+    ggplot(aes(fill=fiscal_year, y=result, x=municipality)) + 
+    geom_hline(aes(yintercept = med_cohort),
+               size = 1) +
+    geom_text(aes(x = "Regina", y = med_cohort + .1, label = "cohort median"), 
+              angle = 0, position = position_dodge(width = 0.7), size = 4.2, 
+              check_overlap = T, inherit.aes = F) +
+    geom_hline(aes(yintercept = med_overall),
+               size = 1, color = "red3") +
+    geom_text(aes(x = "Regina", y = med_overall + .1, label = "bus only median"), 
+              angle = 0, position = position_dodge(width = 0.7), 
+              color = "red3", size = 4.2, 
+              check_overlap = T, inherit.aes = F) +
+    geom_bar(position="dodge", stat="identity") +
+    geom_text(aes(label = scales::comma(result, accuracy = .01, suffix = " "), 
+                  group = fiscal_year),
+               angle = 90, size = 4.55,  position = position_dodge2(width = .9),  hjust = "right") +
+    theme_fivethirtyeight() +
+    scale_y_continuous(labels = scales::comma_format()) +
+    scale_fill_viridis_d(alpha = .8) +
+    labs(title = "REVENUE VEHICLE HOUR PER CAPITA", fill = "fiscal year")
+```
+
+So then we must pay a lot for it!
+
+...
+
+```{r transit_cost}
+transit <- mbnc_long %>% 
+    filter(measure_number == "TRNT220T",
+           fiscal_year %in% c("2016", "2017", "2018"),
+           municipality %in% bus_only) %>%
+     mutate(result = as.numeric(result))
+
+transit %<>% mutate(med_overall = median(result, na.rm = T)) %>%
+    filter(municipality %in% c(cohort, "Hamilton"))
+
+transit %<>% mutate(med_cohort = median(result, na.rm = T))
+
+
+transit %>%
+    ggplot(aes(fill=fiscal_year, y=result, x=municipality)) + 
+    geom_hline(aes(yintercept = med_cohort),
+               size = 1) +
+    geom_text(aes(x = "Hamilton", y = med_cohort - 5, label = "cohort median"), 
+              angle = 0, position = position_dodge(width = 0.7), size = 4.2, 
+              check_overlap = T, inherit.aes = F) +
+    geom_hline(aes(yintercept = med_overall),
+               size = 1, color = "red3") +
+    geom_text(aes(x = "Hamilton", y = med_overall + 10, label = "bus only median"), 
+              angle = 0, position = position_dodge(width = 0.7), 
+              color = "red3", size = 4.2, 
+              check_overlap = T, inherit.aes = F) +
+    geom_bar(position="dodge", stat="identity") +
+    geom_text(aes(label = scales::dollar(result, accuracy = 1, suffix = " "), 
+                  group = fiscal_year),
+               angle = 90, size = 4.55,  position = position_dodge2(width = .9),  hjust = "right") +
+    theme_fivethirtyeight() +
+    scale_y_continuous(labels = scales::dollar_format()) +
+    scale_fill_viridis_d(alpha = .8) +
+    labs(title = "TOTAL COST (EXPENSES) PER\nREVENUE VEHICLE HOUR", fill = "fiscal year")
+```
+
+Not so much, it turns out. 
+
+Our transit system seems to be a leader in efficiency (and, on some measures, of effectiveness) among the MBNC cities. *Surprise!* And, it looks like [there are plans](https://winnipegtransit.com/en/major-projects/transit-master-plan/) to make buses more frequent, quicker, with more direct routes... Nice work Winnipeg!
+
+
+
+### influencing factors for transit
+Basically none of what we've laid out so far tells us the whole picture, but in the case of transit, we do know a couple of other relevant facts.
+
+First, our transit efficiency might have a bit of a back-wind in this comparison (sorry Winnipeg).
+
+We have a higher than normal *density* (for the Canadian cities represented here), so our transit resources don't need to be spread as thin:^[Tempering the dearWinnipeg point, that our sprawl is out of control... That is not to say that it isn't, just that others have it even worse!]
+```{r density}
+overview %>%
+    mutate(municipality = ifelse(municipality == "Sudbury (Greater)", "Sudbury", municipality)) %>%
+    filter(fiscal_year == "2018") %>%
+    mutate(in_cohort = ifelse(municipality %in% cohort, "comparable", "other")) %>%
+    ggplot(aes(fill = in_cohort, y=population_density_mun008, 
+               x=reorder(municipality, -population_density_mun008))) + 
+    geom_bar(stat="identity") +
+    geom_text(aes(y = 0, label = scales::comma(population_density_mun008, accuracy = 1, prefix = " "), 
+                  group = fiscal_year),
+               angle = 90, size = 4.55,  hjust = "left") +
+    theme_fivethirtyeight() +
+    scale_y_continuous(labels = scales::comma_format()) +
+    scale_fill_viridis_d(alpha = .8) +
+    theme(axis.text.x = element_text(angle = 45, hjust = 1)) +
+    labs(title = "POPULATION DENSITY\n(pop. per km^2)", fill = "cohort")
+```
+
+However, given that our geography contains rivers, rail-yards, and has an imperfect grid (to say the least), I think we are probably doing okay here.
+<br><br><br>
+
+
+## police
+Time for number 3 on the list of places we spend our money: Winnipeg Police Services.
+
+How much do police services cost us per person?:
+
+```{r police_cost}
+police_cost <- mbnc_long %>% 
+    filter(measure_number == "PLCE227T",
+           fiscal_year %in% c("2016", "2017", "2018"),
+           municipality %in% single_tier) %>%
+     mutate(result = as.numeric(result))
+
+police_cost %<>% mutate(med_overall = median(result, na.rm = T)) %>%
+    filter(municipality %in% cohort)
+
+police_cost %<>% mutate(med_cohort = median(result, na.rm = T))
+
+
+police_cost %>%
+    ggplot(aes(fill=fiscal_year, y=result, x=municipality)) + 
+    geom_hline(aes(yintercept = med_cohort),
+               size = 1) +
+    geom_text(aes(x = "London", y = med_cohort -10, label = "cohort median"), 
+              angle = 0, position = position_dodge(width = 0.7), size = 4.2, 
+              check_overlap = T, inherit.aes = F) +
+    geom_hline(aes(yintercept = med_overall),
+               size = 1, color = "red3") +
+    geom_text(aes(x = "London", y = med_overall + 25, label = "overall median"), 
+              angle = 0, position = position_dodge(width = 0.7), 
+              color = "red3", size = 4.2, 
+              check_overlap = T, inherit.aes = F) +
+    geom_bar(position="dodge", stat="identity") +
+    geom_text(aes(label = scales::dollar(result, accuracy = 1, suffix = " "), 
+                  group = fiscal_year),
+               angle = 90, size = 4.55,  position = position_dodge2(width = .9),  hjust = "right") +
+    theme_fivethirtyeight() +
+    scale_y_continuous(labels = scales::dollar_format()) +
+    scale_fill_viridis_d(alpha = .8) +
+    labs(title = "TOTAL COST FOR POLICE SERVICES PER CAPITA", fill = "fiscal year")
+```
+
+Both within cohort and outside of it, it looks like we are spending a pretty average amount per capita here. 
+
+We also have a pretty un-interesting number of police staff:
+
+```{r police}
+
+police <- mbnc_long %>% 
+    filter(measure_number == "PLCE215",
+           fiscal_year %in% c("2016", "2017", "2018"),
+           municipality %in% single_tier) %>%
+     mutate(result = as.numeric(result))
+
+police %<>% mutate(med_overall = median(result, na.rm = T)) %>%
+    filter(municipality %in% cohort)
+
+police %<>% mutate(med_cohort = median(result, na.rm = T))
+
+
+police %>%
+    ggplot(aes(fill=fiscal_year, y=result, x=municipality)) + 
+    geom_hline(aes(yintercept = med_cohort),
+               size = 1) +
+    geom_text(aes(x = "London", y = med_cohort - 10, label = "cohort median"), 
+              angle = 0, position = position_dodge(width = 0.7), size = 4.2, 
+              check_overlap = T, inherit.aes = F) +
+    geom_hline(aes(yintercept = med_overall),
+               size = 1, color = "red3") +
+    geom_text(aes(x = "London", y = med_overall + 15, label = "overall median"), 
+              angle = 0, position = position_dodge(width = 0.7), 
+              color = "red3", size = 4.2, 
+              check_overlap = T, inherit.aes = F) +
+    geom_bar(position="dodge", stat="identity") +
+    geom_text(aes(label = scales::comma(result, accuracy = 1, suffix = " "), 
+                  group = fiscal_year),
+               angle = 90, size = 4.55,  position = position_dodge2(width = .9),  hjust = "right") +
+    theme_fivethirtyeight() +
+    scale_y_continuous(labels = scales::comma_format(suffix = " ")) +
+    scale_fill_viridis_d(alpha = .8) +
+    labs(title = "POLICE STAFF (OFFICERS AND CIVILIANS) PER 100K", fill = "fiscal year")
+```
+
+Our efficiency, is pretty standard too. We are right on or near the median for costs and resources (more than median resources, less than median cost).  Not much to go on from a cost-savings/optimization point of view, so I'll exclude it here.^[But, feel free to check at (pp. 164-175).]
+
+Unfortunately, our crime levels are above the median:^[And violent crime is even a bit more pronounced!]
+
+```{r crime}
+crime <- mbnc_long %>% 
+    filter(measure_number == "PLCE120",
+           fiscal_year %in% c("2016", "2017", "2018"),
+           municipality %in% single_tier) %>%
+     mutate(result = as.numeric(result))
+
+crime %<>% mutate(med_overall = median(result, na.rm = T)) %>%
+    filter(municipality %in% cohort)
+
+crime %<>% mutate(med_cohort = median(result, na.rm = T))
+
+
+crime %>%
+    ggplot(aes(fill=fiscal_year, y=result, x=municipality)) + 
+    geom_hline(aes(yintercept = med_cohort),
+               size = 1) +
+    geom_text(aes(x = "London", y = med_cohort + 2000, label = "cohort median"), 
+              angle = 0, position = position_dodge(width = 0.7), size = 4.2, 
+              check_overlap = T, inherit.aes = F) +
+    geom_hline(aes(yintercept = med_overall),
+               size = 1, color = "red3") +
+    geom_text(aes(x = "London", y = med_overall + 2000, label = "overall median"), 
+              angle = 0, position = position_dodge(width = 0.7), 
+              color = "red3", size = 4.2, 
+              check_overlap = T, inherit.aes = F) +
+    geom_bar(position="dodge", stat="identity") +
+    geom_text(aes(label = scales::comma(result, accuracy = .1, scale = .001, suffix = " "), 
+                  group = fiscal_year),
+               angle = 90, size = 4.55,  position = position_dodge2(width = .9),  hjust = "right") +
+    theme_fivethirtyeight() +
+    scale_y_continuous(labels = scales::comma_format( scale = .001)) +
+    scale_fill_viridis_d(alpha = .8) +
+    labs(title = "REPORTED CRIMINAL CODE INCIDENTS PER 100K\n(non-traffic)", fill = "fiscal year")
+```
+
+This suggests that either our crime-reducing interventions are less effective than other cites, or there is some other factor at play. 
+
+It is unclear whether this is better tackled by changes in policing or other social interventions. However, given that our police will have more incidents to respond to than other cities, it is plausible that our police force is *more efficient* than the total expenses/staffing would suggest.
+<br><br><br>
+
+
+
+## honourable mentions---water and waste
+I won't go into all of the details here except to comment on the general infrastructure theme---we're in trouble:
+
+```{r waste}
+
+waste_water <- mbnc_long %>% 
+    filter(measure_number == "WWTR816",
+           fiscal_year %in% c("2016", "2017", "2018")) %>%
+     mutate(result = as.numeric(result))
+
+waste_water %<>% mutate(med_overall = median(result, na.rm = T)) %>%
+    filter(municipality %in% cohort)
+
+waste_water %<>% mutate(med_cohort = median(result, na.rm = T))
+
+
+waste_water %>%
+    ggplot(aes(fill=fiscal_year, y=result, x=municipality)) + 
+    geom_hline(aes(yintercept = med_cohort),
+               size = 1) +
+    geom_text(aes(x = "London", y = med_cohort + 3, label = "cohort median"), 
+              angle = 0, position = position_dodge(width = 0.7), size = 4.2, 
+              check_overlap = T, inherit.aes = F) +
+    geom_hline(aes(yintercept = med_overall),
+               size = 1, color = "red3") +
+    geom_text(aes(x = "London", y = med_overall - 2, label = "overall median"), 
+              angle = 0, position = position_dodge(width = 0.7), 
+              color = "red3", size = 4.2, 
+              check_overlap = T, inherit.aes = F) +
+    geom_bar(position="dodge", stat="identity") +
+    geom_text(aes(label = scales::comma(result, accuracy = 1, suffix = " "), 
+                  group = fiscal_year),
+               angle = 90, size = 4.55,  position = position_dodge2(width = .9),  hjust = "right") +
+    theme_fivethirtyeight() +
+    scale_y_continuous(labels = scales::comma_format()) +
+    scale_fill_viridis_d(alpha = .8) +
+    labs(title = "AVERAGE AGE OF WASTEWATER PIPE", fill = "fiscal year")
+```
+Yep, more infrastructure deficit... Also, according to the MBNC we should expect that density *increases* the costs to repair & replace this infrastructure (p. 233). The great news just keeps coming!
+
+Of course, a big influencing factor of this measure is when cities expanded. If a city expanded more than another more recently, we would expect that to drive down the comparative age of pipes. In other words, we are on the hook for the repair but comparison to other cities is cloudy at best.
+<br><br><br>
+
+
+
+## Summing up
+Okay! I think we learned some interesting things about Winnipeg, what we care about as a city, and got to practice some "green field" data science prioritization. 
+
+We'll finish up in the next post by developing some tools to see if where we allocate money as a city lines up with what *you* care about.
+
+
+
+
+<small>
+
+*All of the views expressed on this blog are my own opinions, all data is openly available, and all analyses coded using reproducible research methods posted publicly. *
+
+- *The open data used in this analysis was obtained via the [winnipegr](https://github.com/jdallmann/winnipegr) package.*
+- *The code for this post is available [here](https://github.com/jdallmann/minimal_bd_site/tree/master/content/post).*
+
+</small>

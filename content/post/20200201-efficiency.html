@@ -1,0 +1,196 @@
+---
+title: "II. What is Good for a City?"
+description: "Efficiency & effectiveness measures"
+authors: ["jdallmann"]
+date: 2020-02-01
+weight: -200
+categories:  ["winnipeg", "budget", "city comparison", "efficiency", "effectiveness"]
+tags: ["good for a city", "semi-serious", "efficiency", "effectiveness"]
+editor_options: 
+    chunk_output_type: console
+---
+
+<script src="/rmarkdown-libs/htmlwidgets/htmlwidgets.js"></script>
+<script src="/rmarkdown-libs/jquery/jquery.min.js"></script>
+<link href="/rmarkdown-libs/datatables-css/datatables-crosstalk.css" rel="stylesheet" />
+<script src="/rmarkdown-libs/datatables-binding/datatables.js"></script>
+<link href="/rmarkdown-libs/dt-core/css/jquery.dataTables.min.css" rel="stylesheet" />
+<link href="/rmarkdown-libs/dt-core/css/jquery.dataTables.extra.css" rel="stylesheet" />
+<script src="/rmarkdown-libs/dt-core/js/jquery.dataTables.min.js"></script>
+<link href="/rmarkdown-libs/crosstalk/css/crosstalk.css" rel="stylesheet" />
+<script src="/rmarkdown-libs/crosstalk/js/crosstalk.min.js"></script>
+
+
+<div id="from-financial-impact-to-efficiency" class="section level1">
+<h1>from financial impact to efficiency</h1>
+<p>Hi folks,</p>
+<p>In our <a href="https://jdallmann.org/post/20200110-prioritization/">last post</a>, we looked at the departments where Winnipeg spends the most money. This was the first step to figuring out (i) what we care about as a city, and (ii) the most likely places we could make a difference to the things that we care about as a city. As a reminder, the top three departments where the City spends money are:</p>
+<ol style="list-style-type: decimal">
+<li>Public Works (the department responsible for infrastructure like roads, bridges, etc.),</li>
+<li>Transit, and</li>
+<li>The Winnipeg Police Service.</li>
+</ol>
+<p>We ended up breaking it down into the next level of more specific spends. But, being a big number on the financials doesn’t necessarily tell us much about whether the processes generating that number can be optimized. To set the baseline, I’d like to look at how Winnipeg stacks up on delivery of these services by comparing it to other cities in these areas. Fortunately, the <a href="http://mbncanada.ca/">Municipal Benchmarking Network Canada</a> provides a good, and open, data source on just these kinds of measures. MBNC was originally created to track Ontario cities performance, but has since been expanded to other provinces and, luckily, Winnipeg is one of the cities that signed on.<a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a></p>
+<p>Here are some of the highest level descriptive statistics collected for the participating cities in 2018:
+<div id="htmlwidget-1" style="width:100%;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-1">{"x":{"filter":"none","data":[["1","2","3","4","5","6","7","8","9","10","11","12","13","14","15","16"],["Calgary","Durham","Halifax","Halton","Hamilton","London","Montreal","Niagara","Regina","Sudbury (Greater)","Thunder Bay","Toronto","Waterloo","Windsor","Winnipeg","York"],[1267344,691580,430512,583363,572575,393167,1757366,472448,234177,161531,107909,2956024,601220,224134,753700,1191358],[848.2,2537,5927.54,969.25,1129,423.43,365.7,1896,182.43,3625,328.24,634.06,1382.17,146.91,475.5,1776],[1494,273,73,602,507,929,4805,249,1284,45,329,4662,435,1526,1585,671],[15918.3,6385.8,4366.9,3195.8,6724,5121,24114,3740.6,2836.4,2546,2365,56973.9,4239.42,3095,9118,5839],["$4,992M","$1,311M","$977M","$1,020M","$2,294M","$1,225M","$8,157M","$916M","$594M","$611M","$540M","$13,905M","$1,166M","$851M","$1,801M","$2,194M"],["$2,668M","$532M","$375M","$542M","$938M","$520M","$4,681M","$308M","$258M","$297M","$265M","$6,304M","$491M","$315M","$931M","$1,329M"],[1.25603624588115,0.923363891379161,1.01435035492623,0.547823567829979,1.17434397240536,1.30249995548965,1.37216720933488,0.791748509888919,1.21122057247296,1.57616804204766,2.19166149255391,1.92738286292669,0.705136223013206,1.38087037218807,1.20976515855115,0.490112963525657],[18.7671539731195,2.51706740244383,0.73671371260253,3.29718854784627,5.95571302037201,12.0940887513875,65.9392945036916,1.97289029535865,15.5478813791591,0.702344827586207,7.20509383378016,89.8556918903574,3.0672203853361,21.0673201279695,19.1756046267087,3.28772522522523]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>municipality<\/th>\n      <th>population<\/th>\n      <th>area km^2<\/th>\n      <th>population density<\/th>\n      <th>budgeted full-time employees<\/th>\n      <th>operating and capital expenses<\/th>\n      <th>municipal purchases<\/th>\n      <th>employees per 100 pop<\/th>\n      <th>employee density<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":5,"lengthMenu":[5,10,15],"scrollX":true,"autoWidth":true,"width":300,"columnDefs":[{"className":"dt-right","targets":[2,3,4,5,8,9]},{"orderable":false,"targets":0}],"order":[],"orderClasses":false,"rowCallback":"function(row, data) {\nDTWidget.formatRound(this, row, data, 8, 2, 3, \",\", \".\");\nDTWidget.formatRound(this, row, data, 9, 2, 3, \",\", \".\");\nDTWidget.formatRound(this, row, data, 3, 0, 3, \",\", \".\");\nDTWidget.formatRound(this, row, data, 5, 0, 3, \",\", \".\");\nDTWidget.formatRound(this, row, data, 2, 0, 3, \",\", \".\");\n}"}},"evals":["options.rowCallback"],"jsHooks":[]}</script></p>
+<p>In order to have a baseline, let’s use these overview stats to find “similar” cities. First a quick “k-means” clustering.<a href="#fn2" class="footnote-ref" id="fnref2"><sup>2</sup></a> We would like somewhere between 3 and 6 comparables, so we should use between 3 and 6 groups. After clustering each city’s yearly data, we get the following groups (which were pretty stable for Winnipeg’s cohort):</p>
+<p><div id="htmlwidget-2" style="width:100%;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-2">{"x":{"filter":"none","data":[["1","2","3","4","5","6","7","8","9","10","11","12","13","14","15","16"],["Thunder Bay","Montreal","Toronto","Hamilton","London","Regina","Windsor","Winnipeg","Durham","Halton","Niagara","Waterloo","York","Halifax","Sudbury (Greater)","Calgary"],[6,5,5,4,4,4,4,4,3,3,3,3,3,2,2,1],[14,6,11,14,14,3,14,7,14,13,14,14,13,2,13,10]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>municipality<\/th>\n      <th>k_cluster<\/th>\n      <th>n<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":5,"lengthMenu":[5,10,20],"columnDefs":[{"className":"dt-right","targets":[2,3]},{"orderable":false,"targets":0}],"order":[],"autoWidth":false,"orderClasses":false}},"evals":[],"jsHooks":[]}</script>
+<br></p>
+<p>With 6 clusters (displayed), Winnipeg ended up grouped together with Hamilton, London, Regina, and Windsor in cluster 4. If we break it into 5 clusters, Calgary gets included in Winnipeg’s group.</p>
+<p>This seems pretty plausible, but to validate, let’s try another method and see what we get.</p>
+<p>Using a bottom-up hierarchical clustering analysis we get the following:<a href="#fn3" class="footnote-ref" id="fnref3"><sup>3</sup></a>
+<img src="/post/20200201-efficiency_files/figure-html/HCA_overview-1.png" width="672" /></p>
+<p>The results are pretty similar (which is good). This method groups Winnipeg with London, Regina and Windsor as comparables. Since this is a sub-grouping of the first method, we will keep these as comparables but keep an eye on Calgary and Hamilton as other possible comparables to baseline-set against.
+<br><br><br></p>
+<div id="general-gov-measures" class="section level2">
+<h2>general gov measures</h2>
+<p>Before hitting on the “big three” expenditure areas identified in the <a href="https://jdallmann.org/post/20200110-prioritization/">previous post</a>, the MBNC data also takes a look at general municipal metrics that would be interesting for baseline-setting.</p>
+<p>The first is the operating cost for governance &amp; corporate management as a percent of total municipal operating cost.<a href="#fn4" class="footnote-ref" id="fnref4"><sup>4</sup></a> According to the MBNC, “This measure includes operating costs relating to Governance, i.e. Mayor, Council, Council support and election management; and costs related to Corporate Management, i.e. CAO/City Manager, finance, communication, legal, real estate, etc.” (p. 89).<a href="#fn5" class="footnote-ref" id="fnref5"><sup>5</sup></a></p>
+<p>Across all relevant cities, Winnipeg is just below the median here:
+<img src="/post/20200201-efficiency_files/figure-html/gov_cost-1.png" width="672" /></p>
+<p>The result is similar if we look only at the closest comparables (moving right to the median if we include Hamilton, and back down if we include Calgary):
+<img src="/post/20200201-efficiency_files/figure-html/gov_cost_comp-1.png" width="672" /></p>
+<p>This seems good, but maybe expected since labor costs are pretty low in Winnipeg.</p>
+<p>Another interesting general fact is that we have one of the highest city employee turnover rates out there:
+<img src="/post/20200201-efficiency_files/figure-html/churn-1.png" width="672" /></p>
+<p>Again, Winnipeg would do better if we include Hamilton and worse if we include Calgary for a wash on the broader comparison. Notably, if you look at all municipalities, it looks like Winnipeg’s cohort members all do pretty bad for churn…the black line is the median within the cohort and the red line is median outside of cohort/overall.</p>
+<p>Churn is a huge cost in business, since new employees tend to be initially inefficient, require time to train from those who are more efficient—thus making them less efficient, and hiring talent is itself costly, requiring job posting assessment, interviews with senior staff, etc. It all adds up pretty quickly.</p>
+<p>The graph also reveals a lot more:</p>
+<p>Winnipeg has the highest in-cohort churn in 2018, it has been trending upward over the past three years. Yet, Winnipeg has one of the lowest retirement rates! This means that the churn Winnipeg is seeing is due to <em>resignations</em>. Presenting just the resignation data makes it even clearer:</p>
+<p><img src="/post/20200201-efficiency_files/figure-html/resignation-1.png" width="672" /></p>
+<p>This is really surprising and a great “green field” data science insight. Churn due to resignation is controllable by human intervention. That it has been climbing/varies year over year, suggests it could be reversed. Plus, there are lots of ways to model churn and predict which factors influence it using familiar data science techniques.<a href="#fn6" class="footnote-ref" id="fnref6"><sup>6</sup></a> Plus, because of the number of employees, it is potentially a huge area of opportunity.<a href="#fn7" class="footnote-ref" id="fnref7"><sup>7</sup></a></p>
+<p>By some quick “back of the napkin” math:</p>
+<ul>
+<li>We have 9,118 employees (from the above data).</li>
+<li>Say new employees make $40k/yr and are only 70% efficient in their first 4 months—that’s a loss of $40k / 12 x 4 x (1 - .7) = $4 k/yr whenever a new employee has to take the place of an seasoned one.</li>
+<li>These employees also have to be trained. Lets ball-park assume that their trainers can only be 90% effective while training them, and that they make $60k/yr on average. By the same math, we lose an additional $2 k/yr.</li>
+<li>Then there is the cost of HR to write and post the job, screen, and interview. A friend in HR ball-parks this at $5,000 per employee.</li>
+</ul>
+<p>Putting it all together, given that we have a resignation rate of 4.59% (ignoring retirements, which we will treat as non-controllable), we are losing 9,118 employees x 0.0495 x (4k new employee time + 2k seasoned employee time + 5k HR cost) = $5.0 M/yr to churn as a city each year.</p>
+<p>Five million, not bad!</p>
+<p>Realistically though, there are lots of cities performing around 1.5% resignation, so a $4M savings should be possible if this was targeted.</p>
+<p><br><br><br></p>
+</div>
+<div id="roads" class="section level2">
+<h2>roads</h2>
+<p>Okay, on to the three areas highlighted by our financial analysis, starting with Public Works and roads.</p>
+<p>Winnipeg’s roads are well-traveled:<a href="#fn8" class="footnote-ref" id="fnref8"><sup>8</sup></a>
+<img src="/post/20200201-efficiency_files/figure-html/road_use-1.png" width="672" /></p>
+<p>And we don’t spend a lot of money repairing them, compared to similar cities or overall:
+<img src="/post/20200201-efficiency_files/figure-html/road_repair-1.png" width="672" /></p>
+<p>What about when we factor in other things like snow removal, something other municipalities (Regina excluded) wouldn’t have to deal with to the same extent?:<a href="#fn9" class="footnote-ref" id="fnref9"><sup>9</sup></a></p>
+<p><img src="/post/20200201-efficiency_files/figure-html/road_maintenance-1.png" width="672" /></p>
+<p>Here we spend a fair bit more.</p>
+<p>That we spend more than Regina, and that it represents more of an increase ($15 vs $9), indicates that we are paying a lot for snow removal. Regina aside, snow removal has other implications too.</p>
+<p>Both of the previous graphs include amortization, or how long we can spread the cost over at the going rate of interest. Since snow entails more wear and tear on roads, Winnipeg probably can’t amortize it’s roads as long, driving up cost. This should further accentuate how little Winnipeg spends on road repair in the first graph.</p>
+<p>This goes some way to explaining the condition of our roads… along with the possibly benefiting from pretty cheap labor and material costs in Winnipeg and/or managing them well. Snow removal optimization could potentially be another interesting data science project to dig into. Tracking objects in space, and optimizing routes are not new GIS or data science problems. In fact, other cities like <a href="https://benwellington.carto.com/builder/6fd59f3f-8082-48ba-8149-b0e85b8ebe2d/embed">New</a> <a href="https://iquantny.tumblr.com/post/180300705249/data-shows-no-increase-in-nyc-plowing-as-storm">York</a> already seem to have this capacity (despite getting less snow). Unfortunately, I could not find any info on plow coordinates on the City’s website or open data.</p>
+<p>Moving on, given that we seem pretty lean on road repair, but heavy on snow clearing, you would expect road condition assessment numbers to be bad right?</p>
+<p>The MBNC data was a bit surprising here:</p>
+<p><img src="/post/20200201-efficiency_files/figure-html/road_condition-1.png" width="672" /></p>
+<p>Umm…not quite what I would have expected. Are we even measuring the same thing? How is “good condition” for a road defined, you ask? Great question:</p>
+<blockquote>
+<p>This measure reflects the percent of paved lane km where no maintenance or rehabilitation action is required except for minor surface maintenance. Municipalities may use different approaches to assess and rate road condition. (p. 186)</p>
+</blockquote>
+<p>Ahh. That helps. Given this definition, if we don’t think we need to repair our roads, and the cost figures in the first graph suggest we let things slide, we get better condition roads by this measure—and, it seems like this is even enough to outweigh the fact that our environment is harder on our roads than those of most cities!</p>
+<p>There are other clues that the data set might be good for trending cities against themselves but not across each other. For example, the MBNC comment on the Toronto data is: “In 2017, Toronto changed from manual data collection methods to a network wide automated pavement data collection system and reassessed its trigger values for good-fair-poor condition ranges. The 2017 and 2018 results cannot be directly compared to previous years’ results” (p. 186).</p>
+<p>Okay, so an overall picture is starting to form. It looks like we are fairly efficient (or at least, can’t tease out inefficiency), in road repair but might not be setting ourselves up well for the future. In terms of getting what we care about right, it looks like we would need to spend <em>even more</em> on infrastructure building than we currently do just to keep up.<a href="#fn10" class="footnote-ref" id="fnref10"><sup>10</sup></a></p>
+<p>Assuming we keep a similar standard for non-road infrastructure, things really start to look dire:</p>
+<p><img src="/post/20200201-efficiency_files/figure-html/infrastructure_condition-1.png" width="672" /></p>
+<div id="a-detour-to-infrastructure-planning" class="section level3">
+<h3>a detour to infrastructure planning</h3>
+<p>Okay, so if we are arguably pretty efficient over at Public Works and we spend most of our money there, why are we coming up short at budget (forcing <a href="https://winnipeg.ca/interhom/Budget/2020Budget/default.stm">major service cuts</a> over the next four years)? I think a look at another measure in MBNC gives us a clue:<a href="#fn11" class="footnote-ref" id="fnref11"><sup>11</sup></a></p>
+<p><img src="/post/20200201-efficiency_files/figure-html/planning-1.png" width="672" /></p>
+<p>We spend less than anyone in the data on planning—we spend 36% of cohort median and 34% of overall median! But, planning is maybe the most important thing to do in a resource constrained environment.</p>
+<p>To paraphrase some guy paraphrasing a quote from an anonymous guy<a href="#fn12" class="footnote-ref" id="fnref12"><sup>12</sup></a> that another guy misattributed to a famous guy:<a href="#fn13" class="footnote-ref" id="fnref13"><sup>13</sup></a></p>
+<blockquote>
+<p>Given one hour to solve a life-or-death problem, I would spend 30 minutes analyzing the problem, 20 minutes planning the solution, and ten minutes executing the solution.</p>
+</blockquote>
+<p>…this may be part of our financial issues.<a href="#fn14" class="footnote-ref" id="fnref14"><sup>14</sup></a> The old example of driving for 30 minutes to save 30 cents on gas comes to mind.
+<br><br><br></p>
+</div>
+</div>
+<div id="transit" class="section level2">
+<h2>transit</h2>
+<p>Moving on to the second major area of City spending reveals other surprises. In this data set we narrow down to “bus only” municipalities for an apples-to-apples comparison. To get a broader picture, let’s include Hamilton in the cohort since London didn’t report (and Calgary has light rail, so isn’t comparable).</p>
+<p>First, some use statistics. Does anyone ride the bus in this frigid tundra?:
+<img src="/post/20200201-efficiency_files/figure-html/transit_trips-1.png" width="672" /></p>
+<p>Comparatively, … yes, as it turns out.</p>
+<p>And, our buses actually have a pretty high per capita time on our roads comparatively:<a href="#fn15" class="footnote-ref" id="fnref15"><sup>15</sup></a></p>
+<p><img src="/post/20200201-efficiency_files/figure-html/transit_hours-1.png" width="672" /></p>
+<p>So then we must pay a lot for it!</p>
+<p>…</p>
+<p><img src="/post/20200201-efficiency_files/figure-html/transit_cost-1.png" width="672" /></p>
+<p>Not so much, it turns out.</p>
+<p>Our transit system seems to be a leader in efficiency (and, on some measures, of effectiveness) among the MBNC cities. <em>Surprise!</em> And, it looks like <a href="https://winnipegtransit.com/en/major-projects/transit-master-plan/">there are plans</a> to make buses more frequent, quicker, with more direct routes… Nice work Winnipeg!</p>
+<div id="influencing-factors-for-transit" class="section level3">
+<h3>influencing factors for transit</h3>
+<p>Basically none of what we’ve laid out so far tells us the whole picture, but in the case of transit, we do know a couple of other relevant facts.</p>
+<p>First, our transit efficiency might have a bit of a back-wind in this comparison (sorry Winnipeg).</p>
+<p>We have a higher than normal <em>density</em> (for the Canadian cities represented here), so our transit resources don’t need to be spread as thin:<a href="#fn16" class="footnote-ref" id="fnref16"><sup>16</sup></a>
+<img src="/post/20200201-efficiency_files/figure-html/density-1.png" width="672" /></p>
+<p>However, given that our geography contains rivers, rail-yards, and has an imperfect grid (to say the least), I think we are probably doing okay here.
+<br><br><br></p>
+</div>
+</div>
+<div id="police" class="section level2">
+<h2>police</h2>
+<p>Time for number 3 on the list of places we spend our money: Winnipeg Police Services.</p>
+<p>How much do police services cost us per person?:</p>
+<p><img src="/post/20200201-efficiency_files/figure-html/police_cost-1.png" width="672" /></p>
+<p>Both within cohort and outside of it, it looks like we are spending a pretty average amount per capita here.</p>
+<p>We also have a pretty un-interesting number of police staff:</p>
+<p><img src="/post/20200201-efficiency_files/figure-html/police-1.png" width="672" /></p>
+<p>Our efficiency, is pretty standard too. We are right on or near the median for costs and resources (more than median resources, less than median cost). Not much to go on from a cost-savings/optimization point of view, so I’ll exclude it here.<a href="#fn17" class="footnote-ref" id="fnref17"><sup>17</sup></a></p>
+<p>Unfortunately, our crime levels are above the median:<a href="#fn18" class="footnote-ref" id="fnref18"><sup>18</sup></a></p>
+<p><img src="/post/20200201-efficiency_files/figure-html/crime-1.png" width="672" /></p>
+<p>This suggests that either our crime-reducing interventions are less effective than other cites, or there is some other factor at play.</p>
+<p>It is unclear whether this is better tackled by changes in policing or other social interventions. However, given that our police will have more incidents to respond to than other cities, it is plausible that our police force is <em>more efficient</em> than the total expenses/staffing would suggest.
+<br><br><br></p>
+</div>
+<div id="honourable-mentionswater-and-waste" class="section level2">
+<h2>honourable mentions—water and waste</h2>
+<p>I won’t go into all of the details here except to comment on the general infrastructure theme—we’re in trouble:</p>
+<p><img src="/post/20200201-efficiency_files/figure-html/waste-1.png" width="672" />
+Yep, more infrastructure deficit… Also, according to the MBNC we should expect that density <em>increases</em> the costs to repair &amp; replace this infrastructure (p. 233). The great news just keeps coming!</p>
+<p>Of course, a big influencing factor of this measure is when cities expanded. If a city expanded more than another more recently, we would expect that to drive down the comparative age of pipes. In other words, we are on the hook for the repair but comparison to other cities is cloudy at best.
+<br><br><br></p>
+</div>
+<div id="summing-up" class="section level2">
+<h2>Summing up</h2>
+<p>Okay! I think we learned some interesting things about Winnipeg, what we care about as a city, and got to practice some “green field” data science prioritization.</p>
+<p>We’ll finish up in the next post by developing some tools to see if where we allocate money as a city lines up with what <em>you</em> care about.</p>
+<p><small></p>
+<p><em>All of the views expressed on this blog are my own opinions, all data is openly available, and all analyses coded using reproducible research methods posted publicly. </em></p>
+<ul>
+<li><em>The open data used in this analysis was obtained via the <a href="https://github.com/jdallmann/winnipegr">winnipegr</a> package.</em></li>
+<li><em>The code for this post is available <a href="https://github.com/jdallmann/minimal_bd_site/tree/master/content/post">here</a>.</em></li>
+</ul>
+<p></small></p>
+</div>
+</div>
+<div class="footnotes">
+<hr />
+<ol>
+<li id="fn1"><p>While going through these examples, it is important to remember <a href="https://winnipeg.ca/finance/NotAllCitiesCreatedEqual.stm">not all cities are created equally</a>. MBNC does a good job at flagging how they differ on different measures, and I’ll be adding that info here. But, it’s always a good idea to ask whether there are gotchas when comparing measures compiled by different individuals, especially across differently structured orgs.<a href="#fnref1" class="footnote-back">↩</a></p></li>
+<li id="fn2"><p>I won’t go through all of the detail, but basically k-means is a technique where you (i) transform all measurements to put them on a common unit scale and “plot” them in space, (ii) start with <em>k</em> random evaluation points in the space (often starting on points from the data set) and group each point in the data set to the nearest of these <em>k</em> points, (iii) move the <em>k</em> points to the center of its nearest points, (iv) repeat until you get a more or less stable clustering, where the data points associated with the k points stays the same, or close. For a more in-depth explanation, <a href="https://www.youtube.com/watch?v=4b5d3muPQmA">this guy</a> is usually pretty good. Here is an <a href="https://en.wikipedia.org/wiki/File:K-means_convergence.gif">explanatory GIF</a> if you don’t have 5 minutes.<a href="#fnref2" class="footnote-back">↩</a></p></li>
+<li id="fn3"><p>This analysis takes each point and finds it’s closest point and clusters them, then it takes the average of the attributes for those clusters and tries to find the next closest cluster, etc. It keeps iterating until you have a complete hierarchy. For a clear explanation with some of the choice-points you can make in this type of clustering using R see <a href="https://www.datacamp.com/community/tutorials/hierarchical-clustering-R">this datacamp article</a>.<a href="#fnref3" class="footnote-back">↩</a></p></li>
+<li id="fn4"><p>For “single-tier” municipalities<a href="#fnref4" class="footnote-back">↩</a></p></li>
+<li id="fn5"><p>One thing to keep in mind here is that this depends on how distributed the central services are across municipal departments. These things are pretty central for Winnipeg, so it should be fairly conservative to compare. But, further research would be required to say for sure.<a href="#fnref5" class="footnote-back">↩</a></p></li>
+<li id="fn6"><p>Maybe we’ll take a look at churn analysis in a future post.<a href="#fnref6" class="footnote-back">↩</a></p></li>
+<li id="fn7"><p>For the sake of breadth of opinion, another hypothesis is that HR is really good at attracting top talent in Winnipeg, which naturally has a higher churn rate—you can hope, right? If the Winnipeg Open data portal updated it’s <a href="https://data.winnipeg.ca/Organizational-Support-Services/Human-Resources-Report/44n7-8bfe">HR data</a>, we could potentially dig in further. Another unexplained standout for me here that might be worth looking into is that large cities—where competition should be the highest—have been really good when it comes to keeping their employees.<a href="#fnref7" class="footnote-back">↩</a></p></li>
+<li id="fn8"><p>“A lane km is defined as a kilometer-long segment of roadway that is a single lane in width. For example, a one km stretch of a standard two lane road represents two lane km.” (MNBC <em>Performance Report</em>), p. 183)<a href="#fnref8" class="footnote-back">↩</a></p></li>
+<li id="fn9"><p>In particular, “this measure represents the total cost of all functions related to road maintenance. This includes operating costs and amortization associated with capital costs for paved and unpaved roads, bridges and culverts, traffic operations, roadside maintenance, and winter control for roadways, sidewalks, and parking lots.” (p. 184)<a href="#fnref9" class="footnote-back">↩</a></p></li>
+<li id="fn10"><p>The guy over at <a href="dearwinnipeg.com">dearwinnipeg.com</a> would be proud!<a href="#fnref10" class="footnote-back">↩</a></p></li>
+<li id="fn11"><p>
+As a note on the MBNC data, the <em>Performance Report</em> says that one influencing factor of planning cost is that “Many municipalities are undertaking growth management studies, which impact workload and cost” (p. 154).<a href="#fnref11" class="footnote-back">↩</a></p></li>
+<li id="fn12"><p><a href="https://quoteinvestigator.com/2014/05/22/solve/">Not Einstein!</a><a href="#fnref12" class="footnote-back">↩</a></p></li>
+<li id="fn13"><p>This time Einstein.<a href="#fnref13" class="footnote-back">↩</a></p></li>
+<li id="fn14"><p>More fodder for the <a href="dearwinnipeg.com">DearWinnipeg</a> guy. You’re welcome!<a href="#fnref14" class="footnote-back">↩</a></p></li>
+<li id="fn15"><p>A note on hours of service: “This measure is as the annual vehicle hours operated by active revenue vehicles (buses, trains, etc.) in regular passenger revenue service including scheduled and non-scheduled service. It does not include auxiliary passenger services (e.g. school contracts, charters, crossboundary services to adjacent municipalities), deadheading, training, road tests, or maintenance. The population used in this measure is based on the service area population as reported to CUTA (Canadian Urban Transit Association).” (p. 213)<a href="#fnref15" class="footnote-back">↩</a></p></li>
+<li id="fn16"><p>Tempering the dearWinnipeg point, that our sprawl is out of control… That is not to say that it isn’t, just that others have it even worse!<a href="#fnref16" class="footnote-back">↩</a></p></li>
+<li id="fn17"><p>But, feel free to check at (pp. 164-175).<a href="#fnref17" class="footnote-back">↩</a></p></li>
+<li id="fn18"><p>And violent crime is even a bit more pronounced!<a href="#fnref18" class="footnote-back">↩</a></p></li>
+</ol>
+</div>
