@@ -40,7 +40,9 @@ In our [last post](https://jdallmann.org/post/20200110-prioritization/), we look
 2. Transit, and
 3. The Winnipeg Police Service. 
 
-We ended up breaking it down into the next level of more specific spends. But, being a big number on the financials doesn't necessarily tell us much about whether the processes generating that number can be optimized. To set the baseline, I'd like to look at how Winnipeg stacks up on delivery of these services by comparing it to other cities in these areas. Fortunately, the [Municipal Benchmarking Network Canada](http://mbncanada.ca/) provides a good, and open, data source on just these kinds of measures. MBNC was originally created to track Ontario cities performance, but has since been expanded to other provinces and, luckily, Winnipeg is one of the cities that signed on.^[While going through these examples, it is important to remember [not all cities are created equally](https://winnipeg.ca/finance/NotAllCitiesCreatedEqual.stm). MBNC does a good job at flagging how they differ on different measures, and I'll be adding that info here. But, it's always a good idea to ask whether there are gotchas when comparing measures compiled by different individuals, especially across differently structured orgs.]
+We ended up breaking it down into the next level of more specific spends. But, being a big number on the financials doesn't necessarily tell us much about whether the processes generating that number can be optimized. To set the baseline, I'd like to look at how Winnipeg stacks up on delivery of these services by comparing it to other cities in these areas. 
+
+Fortunately, the [Municipal Benchmarking Network Canada](http://mbncanada.ca/) provides a good, and open, data source on just these kinds of measures. MBNC was originally created to track Ontario cities performance, but has since been expanded to other provinces and, luckily, Winnipeg is one of the cities that signed on.^[While going through these examples, it is important to remember [not all cities are created equally](https://winnipeg.ca/finance/NotAllCitiesCreatedEqual.stm). MBNC does a good job at flagging how they differ on different measures, and I'll be adding that info here. But, it's always a good idea to ask whether there are gotchas when comparing measures compiled by different individuals, especially across differently structured orgs.]
 
 
 Here are some of the highest level descriptive statistics collected for the participating cities in 2018:
@@ -98,7 +100,9 @@ overview %>%
 ```
 
 
-In order to have a baseline, let's use these overview stats to find "similar" cities. First a quick "k-means" clustering.^[I won't go through all of the detail, but basically k-means is a technique where you (i) transform all measurements to put them on a common unit scale and "plot" them in space, (ii) start with *k* random evaluation points in the space (often starting on points from the data set) and group each point in the data set to the nearest of these *k* points, (iii) move the *k* points to the center of its nearest points, (iv) repeat until you get a more or less stable clustering, where the data points associated with the k points stays the same, or close. For a more in-depth explanation, [this guy](https://www.youtube.com/watch?v=4b5d3muPQmA) is usually pretty good. Here is an [explanatory GIF](https://en.wikipedia.org/wiki/File:K-means_convergence.gif) if you don't have 5 minutes.] We would like somewhere between 3 and 6 comparables, so we should use between 3 and 6 groups. After clustering each city's yearly data, we get the following groups (which were pretty stable for Winnipeg's cohort):
+In order to have a baseline, let's use these overview stats to find "similar" cities. First a quick "k-means" clustering.^[I won't go through all of the detail, but basically k-means is a technique where you (i) transform all measurements to put them on a common unit scale and "plot" them in space, (ii) start with *k* random evaluation points in the space (often starting on points from the data set) and group each point in the data set to the nearest of these *k* points, (iii) move the *k* points to the center of its nearest points, (iv) repeat until you get a more or less stable clustering, where the data points associated with the k points stays the same, or close. For a more in-depth explanation, [this guy](https://www.youtube.com/watch?v=4b5d3muPQmA) is usually pretty good. Here is an [explanatory GIF](https://en.wikipedia.org/wiki/File:K-means_convergence.gif) if you don't have 5 minutes.] We would like somewhere between 3 and 6 comparables, so we should use between 3 and 6 groups. 
+
+After clustering each city's yearly data, we get the following groups (which were pretty stable for Winnipeg's cohort):
 
 ```{r kmeans_overview}
 normalized_overview <- overview %>% 
@@ -129,6 +133,7 @@ With 6 clusters (displayed), Winnipeg ended up grouped together with Hamilton, L
 This seems pretty plausible, but to validate, let's try another method and see what we get.
 
 Using a bottom-up hierarchical clustering analysis we get the following:^[This analysis takes each point and finds it's closest point and clusters them, then it takes the average of the attributes for those clusters and tries to find the next closest cluster, etc. It keeps iterating until you have a complete hierarchy. For a clear explanation with some of the choice-points you can make in this type of clustering using R see [this datacamp article](https://www.datacamp.com/community/tutorials/hierarchical-clustering-R).]
+
 ```{r HCA_overview}
 # HAC/bottom up hierarchical clustering
 
@@ -328,7 +333,6 @@ Putting it all together, given that we have a resignation rate of 4.59% (ignorin
 Five million, not bad!
 
 Realistically though, there are lots of cities performing around 1.5% resignation, so a $4M savings should be possible if this was targeted.
-
 <br><br><br>
 
 
@@ -336,6 +340,7 @@ Realistically though, there are lots of cities performing around 1.5% resignatio
 Okay, on to the three areas highlighted by our financial analysis, starting with Public Works and roads. 
 
 Winnipeg's roads are well-traveled:^["A lane km is defined as a kilometer-long segment of roadway that is a single lane in width. For example, a one km stretch of a standard two lane road represents two lane km." (MNBC *Performance Report*), p. 183)]
+
 ```{r road_use}
 roads <- mbnc_long %>% 
     filter(measure_number == "ROAD112",
@@ -374,6 +379,7 @@ roads %>%
 
 
 And we don't spend a lot of money repairing them, compared to similar cities or overall:
+
 ```{r road_repair}
 roads <- mbnc_long %>% 
     filter(measure_number == "ROAD307T",
@@ -607,6 +613,7 @@ To paraphrase some guy paraphrasing a quote from an anonymous guy^[[Not Einstein
 Moving on to the second major area of City spending reveals other surprises. In this data set we narrow down to "bus only" municipalities for an apples-to-apples comparison. To get a broader picture, let's include Hamilton in the cohort since London didn't report (and Calgary has light rail, so isn't comparable).
 
 First, some use statistics. Does anyone ride the bus in this frigid tundra?:
+
 ```{r transit_trips}
 bus_only <- c("Durham", "Hamilton", "Regina",
               "Sudbury", "Thunder Bay", "Waterloo",
@@ -686,9 +693,7 @@ transit %>%
     labs(title = "REVENUE VEHICLE HOUR PER CAPITA", fill = "fiscal year")
 ```
 
-So then we must pay a lot for it!
-
-...
+So then we must pay a lot for it! ...
 
 ```{r transit_cost}
 transit <- mbnc_long %>% 
@@ -738,6 +743,7 @@ Basically none of what we've laid out so far tells us the whole picture, but in 
 First, our transit efficiency might have a bit of a back-wind in this comparison (sorry Winnipeg).
 
 We have a higher than normal *density* (for the Canadian cities represented here), so our transit resources don't need to be spread as thin:^[Tempering the dearWinnipeg point, that our sprawl is out of control... That is not to say that it isn't, just that others have it even worse!]
+
 ```{r density}
 overview %>%
     mutate(municipality = ifelse(municipality == "Sudbury (Greater)", "Sudbury", municipality)) %>%

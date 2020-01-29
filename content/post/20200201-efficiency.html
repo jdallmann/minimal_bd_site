@@ -30,18 +30,20 @@ editor_options:
 <li>Transit, and</li>
 <li>The Winnipeg Police Service.</li>
 </ol>
-<p>We ended up breaking it down into the next level of more specific spends. But, being a big number on the financials doesn’t necessarily tell us much about whether the processes generating that number can be optimized. To set the baseline, I’d like to look at how Winnipeg stacks up on delivery of these services by comparing it to other cities in these areas. Fortunately, the <a href="http://mbncanada.ca/">Municipal Benchmarking Network Canada</a> provides a good, and open, data source on just these kinds of measures. MBNC was originally created to track Ontario cities performance, but has since been expanded to other provinces and, luckily, Winnipeg is one of the cities that signed on.<a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a></p>
+<p>We ended up breaking it down into the next level of more specific spends. But, being a big number on the financials doesn’t necessarily tell us much about whether the processes generating that number can be optimized. To set the baseline, I’d like to look at how Winnipeg stacks up on delivery of these services by comparing it to other cities in these areas.</p>
+<p>Fortunately, the <a href="http://mbncanada.ca/">Municipal Benchmarking Network Canada</a> provides a good, and open, data source on just these kinds of measures. MBNC was originally created to track Ontario cities performance, but has since been expanded to other provinces and, luckily, Winnipeg is one of the cities that signed on.<a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a></p>
 <p>Here are some of the highest level descriptive statistics collected for the participating cities in 2018:
 <div id="htmlwidget-1" style="width:100%;height:auto;" class="datatables html-widget"></div>
 <script type="application/json" data-for="htmlwidget-1">{"x":{"filter":"none","data":[["1","2","3","4","5","6","7","8","9","10","11","12","13","14","15","16"],["Calgary","Durham","Halifax","Halton","Hamilton","London","Montreal","Niagara","Regina","Sudbury (Greater)","Thunder Bay","Toronto","Waterloo","Windsor","Winnipeg","York"],[1267344,691580,430512,583363,572575,393167,1757366,472448,234177,161531,107909,2956024,601220,224134,753700,1191358],[848.2,2537,5927.54,969.25,1129,423.43,365.7,1896,182.43,3625,328.24,634.06,1382.17,146.91,475.5,1776],[1494,273,73,602,507,929,4805,249,1284,45,329,4662,435,1526,1585,671],[15918.3,6385.8,4366.9,3195.8,6724,5121,24114,3740.6,2836.4,2546,2365,56973.9,4239.42,3095,9118,5839],["$4,992M","$1,311M","$977M","$1,020M","$2,294M","$1,225M","$8,157M","$916M","$594M","$611M","$540M","$13,905M","$1,166M","$851M","$1,801M","$2,194M"],["$2,668M","$532M","$375M","$542M","$938M","$520M","$4,681M","$308M","$258M","$297M","$265M","$6,304M","$491M","$315M","$931M","$1,329M"],[1.25603624588115,0.923363891379161,1.01435035492623,0.547823567829979,1.17434397240536,1.30249995548965,1.37216720933488,0.791748509888919,1.21122057247296,1.57616804204766,2.19166149255391,1.92738286292669,0.705136223013206,1.38087037218807,1.20976515855115,0.490112963525657],[18.7671539731195,2.51706740244383,0.73671371260253,3.29718854784627,5.95571302037201,12.0940887513875,65.9392945036916,1.97289029535865,15.5478813791591,0.702344827586207,7.20509383378016,89.8556918903574,3.0672203853361,21.0673201279695,19.1756046267087,3.28772522522523]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>municipality<\/th>\n      <th>population<\/th>\n      <th>area km^2<\/th>\n      <th>population density<\/th>\n      <th>budgeted full-time employees<\/th>\n      <th>operating and capital expenses<\/th>\n      <th>municipal purchases<\/th>\n      <th>employees per 100 pop<\/th>\n      <th>employee density<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":5,"lengthMenu":[5,10,15],"scrollX":true,"autoWidth":true,"width":300,"columnDefs":[{"className":"dt-right","targets":[2,3,4,5,8,9]},{"orderable":false,"targets":0}],"order":[],"orderClasses":false,"rowCallback":"function(row, data) {\nDTWidget.formatRound(this, row, data, 8, 2, 3, \",\", \".\");\nDTWidget.formatRound(this, row, data, 9, 2, 3, \",\", \".\");\nDTWidget.formatRound(this, row, data, 3, 0, 3, \",\", \".\");\nDTWidget.formatRound(this, row, data, 5, 0, 3, \",\", \".\");\nDTWidget.formatRound(this, row, data, 2, 0, 3, \",\", \".\");\n}"}},"evals":["options.rowCallback"],"jsHooks":[]}</script></p>
-<p>In order to have a baseline, let’s use these overview stats to find “similar” cities. First a quick “k-means” clustering.<a href="#fn2" class="footnote-ref" id="fnref2"><sup>2</sup></a> We would like somewhere between 3 and 6 comparables, so we should use between 3 and 6 groups. After clustering each city’s yearly data, we get the following groups (which were pretty stable for Winnipeg’s cohort):</p>
+<p>In order to have a baseline, let’s use these overview stats to find “similar” cities. First a quick “k-means” clustering.<a href="#fn2" class="footnote-ref" id="fnref2"><sup>2</sup></a> We would like somewhere between 3 and 6 comparables, so we should use between 3 and 6 groups.</p>
+<p>After clustering each city’s yearly data, we get the following groups (which were pretty stable for Winnipeg’s cohort):</p>
 <p><div id="htmlwidget-2" style="width:100%;height:auto;" class="datatables html-widget"></div>
 <script type="application/json" data-for="htmlwidget-2">{"x":{"filter":"none","data":[["1","2","3","4","5","6","7","8","9","10","11","12","13","14","15","16"],["Thunder Bay","Montreal","Toronto","Hamilton","London","Regina","Windsor","Winnipeg","Durham","Halton","Niagara","Waterloo","York","Halifax","Sudbury (Greater)","Calgary"],[6,5,5,4,4,4,4,4,3,3,3,3,3,2,2,1],[14,6,11,14,14,3,14,7,14,13,14,14,13,2,13,10]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>municipality<\/th>\n      <th>k_cluster<\/th>\n      <th>n<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":5,"lengthMenu":[5,10,20],"columnDefs":[{"className":"dt-right","targets":[2,3]},{"orderable":false,"targets":0}],"order":[],"autoWidth":false,"orderClasses":false}},"evals":[],"jsHooks":[]}</script>
 <br></p>
 <p>With 6 clusters (displayed), Winnipeg ended up grouped together with Hamilton, London, Regina, and Windsor in cluster 4. If we break it into 5 clusters, Calgary gets included in Winnipeg’s group.</p>
 <p>This seems pretty plausible, but to validate, let’s try another method and see what we get.</p>
-<p>Using a bottom-up hierarchical clustering analysis we get the following:<a href="#fn3" class="footnote-ref" id="fnref3"><sup>3</sup></a>
-<img src="/post/20200201-efficiency_files/figure-html/HCA_overview-1.png" width="672" /></p>
+<p>Using a bottom-up hierarchical clustering analysis we get the following:<a href="#fn3" class="footnote-ref" id="fnref3"><sup>3</sup></a></p>
+<p><img src="/post/20200201-efficiency_files/figure-html/HCA_overview-1.png" width="672" /></p>
 <p>The results are pretty similar (which is good). This method groups Winnipeg with London, Regina and Windsor as comparables. Since this is a sub-grouping of the first method, we will keep these as comparables but keep an eye on Calgary and Hamilton as other possible comparables to baseline-set against.
 <br><br><br></p>
 <div id="general-gov-measures" class="section level2">
@@ -70,16 +72,16 @@ editor_options:
 </ul>
 <p>Putting it all together, given that we have a resignation rate of 4.59% (ignoring retirements, which we will treat as non-controllable), we are losing 9,118 employees x 0.0495 x (4k new employee time + 2k seasoned employee time + 5k HR cost) = $5.0 M/yr to churn as a city each year.</p>
 <p>Five million, not bad!</p>
-<p>Realistically though, there are lots of cities performing around 1.5% resignation, so a $4M savings should be possible if this was targeted.</p>
-<p><br><br><br></p>
+<p>Realistically though, there are lots of cities performing around 1.5% resignation, so a $4M savings should be possible if this was targeted.
+<br><br><br></p>
 </div>
 <div id="roads" class="section level2">
 <h2>roads</h2>
 <p>Okay, on to the three areas highlighted by our financial analysis, starting with Public Works and roads.</p>
-<p>Winnipeg’s roads are well-traveled:<a href="#fn8" class="footnote-ref" id="fnref8"><sup>8</sup></a>
-<img src="/post/20200201-efficiency_files/figure-html/road_use-1.png" width="672" /></p>
-<p>And we don’t spend a lot of money repairing them, compared to similar cities or overall:
-<img src="/post/20200201-efficiency_files/figure-html/road_repair-1.png" width="672" /></p>
+<p>Winnipeg’s roads are well-traveled:<a href="#fn8" class="footnote-ref" id="fnref8"><sup>8</sup></a></p>
+<p><img src="/post/20200201-efficiency_files/figure-html/road_use-1.png" width="672" /></p>
+<p>And we don’t spend a lot of money repairing them, compared to similar cities or overall:</p>
+<p><img src="/post/20200201-efficiency_files/figure-html/road_repair-1.png" width="672" /></p>
 <p>What about when we factor in other things like snow removal, something other municipalities (Regina excluded) wouldn’t have to deal with to the same extent?:<a href="#fn9" class="footnote-ref" id="fnref9"><sup>9</sup></a></p>
 <p><img src="/post/20200201-efficiency_files/figure-html/road_maintenance-1.png" width="672" /></p>
 <p>Here we spend a fair bit more.</p>
@@ -114,13 +116,12 @@ editor_options:
 <div id="transit" class="section level2">
 <h2>transit</h2>
 <p>Moving on to the second major area of City spending reveals other surprises. In this data set we narrow down to “bus only” municipalities for an apples-to-apples comparison. To get a broader picture, let’s include Hamilton in the cohort since London didn’t report (and Calgary has light rail, so isn’t comparable).</p>
-<p>First, some use statistics. Does anyone ride the bus in this frigid tundra?:
-<img src="/post/20200201-efficiency_files/figure-html/transit_trips-1.png" width="672" /></p>
+<p>First, some use statistics. Does anyone ride the bus in this frigid tundra?:</p>
+<p><img src="/post/20200201-efficiency_files/figure-html/transit_trips-1.png" width="672" /></p>
 <p>Comparatively, … yes, as it turns out.</p>
 <p>And, our buses actually have a pretty high per capita time on our roads comparatively:<a href="#fn15" class="footnote-ref" id="fnref15"><sup>15</sup></a></p>
 <p><img src="/post/20200201-efficiency_files/figure-html/transit_hours-1.png" width="672" /></p>
-<p>So then we must pay a lot for it!</p>
-<p>…</p>
+<p>So then we must pay a lot for it! …</p>
 <p><img src="/post/20200201-efficiency_files/figure-html/transit_cost-1.png" width="672" /></p>
 <p>Not so much, it turns out.</p>
 <p>Our transit system seems to be a leader in efficiency (and, on some measures, of effectiveness) among the MBNC cities. <em>Surprise!</em> And, it looks like <a href="https://winnipegtransit.com/en/major-projects/transit-master-plan/">there are plans</a> to make buses more frequent, quicker, with more direct routes… Nice work Winnipeg!</p>
@@ -128,8 +129,8 @@ editor_options:
 <h3>influencing factors for transit</h3>
 <p>Basically none of what we’ve laid out so far tells us the whole picture, but in the case of transit, we do know a couple of other relevant facts.</p>
 <p>First, our transit efficiency might have a bit of a back-wind in this comparison (sorry Winnipeg).</p>
-<p>We have a higher than normal <em>density</em> (for the Canadian cities represented here), so our transit resources don’t need to be spread as thin:<a href="#fn16" class="footnote-ref" id="fnref16"><sup>16</sup></a>
-<img src="/post/20200201-efficiency_files/figure-html/density-1.png" width="672" /></p>
+<p>We have a higher than normal <em>density</em> (for the Canadian cities represented here), so our transit resources don’t need to be spread as thin:<a href="#fn16" class="footnote-ref" id="fnref16"><sup>16</sup></a></p>
+<p><img src="/post/20200201-efficiency_files/figure-html/density-1.png" width="672" /></p>
 <p>However, given that our geography contains rivers, rail-yards, and has an imperfect grid (to say the least), I think we are probably doing okay here.
 <br><br><br></p>
 </div>
