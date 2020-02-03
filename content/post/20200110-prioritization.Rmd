@@ -4,7 +4,7 @@ description: "Analysis prioritization: city costs & expenditures"
 authors: ["jdallmann"]
 date: 2020-01-10
 weight: -200
-categories:  ["budget", "capex", "commentary", "financials", "prioritization", "Winnipeg"]
+categories:  ["budget", "capex", "commentary", "eda", "financials", "prioritization", "Winnipeg"]
 tags: ["good for a city", "semi-serious", "analysis_prioritization"]
 editor_options: 
   chunk_output_type: console
@@ -114,7 +114,7 @@ budget_sum %>%
         aes(label = scales::label_comma(scale = .000001, 
                                         suffix = "M")(budget)),
         hjust="inward", color = viridisLite::viridis(3)[1]) +
-    labs(title = "OPPERATING BUDGET TOP 5")
+    labs(title = "OPERATING BUDGET TOP 5")
 ```
 
 So far so good... the top 5 look pretty important to me. How about on the capital expenditures side:

@@ -4,7 +4,7 @@ description: "Efficiency & effectiveness measures"
 authors: ["jdallmann"]
 date: 2020-02-01
 weight: -200
-categories:  ["winnipeg", "budget", "city comparison", "efficiency", "effectiveness"]
+categories:  ["winnipeg", "budget", "city comparison", "clustering", "eda", "efficiency",  "effectiveness"]
 tags: ["good for a city", "semi-serious", "efficiency", "effectiveness"]
 editor_options: 
     chunk_output_type: console
