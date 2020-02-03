@@ -198,8 +198,12 @@ mbnc_long %>%
     geom_bar(position="dodge", stat="identity") +
     geom_text(aes(x = "Hamilton", y = median(gov_cost_ratio, na.rm = T) + .0025, 
                   label = "median"), color = "red3", 
-               angle = 0, position = position_dodge(width = 0.7), 
-               size = 4.2, check_overlap = T, inherit.aes = F) +
+              angle = 0, position = position_dodge(width = 0.7), 
+              size = 4.2, check_overlap = T, inherit.aes = F) +
+    geom_text(aes(label = scales::percent(gov_cost_ratio, accuracy = .01, suffix = "% "), 
+                  group = fiscal_year),
+               angle = 90,  size = 4.2,  position = position_dodge2(width = .9), 
+              hjust = "right") +
     theme_fivethirtyeight() +
     scale_y_continuous(labels = scales::percent_format()) +
     scale_fill_viridis_d(alpha = .8) +
@@ -224,9 +228,12 @@ mbnc_long %>%
     geom_bar(position="dodge", stat="identity") +
     geom_text(aes(x = "Winnipeg", y = median(gov_cost_ratio, na.rm = T) + .0025, 
                   label = "cohort median"),
-               angle = 0, position = position_dodge(width = 0.7), size = 4.2, check_overlap = T, inherit.aes = F) +
-    geom_text(aes(label = scales::percent(gov_cost_ratio, accuracy = .01, suffix = " "), group = fiscal_year),
-               angle = 90,  size = 4.2,  position = position_dodge2(width = .9),  hjust = "right") +
+               angle = 0, position = position_dodge(width = 0.7), 
+              size = 4.2, check_overlap = T, inherit.aes = F) +
+    geom_text(aes(label = scales::percent(gov_cost_ratio, accuracy = .01, suffix = "% "), 
+                  group = fiscal_year),
+               angle = 90,  size = 4.2,  
+              position = position_dodge2(width = .9),  hjust = "right") +
     theme_fivethirtyeight() +
     scale_y_continuous(labels = scales::percent_format()) +
     scale_fill_viridis_d(alpha = .8) +
@@ -287,9 +294,9 @@ churn %>%
 
 Again, Winnipeg would do better if we include Hamilton and worse if we include Calgary for a wash on the broader comparison. Notably, if you look at all municipalities, it looks like Winnipeg's cohort members all do pretty bad for churn...the black line is the median within the cohort and the red line is median outside of cohort/overall.
 
-Churn is a huge cost in business, since new employees tend to be initially inefficient, require time to train from those who are more efficient---thus making them less efficient, and hiring talent is itself costly, requiring job posting assessment, interviews with senior staff, etc. It all adds up pretty quickly.
+Churn is a huge cost in business, since new employees tend to be initially inefficient, require time to train from those who are more efficient---thus making seasoned staff less efficient, and hiring talent is itself costly---you have to pay to advertise the job posting, someone has to writeand review the posting, hold interviews with senior staff, etc. It all adds up pretty quickly.
 
-The graph also reveals a lot more: 
+The graph also reveals a lot more. 
 
 Winnipeg has the highest in-cohort churn in 2018, it has been trending upward over the past three years. Yet, Winnipeg has one of the lowest retirement rates! This means that the churn Winnipeg is seeing is due to *resignations*. Presenting just the resignation data makes it even clearer:
 
@@ -319,7 +326,7 @@ churn_all %>%
 ```
 
 
-This is really surprising and a great "green field" data science insight. Churn due to resignation is controllable by human intervention. That it has been climbing/varies year over year, suggests it could be reversed. Plus, there are lots of ways to model churn and predict which factors influence it using familiar data science techniques.^[Maybe we'll take a look at churn analysis in a future post.] Plus, because of the number of employees, it is potentially a huge area of opportunity.^[For the sake of breadth of opinion, another hypothesis is that HR is really good at attracting top talent in Winnipeg, which naturally has a higher churn rate---you can hope, right? If the Winnipeg Open data portal updated it's [HR data](https://data.winnipeg.ca/Organizational-Support-Services/Human-Resources-Report/44n7-8bfe), we could potentially dig in further. Another unexplained standout for me here that might be worth looking into is that large cities---where competition should be the highest---have been really good when it comes to keeping their employees.]
+This is really surprising and a great "green field" data science insight. Churn due to resignation is controllable by human intervention. That it has been climbing/varies year over year, suggests it could be reversed. Plus, there are lots of ways to model churn and predict which factors influence it using familiar data science techniques.^[Maybe we'll take a look at churn analysis in a future post.] Because of the number of employees, it is potentially a huge area of opportunity.^[For the sake of breadth of opinion, another hypothesis is that HR is really good at attracting top talent in Winnipeg, which naturally has a higher churn rate---you can hope, right? If the Winnipeg Open data portal updated it's [HR data](https://data.winnipeg.ca/Organizational-Support-Services/Human-Resources-Report/44n7-8bfe), we could potentially dig in further. Another unexplained standout for me here that might be worth looking into is that large cities---where competition should be the highest---have been really good when it comes to keeping their employees.]
 
 By some quick "back of the napkin" math:
 
@@ -332,7 +339,7 @@ Putting it all together, given that we have a resignation rate of 4.59% (ignorin
 
 Five million, not bad!
 
-Realistically though, there are lots of cities performing around 1.5% resignation, so a $4M savings should be possible if this was targeted.
+Realistically though, there are lots of cities performing around 1.5% resignation, so a $3M savings should be possible if this was targeted.
 <br><br><br>
 
 
