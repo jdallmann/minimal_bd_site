@@ -237,7 +237,7 @@ mbnc_long %>%
     theme_fivethirtyeight() +
     scale_y_continuous(labels = scales::percent_format()) +
     scale_fill_viridis_d(alpha = .8) +
-    labs(title = "% OPP COST FOR GOVERNANCE &\nCOPRPORATE MANAGEMENT", fill = "fiscal year")
+    labs(title = "% OP COST FOR GOVERNANCE &\nCOPRPORATE MANAGEMENT", fill = "fiscal year")
 ```
 
 
