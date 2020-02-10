@@ -1,1 +1,6 @@
 /* Custom CSS */
+
+.widget-about .logo{
+    max-width:10em;
+    height: auto
+}
