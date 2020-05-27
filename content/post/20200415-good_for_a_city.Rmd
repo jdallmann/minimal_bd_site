@@ -111,8 +111,8 @@ cap_ex_sum %>%
     datatable(rownames = FALSE,
               extensions = 'Buttons',
               options = list(
-                  pageLength = 5,
-                  lengthMenu = c(5, 10, 20),
+                  pageLength = 3,
+                  lengthMenu = c(3, 10, 20),
                   dom = 'Bfrtip',
                   buttons = c('csv', 'excel')
               )) %>%
@@ -125,7 +125,7 @@ To see what this means in terms of *your* property taxes (if you own a home in W
 
 In the app below, select your home and you should be able to see what you pay yearly (in property tax) for each service:^[This works best for single detached homes. Condo's are in the data too, if you wanted to trace it back, but the data is a lot messier in that case, so I just pick one unit in multi-unit dwellings.]
 
-<iframe src="https://jdallmann.shinyapps.io/good_for_a_city/" width=1000 height=800"></iframe>
+<iframe src="https://jdallmann.shinyapps.io/good_for_a_city/" width=700 height=800"></iframe>
 
 A couple of things here are worth noting. First we spent *a ton* on the south west BRT road in 2019. This has already been panned in a lot of places---[here](https://www.dearwinnipeg.com/2019/01/29/should-broke-cities-be-building-new-brt-lines/) is a favorite from another blogger---and it is reoccuring issue: 
 
