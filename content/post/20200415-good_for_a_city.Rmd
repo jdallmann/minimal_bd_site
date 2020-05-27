@@ -2,7 +2,7 @@
 title: "III. What is Good for a City?"
 description: "Is that really what you want?"
 authors: ["jdallmann"]
-date: 2020-05-15
+date: 2020-05-25
 weight: -200
 categories:  ["winnipeg", "budget", "tax calculator"]
 tags: ["good for a city", "semi-serious"]
