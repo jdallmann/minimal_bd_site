@@ -1,0 +1,12 @@
+name: good_for_a_city
+title: good_for_a_city
+username:
+account: jdallmann
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 2358197
+bundleId: 3191179
+url: https://jdallmann.shinyapps.io/good_for_a_city/
+when: 1590501548.09782
+asMultiple: FALSE
+asStatic: FALSE

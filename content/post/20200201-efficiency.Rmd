@@ -86,7 +86,8 @@ overview %>%
                    "population density", "budgeted full-time employees", 
                    "operating and capital expenses", "municipal purchases", 
                    "employees per 100 pop", "employee density")) %>%
-    DT::datatable(options = list(
+    DT::datatable(rownames = FALSE,
+        options = list(
         pageLength = 5,
         lengthMenu = c(5, 10, 15),
         scrollX = TRUE,
@@ -120,7 +121,8 @@ overview <- overview %>%
 
 overview %>% count(municipality, k_cluster) %>%
     arrange(desc(k_cluster)) %>%
-    DT::datatable(options = list(
+    DT::datatable(rownames = FALSE,
+        options = list(
         pageLength = 5,
         lengthMenu = c(5, 10, 20)
     ))

@@ -1,0 +1,150 @@
+---
+title: "III. What is Good for a City?"
+description: "Is that really what you want?"
+authors: ["jdallmann"]
+date: 2020-05-15
+weight: -200
+categories:  ["winnipeg", "budget", "tax calculator"]
+tags: ["good for a city", "semi-serious"]
+editor_options: 
+    chunk_output_type: console
+---
+    
+    
+    ```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+knitr::opts_chunk$set(message = FALSE)
+knitr::opts_chunk$set(warning = FALSE)
+knitr::opts_chunk$set(error = FALSE)
+library(tidyverse)
+library(magrittr)
+library(lubridate)
+library(ggthemes)
+library(scales)
+library(winnipegr)
+library(DT)
+# https://winnipeg.ca/cao/pdfs/CommunityTrendsandPerformanceReportVolume1_2020.pdf (p.209)
+# See eda file for details.
+load("../../static/data/good_for_a_city-202005.RData")
+
+```
+
+
+
+# where does it go?
+Hi folks,
+
+Sorry for the delay (who knew it would be tough to get things done while locked in a house full of kids for three months). In our last couple of posts we took a look at where [Winnipeg spends money](https://jdallmann.org/post/20200110-prioritization/), and how we [compare to other cities](https://jdallmann.org/post/20200201-efficiency/). 
+
+Now I'd like to bring the focus down to the individual level and look at how Winnipeg spends *your* money. We'll take a look at how much of your property taxes go to which city services. Then we can zoom back out to the original question we started the series with: What is good for our city? Given what you value---and setting aside possible inefficiencies, which we looked at last time---does where your money goes line up with what you think is best for the city?
+
+
+# 2019 opperating costs
+On page 209 of the [2020 Community Trends and Performance Report (vol. 1)](https://winnipeg.ca/cao/pdfs/CommunityTrendsandPerformanceReportVolume1_2020.pdf), the city breaks down the % cost per service:
+
+```{r raw_data}
+scaled_op_ex %>%
+    filter(service != "Capital Expenses") %>%
+    mutate(perc_total = perc_total / 100) %>%
+    ggplot(aes(x=reorder(service, perc_total), y = perc_total)) +
+    geom_bar(stat = "identity") +
+    geom_text(aes(label = scales::percent(perc_total, accuracy = .2)), 
+              hjust = "inward") + 
+    coord_flip() +
+    ggthemes::theme_fivethirtyeight() +
+    scale_y_continuous(labels = scales::percent_format(accuracy = 1)) +
+    labs(title = "TAX CONTRIBUTION % IN\n 'COMMUNITY TRENDS'")
+
+```
+
+But, it looks like this breakdown does not include *captial expenses* (like building new roads and buildings) since it mirrors the 2018 operating expenses pretty closely. Plus, as we learned in a [previous post](https://jdallmann.org/post/20200110-prioritization/), when we include capital expenses, Public Works/road expenditures is much larger than the proportion in the provided breakdown. That makes the picture provided by the City a bit misleading since, if we stopped here, we'd think that most of our property taxes go to the police, but that isn't the case.
+
+To help correct for capital expenses, let's rescale the percentages and add a blanket "capital expenditures" category equal to the proportion in 2018---which will be a similar ratio in 2019. That gets us the following by % breakdown:^[Using the same data from our previous posts via the [Winnipeg Open Data portal](data.winnipeg.ca).]
+```{r pct_op}
+scaled_op_ex %>%
+    mutate(scaled_pct = scaled_pct / 100,
+           color = ifelse(service == "Capital Expenses",
+                          "#FF2700", "#BEBEBE")) %>%
+    ggplot(aes(x=reorder(service, scaled_pct), y = scaled_pct)) +
+    geom_bar(stat = "identity", aes(fill = color)) +
+    geom_text(aes(label = scales::percent(scaled_pct, accuracy = .2)), 
+              hjust = "inward") + 
+    coord_flip() +
+    ggthemes::theme_fivethirtyeight() +
+    scale_y_continuous(labels = scales::percent_format(accuracy = 1)) +
+    scale_fill_manual(values = c("darkgray", "#FF2700")) +
+    theme(legend.position = "none") +
+    labs(title = "PROPERTY TAX % BY SERVICE")
+```
+
+But, the captial expenses can be broken down too, for a more accurate picture of where our property taxes go. To do that, let's pull down our significant capital expenses from the [Winnipeg Open Data portal](data.winnipeg.ca), and categorize them in roughly the same way that the City categorized them in the service breakdown.
+
+Like most data exercises, this will involve some interpretive work---don't let anyone fool you into thinking numbers eliminate subjectivity!---so I'll try to highlight possible gotchas. (I also recommend looking over the provided mapping table below if you care!) 
+
+At a high-level, some choice points were putting active transportation / bike paths into "Recreation" instead of "Roads" when they aren't in transportation corridors, and into "Roads" when they are. I also wasn't sure where to place the new bus rapid transit (BRT) corridor. It's a road, serving road-like purposes, but it's for Transit riders, but if it works it will decrease congestion for other drivers, but... so I put it in it's own category---do with it as you'd like.^[Additionally, since the city seems to be including department-specific revenue streams in their cost breakdown by service, I have done the same in calculating the overall proportion of capital expenses to opperating expences. This isn't perfect since it's tough to see a clear principle for treating services that generate revenue differently from those that don't, but that's what we have to work with.]
+
+With all of that, here is the new breakdown:
+```{r pct_op_and_cap}
+
+tax_pct %>%
+    mutate(scaled_pct = scaled_pct / 100) %>%
+    ggplot(aes(x=reorder(service, scaled_pct), y = scaled_pct)) +
+    geom_bar(stat = "identity") +
+    geom_text(aes(label = scales::percent(scaled_pct, accuracy = .2)), 
+              hjust = "inward") + 
+    coord_flip() +
+    ggthemes::theme_fivethirtyeight() +
+    scale_y_continuous(labels = scales::percent_format(accuracy = 1)) +
+    labs(title = "PROPERTY TAX % WITH CAPEX")
+```
+
+And, for those interested, here is the capex to service mapping:
+
+```{r op_cap_map}
+cap_ex_sum <- read_csv("../../static/data/cap_ex_sum.csv")
+
+cap_ex_sum %>%
+    select(project_id, department, category,
+           subcategory, project_description, amount_2019 = cap_ex_2019,
+           map_to = op_map) %>%
+    arrange(desc(amount_2019)) %>%
+    datatable(rownames = FALSE,
+              extensions = 'Buttons',
+              options = list(
+                  pageLength = 5,
+                  lengthMenu = c(5, 10, 20),
+                  dom = 'Bfrtip',
+                  buttons = c('csv', 'excel')
+              )) %>%
+    formatCurrency('amount_2019', digits = 0)
+```
+
+
+
+To see what this means in terms of *your* property taxes (if you own a home in Winnipeg), let's pull down property assemssmet values and frontages from the City's [open data portal](data.winnipeg.ca). Then we'll mash them up against our mill rate (the rate you pay on assessed property value in municipal taxes) and frontage levy to get your approximate property tax. From there we can break it down by service.
+
+In the app below, select your home and you should be able to see what you pay yearly (in property tax) for each service:^[This works best for single detached homes. Condo's are in the data too, if you wanted to trace it back, but the data is a lot messier in that case, so I just pick one unit in multi-unit dwellings.]
+
+<iframe src="https://jdallmann.shinyapps.io/good_for_a_city/" width=1000 height=800"></iframe>
+
+A couple of things here are worth noting. First we spent *a ton* on the south west BRT road in 2019. This has already been panned in a lot of places---[here](https://www.dearwinnipeg.com/2019/01/29/should-broke-cities-be-building-new-brt-lines/) is a favorite from another blogger---and it is reoccuring issue: 
+
+**Roads are expensive**, they degrade quickly (and then are expensive to rebuild), investing in them often increases gridlock, and we can't afford to repair even the ones we have... 
+
+Putting the magnitude of spends like these into context, with that \$357 million you could run any one city service for an entire year---even the heavy hitters. In fact, you know those libraries they were talking about closing (before they were yelled down) in the 2020 budget: that's absolutely nothing compared to this (big) road. *All* libraries together have a sub \$30M yearly opperating budget. You could keep all of our libraries opperating for 10 years without any additional opperating investment for the cost of the South West Rapid Transit road. 
+
+Prefer buses to reading, fine! With transit revenue under \$20M a year, everyone could have free transit for over 17 years---almost in time to start repairing the new rapid transit road! Plus a residual benefit would be getting people out of cars, which will speed up the average transit commute (isn't that the point of rapid transit anyways)! 
+
+So, you can probably guess where I fall on how my tax dollars are spent...**stop blowing it on expensive new roads!**
+
+Does this budget allocation line up with what you think is best for the city?
+
+<small>
+
+*All of the views expressed on this blog are my own opinions, all data is openly available, and all analyses coded using reproducible research methods posted publicly. *
+
+- *The eda script is available [here](https://github.com/jdallmann/minimal_bd_site/tree/master/static/eda). *
+- *The open data used in this analysis was obtained via the [winnipegr](https://github.com/jdallmann/winnipegr) package.*
+- *The code for this post is available [here](https://github.com/jdallmann/minimal_bd_site/tree/master/content/post).*
+
+</small>

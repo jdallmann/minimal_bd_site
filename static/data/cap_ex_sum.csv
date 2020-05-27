@@ -1,0 +1,777 @@
+actual_costs_to_report_date,project_id,department,category,subcategory,project_description,initial_costs,cap_ex_2019,op_map
+399834775.8,4230010514,Transit,Rapid Transit,SWRT Stg2 & Pembina  Construction,SWRT Stage 2 & Pembina Upfront,42763292.11,357071483.7,BRT
+227292395.9,203210002B,Sewage Disposal Utility,Treatment,SEWPCC,SEWPCC Nutrient Removal      P,139897721,87394674.88,Water & Waste
+29040147.72,4210000216,Transit,Transit Buses,2016 Transit Buses,Transit Buses 2016,3010881.86,26029265.86,Public Transit
+47677429.79,203110013B,Sewage Disposal Utility,Treatment,NEWPCC,NEWPCC Upgrade               P,21741996.04,25935433.75,Water & Waste
+79235268.87,1805001413,Public Works,Local Streets,Waterway Crossings and Grade Separations Various,Waverley Street at CN Mainline,55530936.81,23704332.06,Road Maintenance
+14601292.62,1805001119,Public Works,Local Streets,Disraeli Bridge,Disraeli Bridges-Future Pmnt,NA,14601292.62,Road Maintenance
+14521499.01,2013100119,Waterworks Utility,Distribution,Water Main Renewals,2019 Water Main Renewal Pro P,NA,14521499.01,Water & Waste
+18627151.96,1804100217,Public Works,Regional Streets,Streets Renewals,Empress-St. Matthews/Portage,4636590,13990561.96,Road Maintenance
+13154330.79,2038000118,Sewage Disposal Utility,Collection,CSO and BF Strategy,2018 CSO Bsmt Flood Man Strat,8331.73,13145999.06,Water & Waste
+48182736.63,4210000417,Transit,Transit Building Replacement/Refurbishment,Maintenance  Facility Expansion,Expansion of Transit Mtnce Fac,38335386.75,9847349.88,Public Transit
+9362172.34,1804101119,Public Works,Regional Streets,Streets Renewals,Fermor-Lag/Plessis-NBCF,218008.23,9144164.11,Road Maintenance
+7131401.96,1801000219,Public Works,Other Street Projects,New Transportation,Chief Peguis Trail-Future Pmnt,NA,7131401.96,Road Maintenance
+10805876.12,1804101317,Public Works,Regional Streets,Streets Renewals,Garry-Assiniboine/Princess,4288959.81,6516916.31,Road Maintenance
+8310886.85,2037001516,Sewage Disposal Utility,Collection,Interceptors,NE Interceptor River Crossing,1852308.96,6458577.89,Water & Waste
+9384163.92,2039100118,Sewage Disposal Utility,Collection,Sewer Renewals,2018 Sewer Renewal           P,3162154.23,6222009.69,Water & Waste
+6792133.15,1807000118,Public Works,Regional Streets,Developer Paybacks,Developer Payback-Various Loc,615340.34,6176792.81,Road Maintenance
+21449909.83,2038000117,Sewage Disposal Utility,Collection,CSO and BF Strategy,2017 CSO Bsmt Flood Man Strat,15426329.09,6023580.74,Water & Waste
+14453055.27,1804101118,Public Works,Regional Streets,Streets Renewals,Fermor-St Anne's/Archibald,8658887.43,5794167.84,Road Maintenance
+5644908.25,2037001317,Sewage Disposal Utility,Collection,Interceptors,Plessis Road Interceptor,11400,5633508.25,Water & Waste
+25230119.61,4210000218,Transit,Transit Buses,2018 Transit Buses,Transit Buses 2018,20297492.75,4932626.86,Public Transit
+13377676.01,1805001916,Public Works,Local Streets,Waterway Crossings and Grade Separations Various,Fermor Ave Bridge (Seine R)  M,8461549.93,4916126.08,Road Maintenance
+4740875.15,1804101019,Public Works,Regional Streets,Streets Renewals,Main-McAdam/Kildonan Golf-NBCF,193421.84,4547453.31,Road Maintenance
+8929021.87,1806100218,Public Works,Local Streets,Street Renewals,LSR 18-RI-01 AECOM,4510217.82,4418804.05,Road Maintenance
+16430035.19,4210000217,Transit,Transit Buses,2017 Transit Buses,Transit Buses 2017,12452540.83,3977494.36,Public Transit
+3938267.81,1804101619,Public Works,Regional Streets,Streets Renewals,Roblin WB-Shft-Assin PrkD-NBCF,NA,3938267.81,Road Maintenance
+4071366.48,1804100919,Public Works,Regional Streets,Streets Renewals,Inkster-Milner/Fife-NBCF,180492.14,3890874.34,Road Maintenance
+3294705.61,2039100119,Sewage Disposal Utility,Collection,Sewer Renewals,2019 Sewer Renewals          P,NA,3294705.61,Water & Waste
+2981171.69,6331001219,Municipal Accommodations,Property Asset Management,Civic Buildings - Refurbishment and Improvements,PSB and Civic Cntr Car Prk,NA,2981171.69,Misc Capital Expenditure
+2882640.72,1806100519,Public Works,Local Streets,Street Renewals,LSR 19-R-03 A WSP,NA,2882640.72,Road Maintenance
+15607657.55,2039100116,Sewage Disposal Utility,Collection,Sewer Renewals,2016 Sewer Renewals          P,12881024.62,2726632.93,Water & Waste
+3832091.82,1804100717,Public Works,Regional Streets,Streets Renewals,St. James-Sargent/Ellice,1121346.61,2710745.21,Road Maintenance
+2679343.36,1806100619,Public Works,Local Streets,Street Renewals,LSR 19-R-04 B AECOM,NA,2679343.36,Road Maintenance
+2678373.09,8330000119,Winnipeg Fleet Management Agency,Fleet Asset Acquisitions,Fleet Asset Acquisitions,Fleet Asset Acquisitions,NA,2678373.09,Fleet
+2666691.19,1806102119,Public Works,Local Streets,Street Renewals,LSR 19-R-01(A) In-House,NA,2666691.19,Road Maintenance
+3787948.91,3403000118,"Innovation, Transformation and Technology",Hardware,Communications Network Infrastructure,Core Inform Technology ProgrRP,1127977.5,2659971.41,"Innovation, Transformation & Technology"
+2653901.1,1806100219,Public Works,Local Streets,Street Renewals,LSR 18-RI-02 WSP,0,2653901.1,Road Maintenance
+2564269.12,1850000219,Public Works,Parks and Open Space,"Reforestation, Streets and Aesthetic Improvements",Urban Forest Enhancement,NA,2564269.12,Parks and Urban Forestry
+2519880.99,1806101219,Public Works,Local Streets,Street Renewals,LSR 19-R-02 B KGS,NA,2519880.99,Road Maintenance
+11748186.95,2039100117,Sewage Disposal Utility,Collection,Sewer Renewals,2017 Sewer Renewals         P,9380085.27,2368101.68,Water & Waste
+2294734.28,2062000419,Solid Waste Disposal Utility,Collection and Disposal,Brady Road,Brady Road Resource Mgmt Facil,NA,2294734.28,Solid Waste Collection
+2256144.49,4230020117,Transit,Rapid Transit,Rapid Transit Planning,Rapid Transit Master Plan,0,2256144.49,Public Transit
+3668943.13,1806100119,Public Works,Local Streets,Street Renewals,LSR 18-RI-01 AECOM,1420607.65,2248335.48,Road Maintenance
+2183523.61,1806100919,Public Works,Local Streets,Street Renewals,LSR 19-R-03 B WSP,NA,2183523.61,Road Maintenance
+2180785.07,1806100719,Public Works,Local Streets,Street Renewals,LSR 19-R-05 Dillon,NA,2180785.07,Road Maintenance
+2049000,1807000517,Public Works,Regional Streets,Developer Paybacks,Tuxedo Yards Development,NA,2049000,Road Maintenance
+1989685.83,2038000119,Sewage Disposal Utility,Collection,CSO and BF Strategy,2019 CSO Bsmt Flood Man Strat,NA,1989685.83,Water & Waste
+10569790.44,1804101616,Public Works,Regional Streets,Streets Renewals,Pembina-Grant/Osborne,8657576.63,1912213.81,Road Maintenance
+1907418.91,1806100419,Public Works,Local Streets,Street Renewals,LSR 19-R-02 A KGS,NA,1907418.91,Road Maintenance
+1890001.07,1804101219,Public Works,Regional Streets,Streets Renewals,Coryd WB-Cordova-Lanark-NBCF,NA,1890001.07,Road Maintenance
+1780000,4230010519,Transit,Rapid Transit,SWRT Stg2 & Pembina UP Upfront,SWRT2 2019 P3 Payment,NA,1780000,Public Transit
+1874545.84,1804100819,Public Works,Regional Streets,Streets Renewals,Ellice-Arlington/Maryland-NBCF,133404.6,1741141.24,Road Maintenance
+1745409.16,1806101418,Public Works,Local Streets,Street Renewals,LSR 18-R-08- Waverley St,30029.94,1715379.22,Road Maintenance
+1701484.57,1805000119,Public Works,Local Streets,Waterway Crossings and Grade Separations Various,Waterway Crossing & Grade Sep,NA,1701484.57,Road Maintenance
+1680600.18,2030000517,Sewage Disposal Utility,Treatment,Reliability Upgrades,Asset Refurbish/Replace,0,1680600.18,Water & Waste
+1597828.13,2035000118,Sewage Disposal Utility,Collection,Lift Stations,Lift Stations Upgrading,0,1597828.13,Water & Waste
+1761061.02,2030000516,Sewage Disposal Utility,Treatment,Reliability Upgrades,Asset Refurbish/Replace,202279.82,1558781.2,Water & Waste
+6168871.64,1850000218,Public Works,Parks and Open Space,"Reforestation, Streets and Aesthetic Improvements",Urban Forest Enhancement,4611197.89,1557673.75,Parks and Urban Forestry
+1547057.75,400000116,City Clerks,City Clerks,City Archives,City Archives Management,NA,1547057.75,Misc Capital Expenditure
+2585128.21,2078500216,Land Drainage and Flood Control Utility,Flood Control,Outfalls,Outfall Gate Structures,1088340.39,1496787.82,MIsc Capital Expenditure
+1422492.48,4210010219,Transit,Transit Building Replacement/Refurbishment,Building Upgrades,Trn Bldg Roof and Ventil Upgra,NA,1422492.48,Public Transit
+1397210.31,4210001619,Transit,Transit Security Enhance,Transit Safety Mgmt Practices,Bus Op Comp Safety Shields,NA,1397210.31,Public Transit
+1366443.15,1806101419,Public Works,Local Streets,Street Renewals,Residential TBO B,NA,1366443.15,Road Maintenance
+1323618.31,1806101319,Public Works,Local Streets,Street Renewals,Residential TBO A,NA,1323618.31,Road Maintenance
+1272108.32,1804101319,Public Works,Regional Streets,Streets Renewals,Memor Blvd-Yrk-St Mary Av-NBCF,NA,1272108.32,Recreation
+1466401.04,1804102216,Public Works,Regional Streets,Streets Renewals,St. James-Sargent/Ellice,228644.5,1237756.54,Road Maintenance
+3005024.27,2013500317,Waterworks Utility,Distribution,Water Main Renewals,N St Boniface Water Main,1812992.83,1192031.44,Water & Waste
+1190393.62,4210010319,Transit,Transit Building Replacement/Refurbishment,2019 Building General,Garage Improvements Phase 2,NA,1190393.62,Public Transit
+1449457.45,6210634114,Community Services (including Community Incentive Grants),Library,Library Improvements- Existing,Library Fac Redev-Cornish    M,280770.97,1168686.48,Libraries
+2901199.48,1806300318,Public Works,Local Streets,Lane Renewals,Lane Renewals - 18-RL-01C,1752450.61,1148748.87,Road Maintenance
+2179511.94,2035000117,Sewage Disposal Utility,Collection,Lift Stations,Lift Stations Upgrading,1176996.67,1002515.27,Water & Waste
+968000,6331002819,Municipal Accommodations,Police Response,Lease,East District Police Stn Lease,NA,968000,Police Service
+17765530.89,1805001118,Public Works,Local Streets,Disraeli Bridge,Disraeli Bridges-Future Pmnt,16816709.21,948821.68,Road Maintenance
+939176.15,1804101519,Public Works,Regional Streets,Streets Renewals,Cory EB-Borbnk-Brock St-NBCF,NA,939176.15,Road Maintenance
+2659195.54,1805000118,Public Works,Local Streets,Waterway Crossings and Grade Separations Various,Waterway Crossing & Grade Sep,1725931.95,933263.59,Road Maintenance
+1323763.17,6213002114,Community Services (including Community Incentive Grants),Library,Library Redevelopment- New,Library Fac Redev-River Hts  M,402099.21,921663.96,Libraries
+36591340.45,1803000213,Public Works,Regional Streets,Street Improvements,Polo Park-Infrastructure Imp M,35690406.58,900933.87,Road Maintenance
+900059.6,1831100119,Public Works,Regional Streets,Traffic Engineering Improvements,Traffic Signals Improvements,NA,900059.6,Road Maintenance
+6927913.78,1804100318,Public Works,Regional Streets,Streets Renewals,McPhillips-Logan/Jarvis,6068280.13,859633.65,Road Maintenance
+937666.26,1804100219,Public Works,Regional Streets,Streets Renewals,Colony-Ellice/Portage-NBCF,78542.36,859123.9,Road Maintenance
+826249.72,1804200319,Public Works,Regional Streets,Sidewalk and Curb Repair,Sidewalk/Curb Renew-Dtwn RegSt,NA,826249.72,Road Maintenance
+766905.82,1806200119,Public Works,Local Streets,Sidewalks,Sidewalk Renewals Local Street,NA,766905.82,Road Maintenance
+971864.91,1806101118,Public Works,Local Streets,Lane Renewals,18-LI-01 WSP - Granular Imp,235379.92,736484.99,Water & Waste
+1454092.93,6322100118,"Planning, Property and Development",Cemeteries,Cemeteries - Refurbishment and Improvements,Cemeteries - Improvements,733179.75,720913.18,Cemeteries
+4675912.64,1807000117,Public Works,Regional Streets,Developer Paybacks,Developer Payback-Various Loc,3963323.52,712589.12,Road Maintenance
+944067.64,2078500217,Land Drainage and Flood Control Utility,Flood Control,Outfalls,Outfall Gate Structures,243538.87,700528.77,Misc Capital Expenditure
+769246.86,2004000716,Waterworks Utility,Distribution,Feeder Mains,Feedermain Condition Assessmnt,70565.43,698681.43,Water & Waste
+720405.31,2040001300,Sewage Disposal Utility,Collection,Information Technology,WWD Business Intelligence  MRP,26377.7,694027.61,Water & Waste
+691480.93,4210010619,Transit,Transit Building Replacement/Refurbishment,Building Upgrades,Heavy Shop Equip Replacement,0,691480.93,Public Transit
+15457962.9,4230001409,Transit,Fare Collection System,Fare Collection/ Peggo Card System,Fare Collection System       M,14774285.91,683676.99,Public Transit
+7846997.79,1832000717,Public Works,Regional Streets,Active Transportation Facilities,Bike Lane-Chevrier & Waverley,7181091.42,665906.37,Road Maintenance
+6046865.18,1805002016,Public Works,Local Streets,Waterway Crossings and Grade Separations Various,Sask Ave Culvert (Sturgn Crk)M,5383496.43,663368.75,Road Maintenance
+794873.06,1804100319,Public Works,Regional Streets,Streets Renewals,Memr Blvd NB-St Mry/Portg-NBCF,138058.82,656814.24,Road Maintenance
+634026.5,1806102019,Public Works,Local Streets,Street Renewals,AssinPkDr-ComissryRd to ZooDr,NA,634026.5,Road Maintenance
+1809652.71,6362400119,Community Services (including Community Incentive Grants),Recreation and Leisure,Recreation Facility Refurbishment & Redevelopment- Existing,Seven Oaks Pool-Concrte Restor,1177230.9,632421.81,Recreation
+698240.25,2040000617,Sewage Disposal Utility,Treatment,Information Technology,Process Control Sys Upgrade,66572.65,631667.6,Water & Waste
+628335.7,1831000119,Public Works,Regional Streets,Traffic Engineering Improvements,Traffic Engineer Improve     P,NA,628335.7,Road Maintenance
+3685776.83,2030000515,Sewage Disposal Utility,Treatment,Reliability Upgrades,WPCC Asset Refurbish/Replace,3058620.25,627156.58,Water & Waste
+1913451.35,4230030116,Transit,Innovative Transit Program,2016 Innovative Transit Program,Innovative Transit Program,1289971.9,623479.45,Public Transit
+849494.93,6251000117,Community Services (including Community Incentive Grants),Grants,Community Incentive Grant Program,Community Incentive Grant Prog,251922.05,597572.88,Misc Capital Expenditure
+83764155.33,1803000112,Public Works,Regional Streets,Street Improvements,Plessis Road Twinning and Grad,83193159.3,570996.03,Road Maintenance
+640932.46,6331000518,Municipal Accommodations,Property Asset Management,Civic Buildings - Refurbishment and Improvements,Portage & Main Inters. Improv,73187,567745.46,Misc Capital Expenditure
+541803.65,2078500218,Land Drainage and Flood Control Utility,Flood Control,Outfalls,Outfall Gate Structures,0,541803.65,Misc Capital Expenditure
+2844386.86,6392010114,Municipal Accommodations,Property Asset Management,Indoor Aquatic Facilities - Maintenance and Repair,Pan Am Pool-Boiler System    M,2318667.21,525719.65,Recreation
+2361431.05,1805001317,Public Works,Local Streets,Waterway Crossings and Grade Separations Various,Kenstn/Rt90 Wide & StJamsBridg,1842246,519185.05,Road Maintenance
+6126528.08,1804101017,Public Works,Regional Streets,Streets Renewals,Ellice-Erin/Arlington,5609682.96,516845.12,Road Maintenance
+509531.13,1801000220,Public Works,Other Street Projects,New Transportation,Chief Peguis Trail-Future Pmnt,NA,509531.13,Road Maintenance
+3492669.53,4210000517,Transit,Transit Building Replacement/Refurbishment,Building Upgrades,Trn Bldg Roof and Ventil Upgra,2985049.91,507619.62,Public Transit
+938526.35,4230010616,Transit,Rapid Transit,Rapid Transit Planning,Rapid Transit Plan & Design,434061.16,504465.19,Public Transit
+8278323.33,1805001514,Public Works,Local Streets,Waterway Crossings and Grade Separations Various,Ness Ave Culvert (Sturgeon Cr),7774405.34,503917.99,Road Maintenance
+809075.44,6362500217,Community Services (including Community Incentive Grants),Recreation and Leisure,Recreation Facility Refurbishment & Redevelopment- Existing,St. James Civic Centre,308297.69,500777.75,Recreation
+526456.61,1804100419,Public Works,Regional Streets,Streets Renewals,York-Osborne/Memorial-NBCF,31374.66,495081.95,Road Maintenance
+1532167.23,6251000116,Community Services (including Community Incentive Grants),Grants,Community Incentive Grant Program,Community Incentive Grant Prog,1050870.3,481296.93,Misc Capital Expenditure
+658571.01,1833000218,Public Works,Regional Streets,Active Transportation Facilities,Parking & St Enhance-Exchange,190211.53,468359.48,Road Maintenance
+1294851.39,1832000118,Public Works,Regional Streets,Active Transportation Facilities,Pedestrian & Cycling Program,835572.26,459279.13,Recreation
+630793.59,2030003018,Sewage Disposal Utility,Collection,Lift Stations,Comminutor Chamber Rehab,177525.74,453267.85,Water & Waste
+954614.17,2005100200,Waterworks Utility,Supply and Treatment,Pumping Stations,Water SCADA Upgrade        MRP,516106.93,438507.24,Water & Waste
+435828.95,2078000118,Land Drainage and Flood Control Utility,Flood Control,Outfalls,Outfall Rehabilitation,0,435828.95,Misc Capital Expenditure
+597630.67,6252000118,Community Services (including Community Incentive Grants),Recreation and Leisure,Recreation Facility Refurbishment & Redevelopment- Existing,Community Centre Reno Grant,162831.04,434799.63,Recreation
+431878.29,2037001718,Sewage Disposal Utility,Collection,Interceptors,Airport West Servicing,0,431878.29,Water & Waste
+2984273.6,6210634214,Community Services (including Community Incentive Grants),Library,Library Improvements- Existing,Library Fac Redev-St. John's M,2577051.49,407222.11,Libraries
+422247.27,3459009918,"Innovation, Transformation and Technology",Software,Data Warehouse / Business Integration,ISP - Innovation Bench,21288.37,400958.9,"Innovation, Transformation & Technology"
+388067.86,6322100119,"Planning, Property and Development",Cemeteries,Cemeteries - Refurbishment and Improvements,Cemeteries - Improvements,NA,388067.86,Cemeteries
+536854.18,1857002014,Public Works,Parks and Open Space,Community Park Amenities,Crescent Drive Park,153528.95,383325.23,Parks and Urban Forestry
+383000,1850000119,Public Works,Parks and Open Space,"Reforestation, Streets and Aesthetic Improvements",Reforestation - Improvements,NA,383000,Parks and Urban Forestry
+394394.18,2037500018,Sewage Disposal Utility,Collection,River Crossing Rehab,River Crossings Monitoring   P,11400,382994.18,Water & Waste
+417176.91,2001001713,Waterworks Utility,Distribution,Various,Public Water Outlets,42905.59,374271.32,Water & Waste
+433502.36,6321000018,Fire Paramedic Service,Facilities,Maintenance,Station Capital Maintenance,68104.81,365397.55,Fire Service
+363352.01,4210010419,Transit,Transit Building Replacement/Refurbishment,Building Upgrades,Hoist Replacement at FRG,0,363352.01,Public Transit
+2006875.93,1806102118,Public Works,Local Streets,Street Renewals,LSR 18-R-02B AECOM,1649727.37,357148.56,Road Maintenance
+349999.99,2040001818,Sewage Disposal Utility,Collection,Information Technology,WWD Document Management,1035.29,348964.7,Water & Waste
+5970937.59,2001002700,Waterworks Utility,Supply and Treatment,Bridges,SL Aqued/Falcon Rvr Brid   MRP,5624690.79,346246.8,Water & Waste
+974063.99,6351241517,"Planning, Property and Development",City Beautification,BIZ Zones Image Routes Main Streets,BIZ Zones Image Rtes Main Sts,631687.32,342376.67,City Beautification
+3127436.44,1806300218,Public Works,Local Streets,Lane Renewals,Lane Renewals - 18-RL-01B,2792493.72,334942.72,Road Maintenance
+1016466.58,6318010116,Public Works,Parks and Open Space,Community Parks,Regionl&Communty Pks-Bldgs,685805.82,330660.76,Parks and Urban Forestry
+452963.22,1400000117,Assessment and Taxation,Assessment and Taxation,Assessment Automation,Assessment Automation,126444.1,326519.12,Misc Capital Expenditure
+320883.63,400041715,City Clerks,City Clerks,Innovation Fund,ICF-CFRS Dashboard,NA,320883.63,"Innovation, Transformation & Technology"
+419532.52,1804200218,Public Works,Regional Streets,Sidewalk and Curb Repair,Sidewalk/Curb Renew-Dtwn RegSt,100427.45,319105.07,Road Maintenance
+314819.3,1806101819,Public Works,Local Streets,Street Renewals,Granular Lane Improvements,NA,314819.3,Road Maintenance
+310622.04,1804200119,Public Works,Regional Streets,Sidewalk and Curb Repair,Sidewalk/Curb Renewals-Reg St,NA,310622.04,Road Maintenance
+307688.53,1804101419,Public Works,Regional Streets,Streets Renewals,Mem Blvd SB-Portg-St MryA-NBCF,NA,307688.53,Road Maintenance
+7065289.36,6351800417,"Planning, Property and Development",City Beautification,Other,Tache Promenade,6758957.55,306331.81,City Beautification
+500000,2010000917,Waterworks Utility,Distribution,Information Technology,Utility Asset Mgmt System,197343.16,302656.84,Water & Waste
+3039234.51,1857000117,Public Works,Parks and Open Space,Community Park Amenities,Parks & Rec Enhancement      P,2742764.06,296470.45,Parks and Urban Forestry
+295745.53,6210000319,Community Services (including Community Incentive Grants),Information Technology,Upgrade/Replace,Library Tech Upgrade/Replace,NA,295745.53,Libraries
+450324.06,1806101918,Public Works,Regional Streets,Active Transportation Facilities,Rec Walkways and Bk Path Renew,155426.81,294897.25,Recreation
+291822,6351000219,"Planning, Property and Development",Developer Pay Back,Developer Pay Back/Park Amenities,Developer Payback,NA,291822,Parks and Urban Forestry
+295130.43,2001002914,Waterworks Utility,Distribution,Various,552 & 598 Plinguet Fire Protec,8077.96,287052.47,Water & Waste
+3150464.34,2062000300,Solid Waste Disposal Utility,Collection and Disposal,Brady Road,Brady Landfill-Admin Bldg  MRP,2867450.12,283014.22,Solid Waste Collection
+283237.19,2030000518,Sewage Disposal Utility,Treatment,Reliability Upgrades,Asset Refurbish/Replace,967.71,282269.48,Water & Waste
+277397.15,4210010218,Transit,Transit Building Replacement/Refurbishment,2018 Building General,Trn Bldg Roof and Ventil Upgra,0,277397.15,Public Transit
+276947.03,1804102519,Public Works,Regional Streets,Streets Renewals,Staffrd-Corydn-Pembina-NBCF,NA,276947.03,Road Maintenance
+5603546.4,1806101218,Public Works,Local Streets,Street Renewals,LSR 18-R-01 In-House,5328357.11,275189.29,Road Maintenance
+272731.87,4210010519,Transit,Transit Building Replacement/Refurbishment,Building Upgrades,Rapid OH Doors at Washrack,0,272731.87,Public Transit
+272251.9,6351241518,"Planning, Property and Development",City Beautification,BIZ Zones Image Routes Main Streets,BIZ Zones Image Rtes Main Sts,0,272251.9,City Beautification
+266412.88,1852000218,Public Works,Parks and Open Space,Athletic Fields Improvements,Memorial Pk Soccer Pitch Light,1633.5,264779.38,Parks and Urban Forestry
+264310.42,4230030118,Transit,Innovative Transit Program,2018 Innovative Transit Program,Innovative Transit Program,0,264310.42,Public Transit
+2464101.37,1806100318,Public Works,Local Streets,Street Renewals,LSR 18-RI-02 WSP,2201108.21,262993.16,Road Maintenance
+354033.86,6390005017,Municipal Accommodations,Property Asset Management,City-Wide Accessibility Program,City-Wide Accessibility Prog,94566.59,259467.27,Misc Capital Expenditure
+1892329.89,1832000517,Public Works,Regional Streets,Active Transportation Facilities,Bike Lane-McDermot (Phase 1),1640476.19,251853.7,Road Maintenance
+668730.87,2010001118,Waterworks Utility,Distribution,Information Technology,Web Self Service,418005.14,250725.73,Water & Waste
+382535.09,1200001516,Corporate Projects,Enterprise Systems,PeopleSoft,PS Accounts Receivable Billing,133118.47,249416.62,Misc Capital Expenditure
+249402.1,1853000318,Public Works,Parks and Open Space,Parks Improvements,Regional Parks,0,249402.1,Parks and Urban Forestry
+2320554.56,1806101317,Public Works,Local Streets,Street Renewals,LSR 17/16-R-07-WSP,2076459.02,244095.54,Road Maintenance
+241280.07,4210001217,Transit,Transit Buses,2017 Transit Bus Cameras,Bus Fleet Cameras,0,241280.07,Public Transit
+6357852.37,1832000417,Public Works,Regional Streets,Active Transportation Facilities,Ped & Cycle-Chief Peguis Trail,6119311.89,238540.48,Recreation
+348059.75,2005000317,Waterworks Utility,Supply and Treatment,Pumping Stations,Pump Station Reliability Upgrd,109802.04,238257.71,Water & Waste
+1729053.66,2062000618,Solid Waste Disposal Utility,Collection and Disposal,Brady Road,Brady Drainage Roadwy&Site Imp,1490877.74,238175.92,Solid Waste Collection
+317738.04,1400000318,Assessment and Taxation,Assessment and Taxation,Assessment Data Valuation Information System,Assessm.Data Valuat. Info Sys,85428.71,232309.33,Misc Capital Expenditure
+232044.62,1858000119,Public Works,Parks and Open Space,Community Park Amenities,St James Optimist Park Restore,NA,232044.62,Parks and Urban Forestry
+881786.6,6252000117,Community Services (including Community Incentive Grants),Recreation and Leisure,Recreation Facility Refurbishment & Redevelopment- Existing,Community Centre Reno Grant,649785.41,232001.19,Recreation
+1637254.92,4210010116,Transit,Transit Building Replacement/Refurbishment,2016 Building General,Trn Bldg Replce/Refurb General,1408000.83,229254.09,Public Transit
+4660486.71,1806100818,Public Works,Local Streets,Street Renewals,LSR 18-R-06 WSP,4442382.25,218104.46,Road Maintenance
+229325.58,4210000317,Transit,Transit Building Replacement/Refurbishment,2017 Building General,Trn Bldg Replce/Refurb General,12869.36,216456.22,Public Transit
+215205.95,1804100120,Public Works,Regional Streets,Streets Renewals,Dublin Av-NtrDm to StJams-NBCF,NA,215205.95,Road Maintenance
+569755.85,6390000117,Municipal Accommodations,Property Asset Management,Community Centres - Refurbishment and Improvements,Community Centres- Refurbish,355601.43,214154.42,Recreation
+6061773.65,6213001114,Community Services (including Community Incentive Grants),Library,Library Redevelopment- New,Library Fac Redev-Transcona  M,5854130.55,207643.1,Libraries
+205048.78,1857001719,Public Works,Parks and Open Space,Community Park Amenities,PREP-Priority Safety-Related,NA,205048.78,Parks and Urban Forestry
+201088.27,2060000619,Solid Waste Disposal Utility,Collection and Disposal,Other Landfills,Closed Landfill Site Improv,NA,201088.27,Solid Waste Collection
+288765.01,1831200118,Public Works,Regional Streets,Traffic Engineering Improvements,Permanent Traffic Monitoring,88338.42,200426.59,Road Maintenance
+211951.64,1857000718,Public Works,Parks and Open Space,Community Park Amenities,PREP-North Kildonan,11905.15,200046.49,Parks and Urban Forestry
+200009.09,8310000119,Winnipeg Fleet Management Agency,Fleet Shop,Shop Tools & Equipment Upgrades,Shop Tools and Equip Upgrades,NA,200009.09,Fleet
+200000,8310000319,Winnipeg Fleet Management Agency,Fleet Shop,,Fuel Site Upgrades and Improv,NA,200000,Fleet
+211190.42,2030001818,Sewage Disposal Utility,Collection,Lift Stations,Arc Flash Hazard Analysis/Remd,14513.85,196676.57,Water & Waste
+197880.17,2012000217,Waterworks Utility,Supply and Treatment,Aqueduct,Aqueduct Intake Con Assmt,1299.14,196581.03,Water & Waste
+196260.04,400231717,City Clerks,City Clerks,Innovation Fund,ICF-ElectricVehicles &Charging,NA,196260.04,"Innovation, Transformation & Technology"
+194204.39,1805002419,Public Works,Local Streets,Waterway Crossings and Grade Separations Various,Sherwin Road Bridge (Omand's),NA,194204.39,Road Maintenance
+191586.21,1806300319,Public Works,Local Streets,Lane Renewals,Alley Package - 19-RL-03,NA,191586.21,Road Maintenance
+187923.65,1804102819,Public Works,Regional Streets,Streets Renewals,Corydon-Cambridg-Staffrd-NBCF,NA,187923.65,Road Maintenance
+187708.27,1832000119,Public Works,Regional Streets,Active Transportation Facilities,Pedestrian & Cycling Program,NA,187708.27,Recreation
+185689.91,3458200019,"Innovation, Transformation and Technology",Software,Data Warehouse / Business Integration,Microsoft Software Renewal,NA,185689.91,"Innovation, Transformation & Technology"
+185343.41,6395000119,Municipal Accommodations,Property Asset Management,Accommodation Facilities,Accommodation Facilities,NA,185343.41,Misc Capital Expenditure
+199584.14,4210001218,Transit,Transit Security Enhance,Transit Safety Mgmt Practices,Transit Safety Mgmt Practices,15939.72,183644.42,Public Transit
+182148.26,1857000818,Public Works,Parks and Open Space,Community Park Amenities,PREP-Old Kildonan,2317.5,179830.76,Parks and Urban Forestry
+177406.87,4230030119,Transit,Innovative Transit Program,2019 Innovative Transit Program,Innovative Transit Program,NA,177406.87,Public Transit
+329602.64,3457000017,Customer Service and Corporate Communications,Software,Contact Centre - 311,311 Renewal,154611.48,174991.16,311 Contact Centre
+185679.04,1857000218,Public Works,Parks and Open Space,Community Park Amenities,PREP-Charleswood - Tuxedo,11005.28,174673.76,Parks and Urban Forestry
+783467.44,2004000715,Waterworks Utility,Distribution,Feeder Mains,Feedermain Condition Assessmnt,609207.05,174260.39,Water & Waste
+283003.58,1853000418,Public Works,Parks and Open Space,Parks Improvements,St. John's Park Lighting,109558.63,173444.95,Parks and Urban Forestry
+172063.91,3459000918,"Innovation, Transformation and Technology",Software,Data Warehouse / Business Integration,ISP - EOC-BusinessContinuity,214.31,171849.6,"Innovation, Transformation & Technology"
+171273.03,1804103419,Public Works,Regional Streets,Streets Renewals,Sargt Ave-ArlingtontoErin-NBCF,NA,171273.03,Road Maintenance
+169604.88,2030001819,Sewage Disposal Utility,Collection,Lift Stations,Arc Flash Hazard Analysis/Remd,NA,169604.88,Water & Waste
+168261.61,6362500519,Community Services (including Community Incentive Grants),Recreation and Leisure,Recreation Facility Refurbishment & Redevelopment- Existing,Grant Park Recreation Campus,NA,168261.61,Recreation
+828624.94,1804200417,Public Works,Regional Streets,Streets Renewals,Downtown Reg St,662898.41,165726.53,Road Maintenance
+164197.82,1857000719,Public Works,Parks and Open Space,Community Park Amenities,PREP-North Kildonan,NA,164197.82,Parks and Urban Forestry
+1577881.68,2205000017,Winnipeg Police Service,Computer Upgrades,Software Upgrade,Police Div Systems Upgr. M,1413926.57,163955.11,Police Service
+716768.42,1805001414,Public Works,Local Streets,Waterway Crossings and Grade Separations Various,Louise Bridge (Red River),554672.29,162096.13,Road Maintenance
+162053.85,1806300119,Public Works,Local Streets,Lane Renewals,Alley Package - 19-RL-01,NA,162053.85,Road Maintenance
+301695,2060000600,Solid Waste Disposal Utility,Collection and Disposal,Other Landfills,Closed Landfill Site Improv RP,139889.71,161805.29,Solid Waste Collection
+158017.45,1857000319,Public Works,Parks and Open Space,Community Park Amenities,PREP-Daniel McIntyre,NA,158017.45,Parks and Urban Forestry
+405515.18,6351300216,"Planning, Property and Development",Land Drainage & Flood Control,Riverbank Stabilization,Riverbank Stab/Phys Asset Prot,247809.88,157705.3,Misc Capital Expenditure
+210011.38,6351300117,"Planning, Property and Development",Land Drainage & Flood Control,Riverbank Greenway Programs,Riverbank Greenway Programs,54002.98,156008.4,Misc Capital Expenditure
+773683.3,1804200418,Public Works,Regional Streets,Streets Renewals,Downtown Reg St,617936.99,155746.31,Road Maintenance
+810660.15,1804101517,Public Works,Regional Streets,Streets Renewals,Princess-William/Donald,657275.52,153384.63,Road Maintenance
+233144.17,6390000118,Municipal Accommodations,Property Asset Management,Community Centres - Refurbishment and Improvements,Community Centres- Refurbish,81741.51,151402.66,Recreation
+247463.18,2001001517,Waterworks Utility,Supply and Treatment,Security Upgrades,Water System Security Upgrades,97770.04,149693.14,Water & Waste
+147733.76,1420216217,Local Improvements,Local Improvements,Lane pavement,Coniston/Lyndale/Ferndale/Lawn,NA,147733.76,Road Maintenance
+239922.56,6251000118,Community Services (including Community Incentive Grants),Grants,Community Incentive Grant Program,Community Incentive Grant Prog,93470.86,146451.7,Misc Capital Expenditure
+3342135.8,6362400219,Community Services (including Community Incentive Grants),Recreation and Leisure,Recreation Facility Refurbishment & Redevelopment- Existing,"Pan Am Pool-Ceiling, Lighting",3198975.99,143159.81,Recreation
+206513.92,2003000616,Waterworks Utility,Supply and Treatment,Aqueduct,Aqueduct Asset Preservation,64364.61,142149.31,Water & Waste
+141192.58,1804102919,Public Works,Regional Streets,Streets Renewals,Watt St-Chalmers-Munroe-NBCF,NA,141192.58,Road Maintenance
+220131.89,1857001318,Public Works,Parks and Open Space,Community Park Amenities,PREP-St. James-Brooklands,79783.42,140348.47,Parks and Urban Forestry
+8738752.59,1806101517,Public Works,Local Streets,Street Renewals,Ind St 17-RI-01,8598927.69,139824.9,Road Maintenance
+442304.58,6392060117,Municipal Accommodations,Property Asset Management,Indoor Aquatic Facilities - Maintenance and Repair,Eldon Ross Pool Roof Replace,304139.8,138164.78,Recreation
+1861633.72,3402500016,"Innovation, Transformation and Technology",Hardware,Communications Network Infrastructure,Enterprise Computing Initia RP,1724846.12,136787.6,"Innovation, Transformation & Technology"
+136292.89,1857000919,Public Works,Parks and Open Space,Community Park Amenities,PREP-Point Douglas,NA,136292.89,Parks and Urban Forestry
+663012.58,2104013018,Fire Paramedic Service,Equipment,Replacement,Zoll Monitor Defibrillators,527463.47,135549.11,Fire Service
+134590.1,1804102319,Public Works,Regional Streets,Streets Renewals,Dwtn-SmthNB-NtrDme-Midtwn-NBCF,NA,134590.1,Road Maintenance
+143249.13,1420215818,Local Improvements,Local Improvements,Lane pavement,"Coniston,Lyndale,Monck,Claremo",8711.64,134537.49,Road Maintenance
+143480.28,1420215718,Local Improvements,Local Improvements,Lane pavement,"Coniston,Lyndale,Claremont",11031.38,132448.9,Road Maintenance
+139770.55,6210000117,Community Services (including Community Incentive Grants),Library,Library Improvements- Existing,Library Safety & Access Prog,9700,130070.55,Libraries
+335255.46,2040001516,Sewage Disposal Utility,Collection,Information Technology,GIS & PW Manager Upgrade,208066.3,127189.16,Water & Waste
+5204106.49,1806100918,Public Works,Local Streets,Street Renewals,LSR 18-R-07 Morrison,5079796.16,124310.33,Road Maintenance
+494841.05,6391000117,Municipal Accommodations,Property Asset Management,Arenas - Refurbishment and Redevelopment - Existing,Arenas,370726.15,124114.9,Recreation
+128827.03,2005000700,Waterworks Utility,Supply and Treatment,Pumping Stations,Hurst Pumping Stn          MRP,7422.5,121404.53,Water & Waste
+121024.86,2005001418,Waterworks Utility,Supply and Treatment,Pumping Stations,HVAC Upgrades Pumping Stn    M,0,121024.86,Water & Waste
+503410.78,1813000117,Public Works,Other Street Projects,Land Drainage Sewer,Land Drainage Sewer-Reg/Loc St,382442.38,120968.4,Misc Capital Expenditure
+5388467.71,1804100518,Public Works,Regional Streets,Streets Renewals,McGregor-Selkirk/Mountain,5268618.48,119849.23,Road Maintenance
+118233.48,2104013019,Fire Paramedic Service,Equipment,Replacement,Zoll Monitor Defibrillators,NA,118233.48,Fire Service
+115438.89,400000518,City Clerks,City Clerks,Election Systems,Elections Systems,NA,115438.89,Misc Capital Expenditure
+107596.77,1804102019,Public Works,Regional Streets,Streets Renewals,Dwtn-Fort NB-Grham-Brodwy-NBCF,NA,107596.77,Road Maintenance
+106060.22,6393000119,Municipal Accommodations,Property Asset Management,Outdoor Aquatic Facilities - Maintenance and Repair,Outdoor Aquatic Facilities,NA,106060.22,Recreation
+105962.56,4210010118,Transit,Transit Building Replacement/Refurbishment,2018 Building General,Trn Bldg Replce/Refurb General,0,105962.56,Public Transit
+105678.08,1804103019,Public Works,Regional Streets,Streets Renewals,Munroe-Raleigh-Henderson-NBCF,NA,105678.08,Road Maintenance
+104069.38,1806101119,Public Works,Local Streets,Street Renewals,LSR 19-R-04 A AECOM,NA,104069.38,Road Maintenance
+103878.13,1857001319,Public Works,Parks and Open Space,Community Park Amenities,PREP-St. James,NA,103878.13,Parks and Urban Forestry
+102904.81,6351800119,"Planning, Property and Development",City Beautification,Downtown Enhancement Program,Downtown Enhancement Program,NA,102904.81,City Beautification
+102504.29,1804101919,Public Works,Regional Streets,Streets Renewals,Dwtn-Donld-St MryAv-Gertr-NBCF,NA,102504.29,Road Maintenance
+100887.32,2109010018,Fire Paramedic Service,Equipment,Acquisition,Portable Mass Spectrometer,0,100887.32,Fire Service
+5381421.96,1806100917,Public Works,Local Streets,Street Renewals,LSR 17-R-03 AECOM,5283404.88,98017.08,Road Maintenance
+97930,1804101719,Public Works,Regional Streets,Streets Renewals,Dwtn-Brodway-Osborne-Main-NBCF,NA,97930,Road Maintenance
+97621.21,6361000419,"Planning, Property and Development",Computer Upgrades,Computer Automation,Computer Automation,NA,97621.21,Misc Capital Expenditure
+97090.12,6390000119,Municipal Accommodations,Property Asset Management,Community Centres - Refurbishment and Improvements,Community Centres- Refurbish,NA,97090.12,Recreation
+96478.55,1857001519,Public Works,Parks and Open Space,Community Park Amenities,PREP-St. Vital,NA,96478.55,Parks and Urban Forestry
+96223.25,4210001318,Transit,Transit Security Enhance,Transit Safety Mgmt Practices,Bus Communication Moderization,0,96223.25,Public Transit
+95533.66,1804100220,Public Works,Regional Streets,Streets Renewals,St.Jams St-Dublln to Sask-NBCF,NA,95533.66,Road Maintenance
+1146221.1,6351802015,"Planning, Property and Development",Recreation,Other,Park City West Community Centr,1051041.1,95180,Parks and Urban Forestry
+279334.83,2030001817,Sewage Disposal Utility,Collection,Lift Stations,Arc Flash Hazard Analysis/Remd,184769.82,94565.01,Water & Waste
+94178.62,1804103219,Public Works,Regional Streets,Streets Renewals,Erin St-Ntr Dame-Wolever-NBCF,NA,94178.62,Road Maintenance
+725053.29,1831000118,Public Works,Regional Streets,Traffic Engineering Improvements,Traffic Engineer Improve     P,632765.95,92287.34,Road Maintenance
+92141.52,6362500319,Community Services (including Community Incentive Grants),Recreation and Leisure,Recreation Facility Redevelopment- New,New Rec Fac-S Winnipeg,0,92141.52,Recreation
+92110.82,1806101919,Public Works,Regional Streets,Active Transportation Facilities,Rec Walkways and Bk Path Renew,NA,92110.82,Recreation
+363837.32,6395000118,Municipal Accommodations,Property Asset Management,Accommodation Facilities,Accommodation Facilities,272518.63,91318.69,Misc Capital Expenditure
+90752.89,1831100219,Public Works,Regional Streets,Traffic Engineering Improvements,Traffic Signals Loops,NA,90752.89,Road Maintenance
+88204.23,3458300017,"Innovation, Transformation and Technology",Hardware,Infrastructure Service Enhancement,Infrastructure Service Enhance,0,88204.23,"Innovation, Transformation & Technology"
+1655618.41,1804100218,Public Works,Regional Streets,Streets Renewals,Pembina NB-Ducharme/Cloutier,1567666.84,87951.57,Road Maintenance
+87104.82,1804102719,Public Works,Regional Streets,Streets Renewals,Corydn EB-Watrloo-Cambrdg-NBCF,NA,87104.82,Road Maintenance
+88239.64,6250000118,Community Services (including Community Incentive Grants),Recreation and Leisure,Recreation Facility Refurbishment & Redevelopment- Existing,Rec Facility Safety & Access,3000,85239.64,Recreation
+1576806.62,2062000216,Solid Waste Disposal Utility,Collection and Disposal,Brady Road,Landfill Gas Capture Expan,1493573.29,83233.33,Road Maintenance
+126296.46,6260000117,Community Services (including Community Incentive Grants),Information Technology,Software,Business Application Systems,43154.41,83142.05,Misc Capital Expenditure
+82713.51,8310000219,Winnipeg Fleet Management Agency,Fleet Shop,Power Tools,Power Tools,NA,82713.51,Fleet
+89431.16,1420215918,Local Improvements,Local Improvements,Lane pavement,"Walmer,Kirkdale,Lawndale,Birch",7072.15,82359.01,Road Maintenance
+82156.12,400201717,City Clerks,City Clerks,Innovation Fund,ICF-Lane Closures System,NA,82156.12,"Innovation, Transformation & Technology"
+81941.15,1804102619,Public Works,Regional Streets,Streets Renewals,Taylor Ave-Wilton-Pembina-NBCF,NA,81941.15,Road Maintenance
+163653.09,1804101218,Public Works,Regional Streets,Street Improvements,Kenaston-Ness/Taylor,81867.73,81785.36,Road Maintenance
+1529622.56,3402500017,"Innovation, Transformation and Technology",Hardware,Enterprise Computing,Enterprise Computing Initia RP,1449676.34,79946.22,"Innovation, Transformation & Technology"
+81339.47,1804300218,Public Works,Regional Streets,Streets Renewals,PC-Regional&LocalSt Renewal #2,1582.62,79756.85,Road Maintenance
+305385.46,2010000815,Waterworks Utility,Distribution,Information Technology,Lab Info Mgmt Upgrade,226014.41,79371.05,Water & Waste
+79143.97,2002500818,Waterworks Utility,Supply and Treatment,Water Treatment,WTP Asset Refurbishment,0,79143.97,Water & Waste
+79067.44,1804103119,Public Works,Regional Streets,Streets Renewals,Johnson W-Levis to Hendsn-NBCF,NA,79067.44,Road Maintenance
+78628.42,6391000119,Municipal Accommodations,Property Asset Management,Arenas - Refurbishment and Redevelopment - Existing,Arenas,NA,78628.42,Recreation
+77961.68,1804103719,Public Works,Regional Streets,Streets Renewals,RoblinBlvd-Dieppe-PTH101-NBCF,NA,77961.68,Road Maintenance
+248554.16,6210000116,Community Services (including Community Incentive Grants),Library,Library Improvements- Existing,Library Safety & Access Prog,171518.7,77035.46,Libraries
+76857.77,1857001619,Public Works,Parks and Open Space,Community Park Amenities,PREP-Transcona,NA,76857.77,Parks and Urban Forestry
+76639.16,1857001119,Public Works,Parks and Open Space,Community Park Amenities,PREP-St. Boniface,NA,76639.16,Parks and Urban Forestry
+74374.3,400181716,City Clerks,City Clerks,Innovation Fund,ICF-Transit Enhance & Bus WiFi,NA,74374.3,"Innovation, Transformation & Technology"
+73839.5,1200001517,Corporate Projects,Enterprise Systems,PeopleSoft,PS Accounts Receivable Billing,0,73839.5,Misc Capital Expenditure
+972051.21,1806101417,Public Works,Local Streets,Street Renewals,17-LI-01 WSP - Granular Imp,898857.84,73193.37,Road Maintenance
+1687835.61,6251000115,Community Services (including Community Incentive Grants),Grants,Community Incentive Grant Program,Community Incentive Grant Prog,1614947.45,72888.16,Misc Capital Expenditure
+77553.72,1420215618,Local Improvements,Local Improvements,Lane pavement,"Highfield,Coniston,Chandos,",4913.07,72640.65,Road Maintenance
+72484.33,6362400419,Community Services (including Community Incentive Grants),Recreation and Leisure,Recreation Facility Refurbishment & Redevelopment- Existing,Norwood pool - Decommissioning,NA,72484.33,Recreation
+72401.37,1420216117,Local Improvements,Local Improvements,Lane pavement,Highfield/Coniston /Claremont,NA,72401.37,Road Maintenance
+72000,6251000119,Community Services (including Community Incentive Grants),Grants,Community Incentive Grant Program,Community Incentive Grant Prog,NA,72000,Misc Capital Expenditure
+71734.12,2106020019,Fire Paramedic Service,Systems,Software Upgrade,Computer Aided Dispatch (CAD),NA,71734.12,Fire Service
+282774,1857001718,Public Works,Parks and Open Space,Community Park Amenities,PREP-Priority Safety-Related,211113.82,71660.18,Parks and Urban Forestry
+977721.81,1832000314,Public Works,Regional Streets,Active Transportation Facilities,Active Transportation Corridor,906162.57,71559.24,Recreation
+71479.99,4230040119,Transit,Transit Buses,Low Income Bus Pass,Low Income Bus Pass,NA,71479.99,Public Transit
+135573.88,4230010518,Transit,Rapid Transit,SW Rapid Tr Corridor,SWRT2 2018 P3 Payment,64895.66,70678.22,Public Transit
+3388815.07,1832000617,Public Works,Regional Streets,Active Transportation Facilities,McDermot/Bannatyne (Phase 2) M,3318915.36,69899.71,Recreation
+69326.61,6318020119,Public Works,Parks and Open Space,Community Parks,Parks Buildings,NA,69326.61,Parks and Urban Forestry
+69325.07,8400000119,Winnipeg Parking Authority,Equipment,Automated License Plate Recognition (ALPR) Program,Automated License Plate Recogn,NA,69325.07,Parking
+68960.12,400211717,City Clerks,City Clerks,Innovation Fund,ICF-Alarm Permit Mgnt System,NA,68960.12,"Innovation, Transformation & Technology"
+7943792.67,6392010117,Municipal Accommodations,Property Asset Management,Indoor Aquatic Facilities - Maintenance and Repair,Seven Oaks Renewal Plan,7874977.46,68815.21,Recreation
+81529.48,1857001518,Public Works,Parks and Open Space,Community Park Amenities,PREP-St. Vital,12875,68654.48,Parks and Urban Forestry
+68062.15,3458500019,"Innovation, Transformation and Technology",Hardware,Renewals,Intake Program,NA,68062.15,"Innovation, Transformation & Technology"
+216202.16,1857000418,Public Works,Parks and Open Space,Community Park Amenities,PREP-Elmwood-East Kildonan,148178.25,68023.91,Parks and Urban Forestry
+67293.15,1804103319,Public Works,Regional Streets,Streets Renewals,Wall St-St Mattws-Ntr Dme-NBCF,NA,67293.15,Road Maintenance
+144816.4,1854000117,Public Works,Parks and Open Space,Community Parks,Parks Master Plan,77632.27,67184.13,Parks and Urban Forestry
+67931.67,6362500116,Community Services (including Community Incentive Grants),Recreation and Leisure,Recreation Facility Refurbishment & Redevelopment- Existing,Tyndall Park-Feasibility Study,1528.38,66403.29,Recreation
+2824975.3,1832000117,Public Works,Regional Streets,Active Transportation Facilities,Pedestrian & Cycling Program,2760645.32,64329.98,Recreation
+181405.3,2001002815,Waterworks Utility,Supply and Treatment,Various,Water Conservation Study,119754.69,61650.61,Water & Waste
+144566.48,6253000116,Community Services (including Community Incentive Grants),Recreation and Leisure,Recreation Facility Refurbishment & Redevelopment- Existing,Recreation/Aquatics MasterPlan,84329.81,60236.67,Recreation
+59853.13,4210001219,Transit,Transit Security Enhance,Transit Safety Mgmt Practices,Transit Safety Mgmt Practices,NA,59853.13,Public Transit
+689886.31,6321000017,Fire Paramedic Service,Facilities,Maintenance,Station Capital Maintenance,631444.32,58441.99,Fire Service
+4976768.95,1806100518,Public Works,Local Streets,Street Renewals,LSR 18-R-03 Morrison,4919167.88,57601.07,Road Maintenance
+56469.72,1804102119,Public Works,Regional Streets,Streets Renewals,Dwtn-Hgrv NB-Prtag-Ellice-NBCF,NA,56469.72,Road Maintenance
+70955.94,3459001518,"Innovation, Transformation and Technology",Software,Data Warehouse / Business Integration,ISP - Innovation Portfolio,15099.19,55856.75,"Innovation, Transformation & Technology"
+125587.83,2003000617,Waterworks Utility,Supply and Treatment,Aqueduct,Aqueduct Asset Preservation,70969.25,54618.58,Water & Waste
+813910.32,1806100118,Public Works,Local Streets,Street Renewals,LSR - Rue Des Trappistes,760853.52,53056.8,Road Maintenance
+103561.61,2005001115,Waterworks Utility,Supply and Treatment,Pumping Stations,Chlorine Upgrading Pumping Stn,50518.88,53042.73,Water & Waste
+52723.9,4210001519,Transit,Transit Improvements,Transit Improvements,Heated Bus Shelter Program,NA,52723.9,Public Transit
+76651.19,1812000118,Public Works,Other Street Projects,Asset Management,Asset Mgmt - Various Divisions,23985.2,52665.99,Misc Capital Expenditure
+273814.82,2040000815,Sewage Disposal Utility,Collection,Information Technology,Laboratory Info Mgmt Upgrade,221418.16,52396.66,Water & Waste
+50821.32,6392000119,Municipal Accommodations,Property Asset Management,Indoor Aquatic Facilities - Maintenance and Repair,Indoor Aquatic Facilities,NA,50821.32,Recreation
+50029.73,400151716,City Clerks,City Clerks,Innovation Fund,ICF -Facility Advertising Disp,NA,50029.73,"Innovation, Transformation & Technology"
+49635.76,3459001718,"Innovation, Transformation and Technology",Software,Data Warehouse / Business Integration,ISP-Accounts Payable Workflow,NA,49635.76,"Innovation, Transformation & Technology"
+78137.25,6250000117,Community Services (including Community Incentive Grants),Recreation and Leisure,Recreation Facility Refurbishment & Redevelopment- Existing,Rec Facility Safety & Access,29230.31,48906.94,Recreation
+48666.09,4210000219,Transit,Transit Buses,2019 Transit Buses,Transit Buses 2019,NA,48666.09,Public Transit
+349572.47,2040001716,Sewage Disposal Utility,Treatment,Information Technology,WIMS Dashboard,301356.64,48215.83,Water & Waste
+47907.5,1804103519,Public Works,Regional Streets,Streets Renewals,Archibld-St Cathrne-Eliza-NBCF,NA,47907.5,Road Maintenance
+47790.87,1804100420,Public Works,Regional Streets,Streets Renewals,St.JamsSt-NtrDmetoOmndsCr-NBCF,NA,47790.87,Road Maintenance
+94039.71,6253000217,Community Services (including Community Incentive Grants),Recreation and Leisure,Recreation Facility Refurbishment & Redevelopment- Existing,Recre Refurb&Redevel East End,47340.9,46698.81,Recreation
+46639.5,400331718,City Clerks,City Clerks,Innovation Fund,ICF -PeopleSoft AP Paperless,NA,46639.5,"Innovation, Transformation & Technology"
+47100.61,6331000418,Municipal Accommodations,Property Asset Management,Fire/Life Safety Replacement/Asbestos Abatement,Fire/Life Safety/Regulatory,626.28,46474.33,Fire Service
+199686.4,1857001018,Public Works,Parks and Open Space,Community Park Amenities,PREP-River Heights-Fort Garry,153534.87,46151.53,Parks and Urban Forestry
+46030.69,2004000718,Waterworks Utility,Distribution,Feeder Mains,Feeder Main Condition Assessmt,0,46030.69,Water & Waste
+45636.59,6262000119,Community Services (including Community Incentive Grants),Information Technology,Upgrade/Replace,Tech Advancement Program,NA,45636.59,Misc Capital Expenditure
+543041.84,2003000917,Waterworks Utility,Supply and Treatment,Aqueduct,Br 1 Aqueduct-Riverbank Stab,498145.22,44896.62,Water & Waste
+181264.02,1857001418,Public Works,Parks and Open Space,Community Park Amenities,PREP-S. Winnipeg - St. Norbert,136697.67,44566.35,Parks and Urban Forestry
+44378.76,1857000219,Public Works,Parks and Open Space,Community Park Amenities,PREP-Charleswood-Tuxedo-Westwo,NA,44378.76,Road Maintenance
+43696.2,1804200219,Public Works,Regional Streets,Sidewalk and Curb Repair,Detectable Warning Surf Reg St,NA,43696.2,Road Maintenance
+43423.82,2002500819,Waterworks Utility,Supply and Treatment,Water Treatment,WTP Asset Refurbishment,NA,43423.82,Water & Waste
+100515.25,1859000116,Public Works,Parks and Open Space,Parks Improvements,Regional Pks Investmt Strategy,57250.22,43265.03,Parks and Urban Forestry
+211723.39,1857001118,Public Works,Parks and Open Space,Community Park Amenities,PREP-St. Boniface,168850.2,42873.19,Parks and Urban Forestry
+212966.37,2005000617,Waterworks Utility,Supply and Treatment,Pumping Stations,Tache Booster Pumping Station,170202.75,42763.62,Water & Waste
+47244.64,1420215518,Local Improvements,Local Improvements,Lane pavement,"Dumoulin,Provencher,LaFleche",4579.16,42665.48,Road Maintenance
+2717179.74,1806101318,Public Works,Regional Streets,Streets Renewals,LSR 18-R-05B Morrison,2674717.24,42462.5,Road Maintenance
+42259.87,1857000419,Public Works,Parks and Open Space,Community Park Amenities,PREP-Elmwood-East Kildonan,NA,42259.87,Parks and Urban Forestry
+3365006.71,1831200115,Public Works,Regional Streets,Traffic Engineering Improvements,Transportation Mngmt Centre,3322757.16,42249.55,Road Maintenance
+42036.75,2040002119,Sewage Disposal Utility,Collection,Information Technology,Digital Customer Solutions,NA,42036.75,Water & Waste
+42017.74,4210001319,Transit,Transit Security Enhance,Transit Safety Mgmt Practices,Bus Communication Moderization,NA,42017.74,Public Transit
+309522.01,1420010317,Local Improvements,Local Improvements,Watermains,Grassie Boulevard -Watermain,267623.35,41898.66,Water & Waste
+44934.66,1420216018,Local Improvements,Local Improvements,Lane pavement,Kildondn/Greene Ave/Linden Av,3175.7,41758.96,Road Maintenance
+8099072.45,203110004B,Sewage Disposal Utility,Treatment,Biosolids,Biosolids Budget             P,8057674.82,41397.63,Water & Waste
+373176.98,1805002118,Public Works,Local Streets,Waterway Crossings and Grade Separations Various,Dublin Av Bridge (Omands Crk)M,332109.13,41067.85,Road Maintenance
+39235.96,3459009919,"Innovation, Transformation and Technology",Software,Data Warehouse / Business Integration,ISP-Innovation Bench,NA,39235.96,"Innovation, Transformation & Technology"
+43234.62,6331002618,Municipal Accommodations,Property Asset Management,Security/Building Automation Systems Incentives,Security/Building Automation,4074.4,39160.22,Misc Capital Expenditure
+38936.19,1804101819,Public Works,Regional Streets,Streets Renewals,Dwtn-Portg-Main-Memorial-NBCF,NA,38936.19,Road Maintenance
+38095.87,1420010417,Local Improvements,Local Improvements,Sewermains,905 BickertonSt.Wastewat.Sewer,726.75,37369.12,Road Maintenance
+37127.7,4210001419,Transit,Transit Buses,Electric Buses,Electric Bus Study,NA,37127.7,Public Transit
+394005.97,1804200118,Public Works,Regional Streets,Sidewalk and Curb Repair,Sidewalk/Curb Renewals-Reg St,357039.5,36966.47,Road Maintenance
+499600,6351400718,"Planning, Property and Development","Art, Entertainment, & Culture",Public Art Strategy,Public Art Strategy,464308,35292,"Remaining Arts, Ent. & Culture"
+35261.53,3402500019,"Innovation, Transformation and Technology",Hardware,Enterprise Computing,Enterprise Computing Initiativ,NA,35261.53,"Innovation, Transformation & Technology"
+1391425.18,1806100816,Public Works,Local Streets,Street Renewals,LSR 16-R-07 WSP,1356164.87,35260.31,Road Maintenance
+35232.72,2040001819,Sewage Disposal Utility,Collection,Information Technology,WWD Document Management,NA,35232.72,Water & Waste
+34952.28,2003000618,Waterworks Utility,Supply and Treatment,Aqueduct,Aqueduct Asset Preservation,0,34952.28,Water & Waste
+34715,2030003216,Sewage Disposal Utility,Collection,Reliability Upgrades,Coll Power Reliablity Study,0,34715,Water & Waste
+5185428.71,1804101514,Public Works,Regional Streets,Streets Renewals,Sturgeon/Murray Rndabt,5151225.18,34203.53,Road Maintenance
+1068483.68,1832000416,Public Works,Regional Streets,Active Transportation Facilities,Bicycle Corridors,1035134.23,33349.45,Recreation
+33255.86,400171716,City Clerks,City Clerks,Innovation Fund,ICF - Enterprise Mobility Mgmt,NA,33255.86,"Innovation, Transformation & Technology"
+189744.03,2105000017,Fire Paramedic Service,Equipment,Replacement,911 Call Centre Resillience,156523.96,33220.07,Fire Service
+192308.93,1420010217,Local Improvements,Local Improvements,Sewermains,Grassie Blvd-Wastewater Sewer,159513.41,32795.52,Water & Waste
+32656.14,2076500118,Land Drainage and Flood Control Utility,Flood Control,Flood Pumping Station,Flood Pumping Station Rehab,0,32656.14,Misc Capital Expenditure
+596386.58,1831000117,Public Works,Regional Streets,Traffic Engineering Improvements,Traffic Engineer Improve     P,564468.14,31918.44,Road Maintenance
+7956776.88,2005001216,Waterworks Utility,Supply and Treatment,Pumping Stations,Pump Stn/Reservoir Upgrades,7925933.34,30843.54,Water & Waste
+1505651.87,6351400418,"Planning, Property and Development",City Beautification,Downtown Enhancement Program,James Ave Streetscaping,1475496.82,30155.05,City Beautification
+494299.21,1806102017,Public Works,Regional Streets,Active Transportation Facilities,Rec Walkways and Bk Path Renew,464728.28,29570.93,Recreation
+1298591.97,1806101618,Public Works,Local Streets,Street Renewals,Residential TBO B,1269315.99,29275.98,Road Maintenance
+29017.16,6390001019,Municipal Accommodations,Property Asset Management,Community Centres - Refurbishment and Improvements,Building Asset/Work Management,NA,29017.16,Recreation
+478980.7,1853000116,Public Works,Parks and Open Space,Parks Improvements,Parks - Improvements,450011.78,28968.92,Parks and Urban Forestry
+28930.34,6362500119,Community Services (including Community Incentive Grants),Recreation and Leisure,Recreation Facility Refurbishment & Redevelopment- Existing,Recr.&Leasure Infrastr.Renewal,NA,28930.34,Recreation
+2126996.77,1804101614,Public Works,Regional Streets,Streets Renewals,Downtown Regional Streets,2098414.83,28581.94,Road Maintenance
+2313281.49,1806100718,Public Works,Local Streets,Street Renewals,LSR 18-R-05 Morrison,2284777.95,28503.54,Road Maintenance
+55759.67,2111010917,Fire Paramedic Service,Facilities,Maintenance,Facilities Optimizat-Station 9,27476.05,28283.62,Fire Service
+27837,3459001618,"Innovation, Transformation and Technology",Software,Data Warehouse / Business Integration,ISP-FIPPA Case Mgmt,0,27837,"Innovation, Transformation & Technology"
+294088.75,6210000217,Community Services (including Community Incentive Grants),Library,Library Improvements- Existing,Library Interior Infra Replace,266381.13,27707.62,Libraries
+861701.32,1853000115,Public Works,Parks and Open Space,Parks Improvements,Parks - Improvements,834399.89,27301.43,Parks and Urban Forestry
+2350278.31,6213002113,Community Services (including Community Incentive Grants),Library,Library Improvements- Existing,Library Fac Redev-St. Vital  M,2323121.68,27156.63,Libraries
+448126.11,1832000115,Public Works,Regional Streets,Active Transportation Facilities,Rec Walkways & Bike Paths,422408.83,25717.28,Recreation
+350000,6210000316,Community Services (including Community Incentive Grants),Information Technology,Upgrade/Replace,Library Tech Upgrade/Replace,324296.25,25703.75,Libraries
+14178008.23,2065001100,Solid Waste Disposal Utility,Recycling and Waste Diversion,4R Depots,CIWMS-4R Wpg Depots        MRP,14152324.2,25684.03,Solid Waste Collection
+178159,2111010016,Fire Paramedic Service,Facilities,Optimization,Standards of Coverage,152526,25633,Fire Service
+25117.2,3460000019,"Innovation, Transformation and Technology",Software,Data Warehouse / Business Integration,Info Security Initiatives,NA,25117.2,"Innovation, Transformation & Technology"
+139711.24,6390001016,Municipal Accommodations,Property Asset Management,Community Centres - Refurbishment and Improvements,Building Asset/Work Management,114974.19,24737.05,Recreation
+476484.4,1806101816,Public Works,Regional Streets,Active Transportation Facilities,Rec Walkways & Bk Path Renew,451810.48,24673.92,Recreation
+24299.85,6250000119,Community Services (including Community Incentive Grants),Recreation and Leisure,Recreation Facility Refurbishment & Redevelopment- Existing,Rec Facility Safety & Access,NA,24299.85,Recreation
+23383.42,3459000319,"Innovation, Transformation and Technology",Software,Data Warehouse / Business Integration,ISP-Lineat Referencing System,NA,23383.42,"Innovation, Transformation & Technology"
+376839.64,1853000317,Public Works,Parks and Open Space,Parks Improvements,Regional Parks,353530.5,23309.14,Parks and Urban Forestry
+23279.22,3463000019,"Innovation, Transformation and Technology",Software,Data Warehouse / Business Integration,E-Mail Archiving,NA,23279.22,"Innovation, Transformation & Technology"
+81551.7,2003000517,Waterworks Utility,Supply and Treatment,Shoal Lake Intake,Aqueduct Con Assmt,59108.4,22443.3,Water & Waste
+21404.68,1420216317,Local Improvements,Local Improvements,Lane pavement,Maralbo/Parkville/St.Mary's/Du,NA,21404.68,Road Maintenance
+215857.6,1804101417,Public Works,Regional Streets,Streets Renewals,Ness-Moray/Braintree,194564.4,21293.2,Road Maintenance
+21289.4,1857000619,Public Works,Parks and Open Space,Community Park Amenities,PREP-Mynarski,0,21289.4,Parks and Urban Forestry
+644419.24,1806200117,Public Works,Local Streets,Sidewalks,Sidewalk Renewals Local Street,623660.48,20758.76,Road Maintenance
+438812.7,2070002515,Land Drainage and Flood Control Utility,Land Drainage,Land Drainage System,Ravelston Deep Pond Landscapin,418111.07,20701.63,Misc Capital Expenditure
+19674.3,400251717,City Clerks,City Clerks,Innovation Fund,ICF-Solar Uses Pan Am Pool,NA,19674.3,"Innovation, Transformation & Technology"
+513031.1,1853000117,Public Works,Parks and Open Space,Parks Improvements,Community&Nghbor Parks-Existi,493643.6,19387.5,Parks and Urban Forestry
+18945.93,1804102219,Public Works,Regional Streets,Streets Renewals,Dwtn-Hgrv NB-Brodway-York-NBCF,NA,18945.93,Road Maintenance
+2422485.14,1806300217,Public Works,Local Streets,Lane Renewals,Lane Renewals - 17-RL-01B WSP,2404217.25,18267.89,Road Maintenance
+18000,1816010518,Public Works,Other Street Projects,Asset Management,SMIR-Fly Ash Concrete in Pavem,0,18000,Road Maintenance
+3133988.65,1806300118,Public Works,Local Streets,Lane Renewals,Lane Renewals - 18-RL-01A,3116399.35,17589.3,Road Maintenance
+3858601.85,1801000314,Public Works,Other Street Projects,New Transportation,Chief Peguis Trail -Main/Rt 90,3841124.49,17477.36,Road Maintenance
+230862.08,6321000317,Fire Paramedic Service,Facilities,Maintenance,Station Cap Mtce-Station 16,213912.84,16949.24,Fire Service
+301789.09,1806102018,Public Works,Local Streets,Street Renewals,LSR - Assiniboine Park Dr,285050.46,16738.63,Road Maintenance
+222535.56,1857001218,Public Works,Parks and Open Space,Community Park Amenities,PREP-St. Charles,206369.5,16166.06,Parks and Urban Forestry
+15475.83,6210000219,Community Services (including Community Incentive Grants),Library,Library Improvements- Existing,LibraryRefurb & InteriorInfras,NA,15475.83,Libraries
+147708,6250000116,Community Services (including Community Incentive Grants),Recreation and Leisure,Recreation Facility Refurbishment & Redevelopment- Existing,Rec Facility Safety & Access,132317.44,15390.56,Recreation
+15174.82,1857000819,Public Works,Parks and Open Space,Community Park Amenities,PREP-Old Kildonan,NA,15174.82,Parks and Urban Forestry
+17615.02,2010000918,Waterworks Utility,Distribution,Information Technology,Utility Asset Mgmt System,2464.32,15150.7,Water & Waste
+15029.33,1857001019,Public Works,Parks and Open Space,Community Park Amenities,PREP-River Heights-Fort Garry,NA,15029.33,Parks and Urban Forestry
+15000,1816010418,Public Works,Other Street Projects,Asset Management,SMIR-Pavement Initiatives,0,15000,Road Maintenance
+4165422.93,1806100216,Public Works,Local Streets,Street Renewals,LSR 16-R-01 Morrison,4150642.34,14780.59,Road Maintenance
+2898881.92,1806300117,Public Works,Local Streets,Lane Renewals,Lane Renewals - 17-RL-01A WSP,2884131.13,14750.79,Road Maintenance
+639394.35,6322004016,Winnipeg Police Service,Police Headquarters,Police Headquarters,EDPS Leasehold Improvements,624802.91,14591.44,Police Service
+5138691.17,1804100417,Public Works,Regional Streets,Streets Renewals,Pembina-Killarney/De Vos,5124447.52,14243.65,Road Maintenance
+234918.98,2070000412,Land Drainage and Flood Control Utility,Flood Control,Floodplain Mgmt,Floodplain Mgmt,220905.23,14013.75,Misc Capital Expenditure
+99606.85,1812000117,Public Works,Other Street Projects,Asset Management,Asset Mgmt - Various Divisions,85799.11,13807.74,Road Maintenance
+246548.5,3470000015,"Innovation, Transformation and Technology",Software,Data Warehouse / Business Integration,Enterprise Content Management,233202.25,13346.25,"Innovation, Transformation & Technology"
+766000,1850000118,Public Works,Parks and Open Space,"Reforestation, Streets and Aesthetic Improvements",Reforestation - Improvements,753044.9,12955.1,Parks and Urban Forestry
+12871.25,3459001918,"Innovation, Transformation and Technology",Software,Data Warehouse / Business Integration,ISP-WPS Queue Mgmt,NA,12871.25,"Innovation, Transformation & Technology"
+539605.46,6393010114,Municipal Accommodations,Property Asset Management,Outdoor Aquatic Facilities - Maintenance and Repair - New,Elmwood-Kildonan Spray Pad,526872.36,12733.1,Parks and Urban Forestry
+1350819.76,1806101518,Public Works,Local Streets,Street Renewals,Residential TBO A,1338391.11,12428.65,Road Maintenance
+558899.81,1804101217,Public Works,Regional Streets,Streets Renewals,Provencher-Des Meurons/Archiba,546583.92,12315.89,Road Maintenance
+80137.49,6390005018,Municipal Accommodations,Property Asset Management,City-Wide Accessibility Program,City-Wide Accessibility Prog,67999.81,12137.68,Misc Capital Expenditure
+400510.31,3401200017,"Innovation, Transformation and Technology",Hardware,Communications Network Infrastructure,Communications Network Infr,388670.06,11840.25,"Innovation, Transformation & Technology"
+31633.55,1804300118,Public Works,Regional Streets,Streets Renewals,PC-Regional & Local St Renewal,19858.4,11775.15,Road Maintenance
+2568819.84,1804100917,Public Works,Regional Streets,Streets Renewals,Donald-Notre Dame/Portage,2557051.46,11768.38,Road Maintenance
+11489.99,1804102419,Public Works,Regional Streets,Streets Renewals,Dwtn-Carltn St-Prtg-Ellic-NBCF,NA,11489.99,Road Maintenance
+96372.77,6351800118,"Planning, Property and Development",City Beautification,Downtown Enhancement Program,Downtown Enhancement Program,85343.58,11029.19,City Beautification
+3252244.08,1806300216,Public Works,Local Streets,Lane Renewals,Lane Renewals-16-RL-01B WSP,3241639.65,10604.43,Road Maintenance
+10538.04,1857001219,Public Works,Parks and Open Space,Community Park Amenities,PREP-Waverley West,NA,10538.04,Parks and Urban Forestry
+4395702.14,1806100618,Public Works,Local Streets,Street Renewals,LSR 18-R-04 WSP,4385186.5,10515.64,Road Maintenance
+235954.95,6210000416,Community Services (including Community Incentive Grants),Library,Library Improvements- Existing,Library Refurb/Redevelop Prog,225466.38,10488.57,Libraries
+209228.03,2064000217,Solid Waste Disposal Utility,Recycling and Waste Diversion,Information Technology,Garbage&Recycle Cart Asset Man,198802.15,10425.88,Solid Waste Collection
+1439232.71,1804100817,Public Works,Regional Streets,Streets Renewals,McGillivray-Fennel/Waverley,1428866.75,10365.96,Road Maintenance
+10314.77,1804103619,Public Works,Regional Streets,Streets Renewals,Archibld-Plinget-Doucet-NBCF,NA,10314.77,Road Maintenance
+843976.35,1832000216,Public Works,Regional Streets,Active Transportation Facilities,New Regional Sidewalks,833915.91,10060.44,Road Maintenance
+140738.23,1853000118,Public Works,Parks and Open Space,Parks Improvements,Community&Nghbor Parks-Existi,131017.46,9720.77,Parks and Urban Forestry
+8780.08,3401200019,"Innovation, Transformation and Technology",Hardware,Communications Network Infrastructure,Communications Network Infra,NA,8780.08,"Innovation, Transformation & Technology"
+698577.14,1832000217,Public Works,Regional Streets,Active Transportation Facilities,Pedestrian & Cycling Grade Sep,689979.64,8597.5,Recreation
+279536.12,2070001216,Land Drainage and Flood Control Utility,Flood Control,Floodplain Mgmt,Flood Manual Upgrades,271251.22,8284.9,Misc Capital Expenditure
+1820059.81,1806102217,Public Works,Local Streets,Street Renewals,LSR 17-R-06B MMM,1811977.12,8082.69,Road Maintenance
+298272.46,2040001416,Sewage Disposal Utility,Collection,Information Technology,HR Document Mgmt System,290432.74,7839.72,Water & Waste
+77292.37,1834000116,Public Works,Other Street Projects,Land Acquisition,Land Acq - Transp Right of Way,69522.66,7769.71,Misc Capital Expenditure
+7440,6250000219,Community Services (including Community Incentive Grants),Recreation and Leisure,Recreation Facility Refurbishment & Redevelopment- Existing,Fitness Equipment Upgrade Prog,NA,7440,Recreation
+20849.3,2004000717,Waterworks Utility,Distribution,Feeder Mains,Feeder Main Condition Assessmt,13792.23,7057.07,Water & Waste
+7055.96,400261717,City Clerks,City Clerks,Innovation Fund,ICF-City Hall Waste Reduction,NA,7055.96,"Innovation, Transformation & Technology"
+68334.99,1420214015,Local Improvements,Local Improvements,Lane pavement,WinghamAve-AsphConcLn Pav14x5,61282.86,7052.13,Road Maintenance
+2880614.39,1806101217,Public Works,Local Streets,Street Renewals,LSR 17-R-06 MMM,2873819.03,6795.36,Road Maintenance
+1111547.12,1804102117,Public Works,Regional Streets,Streets Renewals,McGillivray-Pembina/Fennel,1104964.31,6582.81,Road Maintenance
+934746.95,6254000217,Community Services (including Community Incentive Grants),Recreation and Leisure,Recreation Facility Redevelopment- New,Spray Pad - Old Ex/NCentennial,928421.45,6325.5,Recreation
+5999.5,2062000219,Solid Waste Disposal Utility,Collection and Disposal,Brady Road,Landfill Gas Capture Expan,NA,5999.5,Solid Waste Collection
+25276.93,1804300117,Public Works,Regional Streets,Streets Renewals,"PC-15-R-03, 15-R-05, 13-R-08",19832.48,5444.45,Road Maintenance
+175173.66,6321000117,Fire Paramedic Service,Facilities,Maintenance,Station Cap Mtce-Station 2,169882.36,5291.3,Fire Service
+5229.82,1420000119,Local Improvements,Local Improvements,Local Improvements - Float,2019 Local Improvements,NA,5229.82,Misc Capital Expenditure
+5200.21,6331000419,Municipal Accommodations,Property Asset Management,Fire Safety Upgrading,Fire/Life Safety/Regulatory,NA,5200.21,Fire Service
+1004572.32,6392000114,Municipal Accommodations,Property Asset Management,Indoor Aquatic Facilities - Maintenance and Repair,Indoor Aquatic Facilities,999379.94,5192.38,Recreation
+4096343.21,1833000213,Public Works,Regional Streets,Active Transportation Facilities,CPR Yards Func Crossing Study,4091205.71,5137.5,Road Maintenance
+1538433.89,6392040117,Municipal Accommodations,Property Asset Management,Indoor Aquatic Facilities - Maintenance and Repair,Pan Am Pool RTU Replacement,1533564.79,4869.1,Recreation
+4860,6210000119,Community Services (including Community Incentive Grants),Library,Library Improvements- Existing,Library Safety & Access Prog,NA,4860,Libraries
+4304323.76,1806101017,Public Works,Local Streets,Street Renewals,LSR 17-R-04 MMM,4299469.63,4854.13,Road Maintenance
+236317.09,6331002616,Municipal Accommodations,Property Asset Management,Security/Building Automation Systems Incentives,Security/Building Automation,231512.39,4804.7,Misc Capital Expenditure
+4694708.71,1805001715,Public Works,Local Streets,Waterway Crossings and Grade Separations Various,Lyndale Drive-Retaining Wall M,4689933,4775.71,Road Maintenance
+1408999.3,2004001115,Waterworks Utility,Distribution,Feeder Mains,North Kildonan Feedermain,1404324.3,4675,Water & Waste
+478446.53,4230010716,Transit,Rapid Transit,Land Acquisition,Land Acquisition,473961.62,4484.91,Public Transit
+347894.14,2040001117,Sewage Disposal Utility,Collection,Information Technology,Wastewater HaulingSys Replacmt,343422.24,4471.9,Water & Waste
+965000,6252000116,Community Services (including Community Incentive Grants),Recreation and Leisure,Recreation Facility Refurbishment & Redevelopment- Existing,Community Centre Reno Grant,960835.3,4164.7,Recreation
+4080,400321718,City Clerks,City Clerks,Innovation Fund,ICF-ClimateSmartPilot,NA,4080,"Innovation, Transformation & Technology"
+1381807.16,2013500217,Waterworks Utility,Distribution,Water Main Renewals,Transcona Water Main Reliab,1377826.42,3980.74,Water & Waste
+399992.45,1804101617,Public Works,Regional Streets,Streets Renewals,Broadway-Portage/Sherbrook,396487.3,3505.15,Road Maintenance
+3503.17,2005001218,Waterworks Utility,Supply and Treatment,Pumping Stations,Pump Stn/Reservoir Upgrades,0,3503.17,Water & Waste
+3410.88,400000917,City Clerks,City Clerks,Corporate Records Centre,Corporate Records Centre,NA,3410.88,Organizational Support Service
+249723.01,2202600016,Winnipeg Police Service,Computer Upgrades,Software Upgrade,Mobile and Transient Users,246776.69,2946.32,Police Service
+83455.12,1420213915,Local Improvements,Local Improvements,Lane pavement,KitsonSt-Asph Conc Ln Pav 16x5,80581.42,2873.7,Road Maintenance
+355004.21,2002000115,Waterworks Utility,Supply and Treatment,Water Treatment,WTP-Projects and Review,352160.31,2843.9,Water & Waste
+164640.49,1420213215,Local Improvements,Local Improvements,Lane pavement,PoplarwoodAve/St.Marys-Asph Co,161829.51,2810.98,Road Maintenance
+542108.85,1804101717,Public Works,Regional Streets,Streets Renewals,Lag-Dugald/Regent,539401.26,2707.59,Road Maintenance
+2639.4,6362100319,Community Services (including Community Incentive Grants),Library,Library Improvements- Existing,Library FacilityRedev-St James,NA,2639.4,Libraries
+2582.2,1420216619,Local Improvements,Local Improvements,Lane pavement,NS Lane East of Desmeuron St,NA,2582.2,Road Maintenance
+2582.2,1420216419,Local Improvements,Local Improvements,Lane pavement,KirkdaleSt/Highfield St/Lawnda,NA,2582.2,Road Maintenance
+2582.2,1420216519,Local Improvements,Local Improvements,Lane pavement,Walmer St/Kirkdale St/Claremon,NA,2582.2,Road Maintenance
+2422696.92,1804100515,Public Works,Regional Streets,Streets Renewals,St. James - Maroons / Ness,2420126.68,2570.24,Road Maintenance
+99708.3,6390002018,Municipal Accommodations,Property Asset Management,Community Centres - Refurbishment and Improvements,UFF- Hockey Pen Light Standard,97245.5,2462.8,Recreation
+16003.95,1851000116,Public Works,Parks and Open Space,Parks Improvements,Bridgewater Forest Ftn Restore,13656.42,2347.53,Parks and Urban Forestry
+95537.05,1853000216,Public Works,Parks and Open Space,Parks Improvements,Off Leash Dog Park Master Plan,93194.35,2342.7,Parks and Urban Forestry
+2325.6,3470000019,"Innovation, Transformation and Technology",Software,Data Warehouse / Business Integration,Enterprise Content Managemnt M,NA,2325.6,"Innovation, Transformation & Technology"
+71923.73,1420215217,Local Improvements,Local Improvements,Lane pavement,Highfield St/ Coniston St/Fern,69620.71,2303.02,Road Maintenance
+145260.26,1420215418,Local Improvements,Local Improvements,Lane pavement,"Bronstone,Fernwood,St. Mary's",143002.6,2257.66,Road Maintenance
+2244,1869000117,Public Works,Other Street Projects,Asset Management,Work Mgmt/Asset Mgmt Syst Stud,0,2244,Road Maintenance
+125889.9,1420213715,Local Improvements,Local Improvements,Lane pavement,StanmillisAve-Asph Conc Ln Pav,123770.87,2119.03,Road Maintenance
+776640.75,1832000415,Public Works,Regional Streets,Active Transportation Facilities,Bicycle Corridors,774614.71,2026.04,Road Maintenance
+1836.51,6331000219,Municipal Accommodations,Property Asset Management,Civic Buildings - Refurbishment and Improvements,General Building Reno/Refurb,NA,1836.51,Misc Capital Expenditure
+1796.7,1857001419,Public Works,Parks and Open Space,Community Park Amenities,PREP-St. Norbert - Seine River,NA,1796.7,Parks and Urban Forestry
+1792.77,1806101719,Public Works,Local Streets,Street Renewals,Granular Road - Road Oiling,NA,1792.77,Road Maintenance
+1673128.2,1804100615,Public Works,Regional Streets,Streets Renewals,St. James - Ness / Portage,1671395.83,1732.37,Road Maintenance
+67302.6,6392050117,Municipal Accommodations,Property Asset Management,Indoor Aquatic Facilities - Maintenance and Repair,Pan Am Pool Deck Repairs,65579.29,1723.31,Recreation
+1263044.59,1803000117,Public Works,Regional Streets,Street Improvements,Kenaston-McGillivray/Bishop,1261447.07,1597.52,Road Maintenance
+4232961.19,1804101018,Public Works,Regional Streets,Streets Renewals,Roblin-Assiniboine/Shaftesbury,4231410.39,1550.8,Road Maintenance
+1363.87,2005000619,Waterworks Utility,Supply and Treatment,Pumping Stations,Tache Booster Pumping Station,NA,1363.87,Water & Waste
+153029.42,1857000918,Public Works,Parks and Open Space,Community Park Amenities,PREP-Point Douglas,151757.42,1272,Parks and Urban Forestry
+207733.49,2204400016,Winnipeg Police Service,Police Headquarters,Safety Upgrades,Police HQ Bldg Sys Safeguards,206551.48,1182.01,Police Service
+1177.66,1803000319,Public Works,Regional Streets,Street Improvements,Marion St Improv-FuncDesStudy,NA,1177.66,Road Maintenance
+3392109.98,1806100817,Public Works,Local Streets,Street Renewals,LSR 17-R-02 MMM,3390986.95,1123.03,Road Maintenance
+122972.6,1420215017,Local Improvements,Local Improvements,Lane pavement,Lloyd St/Gauvin St/Coniston St,121867.5,1105.1,Road Maintenance
+971,3459000619,"Innovation, Transformation and Technology",Software,Data Warehouse / Business Integration,ISP-Remote Superiision Pilot,NA,971,"Innovation, Transformation & Technology"
+1880418.26,1804100317,Public Works,Regional Streets,Streets Renewals,Salter-Inkster/Cathedral,1879451.01,967.25,Road Maintenance
+391246.38,1804100517,Public Works,Regional Streets,Streets Renewals,Pembina SB-Dalhousie/De Vos,390337.21,909.17,Road Maintenance
+627996.27,1803000217,Public Works,Regional Streets,Street Improvements,Lag & Sage Creek-SB Left Turn,627139.84,856.43,Road Maintenance
+8755.25,1420010517,Local Improvements,Local Improvements,Watermains,905 Bickerton St. Watermain,7926.75,828.5,Water & Waste
+105762.51,1420214215,Local Improvements,Local Improvements,Lane pavement,Calrossie/Byng/Riverside/Pembi,104980.63,781.88,Road Maintenance
+250538.02,1804101817,Public Works,Regional Streets,Streets Renewals,McPhillips-College/Mountain,249762.26,775.76,Road Maintenance
+96726.54,1420215117,Local Improvements,Local Improvements,Lane pavement,Coniston St/Lyndale Dr/Crawfor,95965.04,761.5,Road Maintenance
+92065.64,1420214115,Local Improvements,Local Improvements,Lane pavement,Somerville Ave/Somerset,91314.39,751.25,Road Maintenance
+88543.66,1420215317,Local Improvements,Local Improvements,Lane pavement,Notre Dame St/Dumoulin St/Arch,87835.97,707.69,Road Maintenance
+654.05,2037500019,Sewage Disposal Utility,Collection,River Crossing Rehab,River Crossings Monitoring   P,NA,654.05,Water & Waste
+78622.65,1420214717,Local Improvements,Local Improvements,Lane pavement,Kirkdale St/Highfield St/Monck,78007.03,615.62,Road Maintenance
+2176011.53,1806100217,Public Works,Local Streets,Street Renewals,LSR 17/16-R-03 MMM,2175425.03,586.5,Road Maintenance
+96766.93,1420214517,Local Improvements,Local Improvements,Lane pavement,Dumouline St/Provencher Blvd/J,96191.93,575,Road Maintenance
+47471.54,2002500618,Waterworks Utility,Supply and Treatment,Water Treatment,WT Research&Process Opt Facili,46935.28,536.26,Water & Waste
+67162.38,1420214917,Local Improvements,Local Improvements,Lane pavement,Kirkdale St/Highfield St/Fernd,66667.38,495,Road Maintenance
+367.2,3459000518,"Innovation, Transformation and Technology",Software,Data Warehouse / Business Integration,IDP - Oracle EPM,0,367.2,"Innovation, Transformation & Technology"
+64301.18,1420214817,Local Improvements,Local Improvements,Lane pavement,Highfield St/Coniston St/Lawnd,63936.18,365,Road Maintenance
+360.5,6390002019,Municipal Accommodations,Property Asset Management,Community Centres - Refurbishment and Improvements,UFF- Hockey Pen Light Standard,NA,360.5,Recreation
+66570.02,1420214315,Local Improvements,Local Improvements,Lane pavement,Havelock/Portland/St.Andrew/St,66225.02,345,Road Maintenance
+310.3,2001001719,Waterworks Utility,Distribution,Various,Public Water Outlets,NA,310.3,Water & Waste
+248.71,2004000719,Waterworks Utility,Distribution,Feeder Mains,Feeder Main Condition Assessmt,NA,248.71,Water & Waste
+178.76,2078500219,Land Drainage and Flood Control Utility,Flood Control,Outfalls,Outfall Gate Structures,NA,178.76,Misc Capital Expenditure
+150.66,3402500018,"Innovation, Transformation and Technology",Hardware,Enterprise Computing,Enterprise Computing Initiativ,0,150.66,"Innovation, Transformation & Technology"
+77.5,2030000519,Sewage Disposal Utility,Treatment,Reliability Upgrades,Asset Refurbish/Replace,NA,77.5,Water & Waste
+5661185.53,6392010113,Municipal Accommodations,Property Asset Management,Indoor Aquatic Facilities - Maintenance and Repair,Transcona Centennial Pool    M,5661111.4,74.13,Recreation
+863582.82,1804100818,Public Works,Regional Streets,Streets Renewals,McPhillips-Swailes/Leila,863528.12,54.7,Road Maintenance
+54.05,3461000019,"Innovation, Transformation and Technology",Software,Data Warehouse / Business Integration,Microsoft Office License EverG,NA,54.05,"Innovation, Transformation & Technology"
+157574.56,1804101318,Public Works,Regional Streets,Streets Renewals,Paving Granular Shoulders,157541.1,33.46,Road Maintenance
+222758.76,1832000211,Public Works,Regional Streets,Active Transportation Facilities,New Regional Sidewalks,222758.76,0,Recreation
+4635,1857000518,Public Works,Parks and Open Space,Community Park Amenities,PREP-Fort Rouge-East Fort Garr,4635,0,Parks and Urban Forestry
+0,6331020819,Municipal Accommodations,Property Asset Management,Civic Buildings - Refurbishment and Improvements,Gen Replace & Upgrade,NA,0,Misc Capital Expenditure
+0,6391000118,Municipal Accommodations,Property Asset Management,Arenas - Refurbishment and Redevelopment - Existing,Arenas,0,0,Misc Capital Expenditure
+0,2202400019,Winnipeg Police Service,Computer Upgrades,Computer Upgrades,North Station Inform Tech Req.,NA,0,Police Service
+0,2001000818,Waterworks Utility,Distribution,Various,Building Reno-1199 Pacific,0,0,Water & Waste
+0,1816010616,Public Works,Other Street Projects,Asset Management,SMIR-Partial Depth Repair,0,0,Road Maintenance
+31827.75,1832001009,Public Works,Regional Streets,Active Transportation Facilities,North Winnipeg Parkway,31827.75,0,Recreation
+0,6394000118,Municipal Accommodations,Property Asset Management,Community Facilities,Recreation & Leisure Centres,0,0,Misc Capital Expenditure
+0,400121716,City Clerks,City Clerks,Innovation Fund,ICF -Y/E Consol/Work Sys,NA,0,"Innovation, Transformation & Technology"
+6718678.4,1801000217,Public Works,Other Street Projects,New Transportation,Chief Peguis Trail-Future Pmnt,6718678.4,0,Road Maintenance
+0,2205900019,Winnipeg Police Service,Police Headquarters,Police Headquarters,Evidence Archival -Tenant Impr,NA,0,Police Service
+0,1804103819,Public Works,Regional Streets,Streets Renewals,PortgeAv EB-St Charls to David,NA,0,Road Maintenance
+0,3459001818,"Innovation, Transformation and Technology",Software,Data Warehouse / Business Integration,ISP-Rev & Exp Open Budget,NA,0,"Innovation, Transformation & Technology"
+0,3459000719,"Innovation, Transformation and Technology",Software,Data Warehouse / Business Integration,ISP-AVL for Mowers,NA,0,"Innovation, Transformation & Technology"
+0,4210010819,Transit,Rapid Transit,Land Acquisition,Land Acquisition,NA,0,Public Transit
+0,3455000019,"Innovation, Transformation and Technology",Software,PeopleSoft,PeopleSoft Enhancements,NA,0,"Innovation, Transformation & Technology"
+110744.01,1833000115,Public Works,Regional Streets,Active Transportation Facilities,Transportation Master Plan,110744.01,0,Road Maintenance
+0,2203800018,Winnipeg Police Service,Police Headquarters,Police Headquarters,Bomb Unit Truck Replacement,0,0,Police Service
+11848.96,2013500117,Waterworks Utility,Distribution,Water Main Renewals,Saskatchewan Water Main,11848.96,0,Water & Waste
+0,2070000418,Land Drainage and Flood Control Utility,Flood Control,Floodplain Mgmt,Floodplain Mgmt,0,0,Misc Capital Expenditure
+1670501.71,1806100517,Public Works,Local Streets,Street Renewals,LSR 17/16-R-05B AECOM,1670501.71,0,Road Maintenance
+0,2010001319,Waterworks Utility,Distribution,Information Technology,Automated Remittance Processin,NA,0,Water & Waste
+80318.71,1803000617,Public Works,Regional Streets,Street Improvements,Kenaston-Ness/Taylor,80318.71,0,Road Maintenance
+0,3462000019,"Innovation, Transformation and Technology",Software,Data Warehouse / Business Integration,Disaster Recov Gap Mitigat Ph1,NA,0,"Innovation, Transformation & Technology"
+0,2064000318,Solid Waste Disposal Utility,Recycling and Waste Diversion,Information Technology,Collection Mgmt System,0,0,Solid Waste Collection
+0,1804000117,Public Works,Regional Streets,Streets Renewals,Regional and Local Streets Ren,0,0,Road Maintenance
+624153.42,1806100117,Public Works,Local Streets,Street Renewals,LSR 17/16-R-02 Morrison,624153.42,0,Road Maintenance
+408191.63,1832000113,Public Works,Regional Streets,Active Transportation Facilities,Rec Walkways & Bike Paths,408191.63,0,Recreation
+282094.09,1806102317,Public Works,Local Streets,Street Renewals,LSR - McDermot-Arlington/Furby,282094.09,0,Road Maintenance
+0,2082000218,Land Drainage and Flood Control Utility,Land Drainage,Land Drainage System,LD Regional/Local Streets,0,0,Misc Capital Expenditure
+25000,1816010317,Public Works,Other Street Projects,Asset Management,SMIR-Dutch Elm Disease,25000,0,Parks and Urban Forestry
+0,6362100419,Community Services (including Community Incentive Grants),Library,Library Redevelopment- New,Library FacilityRedev-Old Kild,NA,0,Libraries
+0,1420000118,Local Improvements,Local Improvements,Local Improvements - Float,2018 Local Improvements,0,0,Misc Capital Expenditure
+488467.69,1804200217,Public Works,Regional Streets,Streets Renewals,Sidewalk/Curb Renew-Dtwn RegSt,488467.69,0,Road Maintenance
+2655785.26,1806100516,Public Works,Local Streets,Street Renewals,LSR 16-R-04 AECOM,2655785.26,0,Road Maintenance
+1532181.76,1801000414,Public Works,Other Street Projects,New Transportation,William Clement Parkway,1532181.76,0,Road Maintenance
+0,2202600018,Winnipeg Police Service,Computer Upgrades,Computer Upgrades,Intelligence Led Reporting Ph2,0,0,Police Service
+1210670.63,1806101718,Public Works,Local Streets,Street Renewals,Residential TBO C,1210670.63,0,Road Maintenance
+0,3459001118,"Innovation, Transformation and Technology",Software,Data Warehouse / Business Integration,ISP - Trainfo,0,0,"Innovation, Transformation & Technology"
+0,3459000419,"Innovation, Transformation and Technology",Software,Data Warehouse / Business Integration,ISP-Bike Share,NA,0,"Innovation, Transformation & Technology"
+0,2062001019,Solid Waste Disposal Utility,Recycling and Waste Diversion,Brady Road,BRRMF - Onsite Leachate,NA,0,Solid Waste Collection
+99.45,2061000117,Solid Waste Disposal Utility,Collection and Disposal,Land Acquisition,Misc Land Acquisition,99.45,0,Solid Waste Collection
+0,1831200119,Public Works,Regional Streets,Traffic Engineering Improvements,Permanent Traffic Monitoring,NA,0,Road Maintenance
+189553.12,6394000117,Municipal Accommodations,Property Asset Management,Community Facilities,Community Facilities,189553.12,0,Misc Capital Expenditure
+0,1859000117,Public Works,Parks and Open Space,Parks Improvements,Regional Pks Investmt Strategy,0,0,Parks and Urban Forestry
+103140.98,6393000118,Municipal Accommodations,Property Asset Management,Outdoor Aquatic Facilities - Maintenance and Repair,Outdoor Aquatic Facilities,103140.98,0,Recreation
+0,1804101418,Public Works,Regional Streets,Streets Renewals,Reg St Renew-Various Locations,0,0,Road Maintenance
+490944.3,1804200116,Public Works,Regional Streets,Sidewalk and Curb Repair,Sidewk/Curb Renew - Reg St,490944.3,0,Road Maintenance
+0,2005001517,Waterworks Utility,Supply and Treatment,Water Treatment,Ultraviolet Light  Upgrade,0,0,Water & Waste
+0,6390005019,Municipal Accommodations,Property Asset Management,City-Wide Accessibility Program,City-Wide Accessibility Prog,NA,0,Misc Capital Expenditure
+0,1857000519,Public Works,Parks and Open Space,Community Park Amenities,PREP-Fort Rouge-East Fort Garr,NA,0,Recreation
+3530947.89,1804102116,Public Works,Regional Streets,Streets Renewals,St. James-Maroons/Portage,3530947.89,0,Road Maintenance
+0,2202700019,Winnipeg Police Service,Computer Upgrades,Software Upgrade,Major Case Mgnt System Expansn,NA,0,Police Service
+0,3459100119,"Innovation, Transformation and Technology",Software,Data Warehouse / Business Integration,Smart Cities Innovation Prgm,NA,0,"Innovation, Transformation & Technology"
+161136.59,1804101917,Public Works,Regional Streets,Streets Renewals,Paving Granular Shoulders,161136.59,0,Road Maintenance
+0,2005000916,Waterworks Utility,Supply and Treatment,Water Treatment,Deacon PS Suction Header Valve,0,0,Water & Waste
+0,1816010118,Public Works,Other Street Projects,Asset Management,SMIR-Sidewalk Trip Hazard Remo,0,0,Road Maintenance
+160724.43,6392020116,Municipal Accommodations,Property Asset Management,Indoor Aquatic Facilities - Maintenance and Repair,Margaret Grant Electrical Rplc,160724.43,0,Recreation
+206500,3459000218,"Innovation, Transformation and Technology",Software,Data Warehouse / Business Integration,ISP-Electronic Court Notificat,206500,0,"Innovation, Transformation & Technology"
+412572.45,1806200118,Public Works,Local Streets,Sidewalks,Sidewalk Renewals Local Street,412572.45,0,Road Maintenance
+0,2075000118,Land Drainage and Flood Control Utility,Land Drainage,Storm Water Retention Basin,Stormwater Retention Basin,0,0,Misc Capital Expenditure
+49502.16,1816010218,Public Works,Other Street Projects,Asset Management,SMIR-Dutch Elm Disease,49502.16,0,Parks and Urban Forestry
+0,400001715,City Clerks,City Clerks,Innovation Fund,Innovation Capital Fund,NA,0,Water & Waste
+0,2005001619,Waterworks Utility,Supply and Treatment,Pumping Stations,Discharge Meter Upgrades,NA,0,Water & Waste
+214.31,3459000818,"Innovation, Transformation and Technology",Software,Data Warehouse / Business Integration,ISP - AS Innovation Ideas,214.31,0,"Innovation, Transformation & Technology"
+0,2075000117,Land Drainage and Flood Control Utility,Land Drainage,Storm Water Retention Basin,Stormwater Retention Basin,0,0,Water & Waste
+0,3459000219,"Innovation, Transformation and Technology",Software,Data Warehouse / Business Integration,ISP-Enterprise Mobility Mgmt,NA,0,"Innovation, Transformation & Technology"
+0,2003000518,Waterworks Utility,Supply and Treatment,Shoal Lake Intake,Aqueduct Con Assmt,0,0,Water & Waste
+0,1420000116,Local Improvements,Local Improvements,Local Improvements - Float,2016 Local Improvements,0,0,Misc Capital Expenditure
+0,2104014019,Fire Paramedic Service,Equipment,Replacement,Bariatric Equipment,NA,0,Fire Service
+0,1420000115,Local Improvements,Local Improvements,Local Improvements - Float,2015 Local Improvements,0,0,Misc Capital Expenditure
+0,6331000718,Municipal Accommodations,Property Asset Management,Civic Buildings - Refurbishment and Improvements,Historic Buildings,0,0,Misc Capital Expenditure
+1568430.98,1804102015,Public Works,Regional Streets,Streets Renewals,Plessis/Gunn-Intersectn Improv,1568430.98,0,Road Maintenance
+0,2002500718,Waterworks Utility,Supply and Treatment,Water Treatment,WT Plant Capacity Validation,0,0,Water & Waste
+1234775.53,2077000118,Land Drainage and Flood Control Utility,Land Drainage,Land Drainage System,Development Agree Payback,1234775.53,0,Misc Capital Expenditure
+3557805.35,1804200216,Public Works,Regional Streets,Streets Renewals,Sidewk /Curb Renew-Dntn Reg St,3557805.35,0,Road Maintenance
+0,3459000119,"Innovation, Transformation and Technology",Software,Data Warehouse / Business Integration,Innovation Strategy,NA,0,"Innovation, Transformation & Technology"
+0,2002500518,Waterworks Utility,Supply and Treatment,Water Treatment,Deacon Site Flood Protection,0,0,Water & Waste
+17821964.77,1805001117,Public Works,Local Streets,Disraeli Bridge,Disraeli Bridges-Future Pmnt,17821964.77,0,Road Maintenance
+0,2003000918,Waterworks Utility,Supply and Treatment,Aqueduct,Br 1 Aqueduct-Riverbank Stab,0,0,Water & Waste
+0,4210010719,Transit,Transit Security Enhance,Transit Safety Mgmt Practices,Admin & Ctrl Centre Radio Repl,NA,0,Public Transit
+3000,6210000118,Community Services (including Community Incentive Grants),Library,Library Improvements- Existing,Library Safety & Access Prog,3000,0,Libraries
+1344528.11,1804101216,Public Works,Regional Streets,Streets Renewals,Archibald/Watt-#80Narin,1344528.11,0,Road Maintenance
+673777.94,1806100417,Public Works,Local Streets,Street Renewals,LSR 17/16-R-04 AECOM,673777.94,0,Road Maintenance
+0,1804100418,Public Works,Regional Streets,Streets Renewals,Portage & Main Rehabilitation,0,0,Road Maintenance
+0,2010001219,Waterworks Utility,Distribution,Information Technology,Customer Billing Upgrade,NA,0,Water & Waste
+15140.63,1816010717,Public Works,Other Street Projects,Asset Management,SMIR-New Signals Controllers,15140.63,0,Road Maintenance
+0,6331002619,Municipal Accommodations,Property Asset Management,Security/Building Automation Systems Incentives,Security/Building Automation,NA,0,Misc Capital Expenditure
+0,2203500019,Winnipeg Police Service,Computer Upgrades,,Technology Upgrades-Infor Syst,NA,0,Police Service
+4474956.97,1806102117,Public Works,Local Streets,Street Renewals,LSR 17-R-05B AECOM,4474956.97,0,Road Maintenance
+0,3459000519,"Innovation, Transformation and Technology",Software,Data Warehouse / Business Integration,ISP-Robotic Process Automation,NA,0,"Innovation, Transformation & Technology"
+0,6331000619,Municipal Accommodations,Property Asset Management,Civic Buildings - Refurbishment and Improvements,Energy Conservation,NA,0,Misc Capital Expenditure
+0,2203700019,Winnipeg Police Service,Computer Upgrades,Hardware Upgrade,In Car Computing,NA,0,Police Service
+0,2037001619,Sewage Disposal Utility,Collection,Interceptors,Southwest Interceptor Crossing,NA,0,Police Service
+0,1816010417,Public Works,Other Street Projects,Asset Management,SMIR-Cold Weather Concreting,0,0,Road Maintenance
+2396078.43,1807000518,Public Works,Regional Streets,Developer Paybacks,Tuxedo Yards Development,2396078.43,0,Road Maintenance
+0,3401206019,"Innovation, Transformation and Technology",Hardware,Communications Network Infrastructure,Tait Radio Replacement M,NA,0,"Innovation, Transformation & Technology"
+0,2010001619,Waterworks Utility,Distribution,Information Technology,IT Cybersecurity Review,NA,0,Water & Waste
+0,2111020017,Fire Paramedic Service,Facilities,Optimization,Standards of Coverage,0,0,Fire Service
+0,3459000118,"Innovation, Transformation and Technology",Software,Data Warehouse / Business Integration,Innovation Strategy-ISP,0,0,"Innovation, Transformation & Technology"
+0,2005001317,Waterworks Utility,Supply and Treatment,Pumping Stations,Study Backup Power Hurst,0,0,Water & Waste
+0,1852000119,Public Works,Parks and Open Space,Athletic Fields Improvements,Athletic Fields - Improvements,NA,0,Recreation
+0,400291718,City Clerks,City Clerks,Innovation Fund,ICF-FlameguardFireSuppression,NA,0,"Innovation, Transformation & Technology"
+2481914.69,4230010313,Transit,Rapid Transit,Jubilee Rapid Transit Station,Jubilee Rapid Tr Station 2013,2481914.69,0,Public Transit
+0,3401205019,"Innovation, Transformation and Technology",Hardware,Communications Network Infrastructure,CSB Facilities,NA,0,"Innovation, Transformation & Technology"
+213574.19,1857001618,Public Works,Parks and Open Space,Community Park Amenities,PREP-Transcona,213574.19,0,Parks and Urban Forestry
+0,1420230614,Local Improvements,Local Improvements,Boulevards and Sidewalks,Point Hebert-GrassBLVD-20.5ft,0,0,Road Maintenance
+1020,2062000716,Solid Waste Disposal Utility,Collection and Disposal,Brady Road,Brady Alternative Energy Study,1020,0,Solid Waste Collection
+1394487.75,1806101817,Public Works,Local Streets,Street Renewals,Residential TBO C,1394487.75,0,Road Maintenance
+36.4,2201400013,Winnipeg Police Service,Computer Upgrades,Telephone System,Comm New Phone System,36.4,0,Police Service
+479006.56,1806100317,Public Works,Local Streets,Street Renewals,LSR 17/16-R-03B  MMM,479006.56,0,Road Maintenance
+398728.33,1832000311,Public Works,Regional Streets,Active Transportation Facilities,Active Transportation Corridor,398728.33,0,Road Maintenance
+0,6394000119,Municipal Accommodations,Property Asset Management,Community Facilities,Recreation & Leisure Centres,NA,0,Recreation
+0,1812000119,Public Works,Other Street Projects,Asset Management,Asset Mgmt - Various Divisions,NA,0,Road Maintenance
+10924935.22,2037001211,Sewage Disposal Utility,Collection,Interceptors,Inkster Blvd Interceptor,10924935.22,0,Water & Waste
+0,2078000119,Land Drainage and Flood Control Utility,Flood Control,Outfalls,Outfall Rehabilitation,NA,0,Misc Capital Expenditure
+0,4230030219,Transit,Transit Improvements,Transit Improvements,Accessibility Program,NA,0,Public Transit
+0,400001718,City Clerks,City Clerks,Innovation Fund,Innovation Capital Fund,NA,0,"Innovation, Transformation & Technology"
+0,2205000019,Winnipeg Police Service,Computer Upgrades,Software Upgrade,Police Div Systems Upgr. M,NA,0,Police Service
+0,1804104119,Public Works,Regional Streets,Streets Renewals,Reg St Renew-Various Locations,NA,0,Road Maintenance
+0,2204500016,Winnipeg Police Service,Computer Upgrades,Electronic Ticketing,Electronic Ticketing,0,0,Police Service
+0,1400000218,Assessment and Taxation,Assessment and Taxation,Valcura System,Valcura System,0,0,Misc Capital Expenditure
+56058.89,1804200318,Public Works,Regional Streets,Sidewalk and Curb Repair,Detectable Warning Surf Reg St,56058.89,0,Road Maintenance
+0,6351300218,"Planning, Property and Development",Land Drainage & Flood Control,Riverbank Stabilization,Riverbank Stab/Phys Asset Prot,0,0,Misc Capital Expenditure
+937757.96,1804101316,Public Works,Regional Streets,Streets Renewals,Watt-Chalmers/Nairin,937757.96,0,Road Maintenance
+498560.38,1832000116,Public Works,Regional Streets,Active Transportation Facilities,Rec Walkways & Bike Paths,498560.38,0,Recreation
+418471.34,1856000317,Public Works,Parks and Open Space,Pathway/Roadway/Tennis Court Upgrading,Parks Road Renewal,418471.34,0,Parks and Urban Forestry
+505177.2,1804100617,Public Works,Regional Streets,Streets Renewals,Pembina-Cloutier/Ducharme,505177.2,0,Road Maintenance
+3207.89,3459001418,"Innovation, Transformation and Technology",Software,Data Warehouse / Business Integration,ISP - eVoting,3207.89,0,"Innovation, Transformation & Technology"
+0,2030003019,Sewage Disposal Utility,Collection,Lift Stations,Comminutor Chamber Rehab,NA,0,Water & Waste
+0,2035000119,Sewage Disposal Utility,Collection,Lift Stations,2019 Stations Upgrading,NA,0,Water & Waste
+0,6351241519,"Planning, Property and Development",City Beautification,BIZ Zones Image Routes Main Streets,BIZ Zones Image Rtes Main Sts,NA,0,City Beautification
+0,3459000819,"Innovation, Transformation and Technology",Software,Data Warehouse / Business Integration,ISP-Business Continuity Plann,NA,0,"Innovation, Transformation & Technology"
+0,2010002019,Waterworks Utility,Distribution,Information Technology,GIS Enhancements,NA,0,Water & Waste
+0,400001717,City Clerks,City Clerks,Innovation Fund,Innovation Capital Fund,NA,0,"Innovation, Transformation & Technology"
+0,2065001219,Solid Waste Disposal Utility,Recycling and Waste Diversion,Recycling,CIWMS Material Recov Education,NA,0,Solid Waste Collection
+0,3459000618,"Innovation, Transformation and Technology",Software,Data Warehouse / Business Integration,ISP - Book an Officer Website,0,0,"Innovation, Transformation & Technology"
+0,3459000418,"Innovation, Transformation and Technology",Software,Data Warehouse / Business Integration,ISP - Citizen Portal,0,0,"Innovation, Transformation & Technology"
+0,1804000118,Public Works,Regional Streets,Streets Renewals,Regional and Local Streets Ren,0,0,Road Maintenance
+0,6331020818,Municipal Accommodations,Property Asset Management,Civic Buildings - Refurbishment and Improvements,Gen Replace & Upgrade,0,0,Misc Capital Expenditure
+0,2010001518,Waterworks Utility,Distribution,Information Technology,CCB iNovah Integration,0,0,Water & Waste
+10000,1816010517,Public Works,Other Street Projects,Asset Management,SMIR-Rut Resist Modifid Type1A,10000,0,Road Maintenance
+5579.6,2204500015,Winnipeg Police Service,Computer Upgrades,Electronic Ticketing,Electronic Ticketing,5579.6,0,Police Service
+539020.08,4230030117,Transit,Innovative Transit Program,2017 Innovative Transit Program,Innovative Transit Program,539020.08,0,Public Transit
+16276,6331000717,Municipal Accommodations,Property Asset Management,Civic Buildings - Refurbishment and Improvements,Historic Buildings,16276,0,Misc Capital Expenditure
+0,1856000217,Public Works,Parks and Open Space,Pathway/Roadway/Tennis Court Upgrading,Boat Docks & Lauches,0,0,Parks and Urban Forestry
+96184.7,6331000217,Municipal Accommodations,Property Asset Management,Civic Buildings - Refurbishment and Improvements,General Building Reno/Refurb,96184.7,0,Misc Capital Expenditure
+0,2002500517,Waterworks Utility,Supply and Treatment,Water Treatment,Deacon Site Flood Protection,0,0,Water & Waste
+0,3459000718,"Innovation, Transformation and Technology",Software,Data Warehouse / Business Integration,ISP - Fibre Build Re- Engineer,0,0,"Innovation, Transformation & Technology"
+0,1806101019,Public Works,Local Streets,Street Renewals,LSR 19-R-03 C WSP,NA,0,Road Maintenance
+2259492.19,1806200116,Public Works,Local Streets,Sidewalks,Sidewalk Renewals Local Street,2259492.19,0,Road Maintenance
+0,6321000019,Fire Paramedic Service,Facilities,Maintenance,Station Capital Maintenance,NA,0,Fire Service
+287886.51,1832000316,Public Works,Regional Streets,Active Transportation Facilities,New Non - Regional Sidewalks,287886.51,0,Road Maintenance
+0,2070002719,Land Drainage and Flood Control Utility,Land Drainage,Land Drainage System,Lot 16 Drain Slope Stab,NA,0,Misc Capital Expenditure
+7146794.4,1801000218,Public Works,Other Street Projects,New Transportation,Chief Peguis Trail-Future Pmnt,7146794.4,0,Road Maintenance
+1514176.97,1806101117,Public Works,Local Streets,Street Renewals,LSR 17-R-05 AECOM,1514176.97,0,Road Maintenance
+3700,6213000117,Community Services (including Community Incentive Grants),Library,Library Redevelopment- New,Library Facility New-South Wpg,3700,0,Libraries
+7155.3,3459001318,"Innovation, Transformation and Technology",Software,Data Warehouse / Business Integration,ISP - ChatBot,7155.3,0,"Innovation, Transformation & Technology"
+1116380.1,1806101617,Public Works,Local Streets,Street Renewals,Residential TBO A,1116380.1,0,Road Maintenance
+0,2035000616,Sewage Disposal Utility,Collection,Lift Stations,D'Arcy Lift Stn Load Shedding,0,0,Road Maintenance
+0,2111010918,Fire Paramedic Service,Facilities,Maintenance,Facilities Optimizat-Station 9,0,0,Fire Service
+0,2070000413,Land Drainage and Flood Control Utility,Flood Control,Floodplain Mgmt,Floodplain Mgmt,0,0,Misc Capital Expenditure
+0,6351300219,"Planning, Property and Development",Land Drainage & Flood Control,Riverbank Stabilization,Riverbank Stab/Phys Asset Prot,NA,0,Misc Capital Expenditure
+2589136.84,1804100414,Public Works,Regional Streets,Streets Renewals,King Edward-Legion/Dublin,2589136.84,0,Road Maintenance
+94970.53,1804200316,Public Works,Regional Streets,Sidewalk and Curb Repair,Detectable Warning Surf Reg St,94970.53,0,Road Maintenance
+0,2203200018,Winnipeg Police Service,Computer Upgrades,Computer Upgrades,"WPS Data Integr,Audit & Qualty",0,0,Police Service
+0,1816010817,Public Works,Other Street Projects,Asset Management,SMIR-Pavement Initiatives,0,0,Road Maintenance
+0,6252000119,Community Services (including Community Incentive Grants),Recreation and Leisure,Recreation Facility Refurbishment & Redevelopment- Existing,Community Centre Reno Grant,NA,0,Recreation
+0,6351300119,"Planning, Property and Development",Land Drainage & Flood Control,Riverbank Greenway Programs,Riverbank Greenway Programs,NA,0,Misc Capital Expenditure
+0,2040001219,Sewage Disposal Utility,Collection,Information Technology,Customer Billing Upgrade,NA,0,Water & Waste
+88152.1,1804200317,Public Works,Regional Streets,Sidewalk and Curb Repair,Detectable Warning Surf Reg St,88152.1,0,Road Maintenance
+0,2010001519,Waterworks Utility,Distribution,Information Technology,CCB iNovah Integration,NA,0,Water & Waste
+0,2082000219,Land Drainage and Flood Control Utility,Land Drainage,Land Drainage System,LD Regional/Local Streets,NA,0,Misc Capital Expenditure
+0,2062000819,Solid Waste Disposal Utility,Recycling and Waste Diversion,Brady Road,BRRMF - Site Improvements,NA,0,Solid Waste Collection
+11312.64,1816010318,Public Works,Other Street Projects,Asset Management,SMIR-Ash Tree Ring (EAB),11312.64,0,Road Maintenance
+0,2001002819,Waterworks Utility,Supply and Treatment,Various,Water Conservation Study,NA,0,Water & Waste
+432200.98,2001003015,Waterworks Utility,Supply and Treatment,Various,Watershed & Asset Protection,432200.98,0,Water & Waste
+0,2104015019,Fire Paramedic Service,Equipment,Replacement,Power Stretchers,NA,0,Fire Service
+0,2076500119,Land Drainage and Flood Control Utility,Flood Control,Flood Pumping Station,Flood Pumping Station Rehab,NA,0,Misc Capital Expenditure
+0,6351300217,"Planning, Property and Development",Land Drainage & Flood Control,Riverbank Stabilization,Riverbank Stab/Phys Asset Prot,0,0,Misc Capital Expenditure
+0,1420230714,Local Improvements,Local Improvements,Boulevards and Sidewalks,Point Hebert-BLVD-Trees Messag,0,0,Road Maintenance
+0,2010001919,Waterworks Utility,Distribution,Information Technology,Digital Enablement,NA,0,Water & Waste
+3543356.39,1806100717,Public Works,Local Streets,Street Renewals,LSR 17-R-01 IN-HOUSE,3543356.39,0,Road Maintenance
+0,6331000719,Municipal Accommodations,Property Asset Management,Civic Buildings - Refurbishment and Improvements,Historic Buildings,NA,0,Misc Capital Expenditure
+0,2104200019,Fire Paramedic Service,Equipment,Replacement,Hoists and Compressor,NA,0,Fire Service
+0,1400000119,Assessment and Taxation,Assessment and Taxation,Assessment Automation,Assessment Automation,NA,0,Misc Capital Expenditure
+473088.38,1804200117,Public Works,Regional Streets,Streets Renewals,Sidewalk/Curb Renewals-Reg St,473088.38,0,Road Maintenance
+274590.5,1858000315,Public Works,Parks and Open Space,Insect Control - Safe storage and handling of Chemicals,Insect Control-Repl 3Grey St.,274590.5,0,Parks and Urban Forestry
+0,1804104019,Public Works,Regional Streets,Streets Renewals,Paving Granular Shoulders,NA,0,Road Maintenance
+13654438.26,6399000313,Municipal Accommodations,Property Asset Management,Community Centres - Refurbishment and Improvements,Jonathan Toews Field House,13654438.26,0,Recreation
+0,2070002819,Land Drainage and Flood Control Utility,Flood Control,Primary Dike,St Boniface PLD Slop Stab,NA,0,Misc Capital Expenditure
+0,1833000119,Public Works,Regional Streets,Active Transportation Facilities,Transportation Master Plan,NA,0,Public Transit
+93304.18,1832000315,Public Works,Regional Streets,Active Transportation Facilities,New Non - Regional Sidewalks,93304.18,0,Recreation
+1017876.77,1806101717,Public Works,Local Streets,Street Renewals,Residential TBO B,1017876.77,0,Road Maintenance
+0,400001716,City Clerks,City Clerks,Innovation Fund,Innovation Capital Fund,NA,0,"Innovation, Transformation & Technology"
+13311.53,6392030117,Municipal Accommodations,Property Asset Management,Indoor Aquatic Facilities - Maintenance and Repair,CKRC Pool - Replac Direct  AHU,13311.53,0,Recreation
+0,2037001618,Sewage Disposal Utility,Collection,Interceptors,Southwest Interceptor Crossing,0,0,Water & Waste
+0,400311718,City Clerks,City Clerks,Innovation Fund,Digitization of Board Comm Rec,NA,0,"Innovation, Transformation & Technology"
+0,1804103919,Public Works,Regional Streets,Streets Renewals,LagBlvd NB-RegntAve W to Almy,NA,0,Road Maintenance
+32109.97,1804200315,Public Works,Regional Streets,Sidewalk and Curb Repair,Detectable Warning Surf Reg St,32109.97,0,Road Maintenance
+0,2080000115,Land Drainage and Flood Control Utility,Flood Control,Land Acquisition,Seine River Waterway Acquis,0,0,Misc Capital Expenditure
+2839.38,2061000118,Solid Waste Disposal Utility,Collection and Disposal,Land Acquisition,Misc Land Acquisition,2839.38,0,Solid Waste Collection
+1454927.43,1806100617,Public Works,Regional Streets,Streets Renewals,LSR 17/16-R-06B AECOM,1454927.43,0,Road Maintenance
+36713,6395020118,Municipal Accommodations,Property Asset Management,Civic Buildings - Refurbishment and Improvements,Millennium Library - HVAC    M,36713,0,Libraries
+0,2070000414,Land Drainage and Flood Control Utility,Flood Control,Floodplain Mgmt,Floodplain Mgmt,0,0,Misc Capital Expenditure
+-0.02,1420000117,Local Improvements,Local Improvements,Local Improvements - Float,2017 Local Improvements,58.88,-58.9,Misc Capital Expenditure
+-137.93,2104014119,Fire Paramedic Service,Equipment,Replacement,Self Contained Breathing Appar,NA,-137.93,Fire Service
+385235.45,6351800117,"Planning, Property and Development",City Beautification,Downtown Enhancement Program,Downtown Enhancement Program,385534.03,-298.58,City Beautification
+121732.41,1857000318,Public Works,Parks and Open Space,Community Park Amenities,PREP-Daniel McIntyre,122459.45,-727.04,Parks and Urban Forestry
+1232983.58,2204400017,Winnipeg Police Service,Police Headquarters,Safety Upgrades,Police HQ Bldg Sys Safeguards,1234091.2,-1107.62,Police Service
+27685.7,2065000814,Solid Waste Disposal Utility,Recycling and Waste Diversion,Brady Road,CIWMS Conslt Supprt Transition,29514.79,-1829.09,Solid Waste Collection
+1964276.68,1806100116,Public Works,Local Streets,Street Renewals,16-LI-01 Granular Imp,1966767.02,-2490.34,Road Maintenance
+283135.01,6321000417,Fire Paramedic Service,Facilities,Maintenance,Station Cap Mtce-Station 17`,285898.64,-2763.63,Fire Service
+280537.6,1816010716,Public Works,Other Street Projects,Asset Management,SMIR-Pavement Initiatives,284401.55,-3863.95,Road Maintenance
+36280.95,6362400317,Community Services (including Community Incentive Grants),Recreation and Leisure,Recreation Facility Refurbishment & Redevelopment- Existing,Boni-Vital Pool M,42633,-6352.05,Recreation
+71826.65,2034000913,Sewage Disposal Utility,Treatment,NEWPCC,Hauled Liq Waste Acceptnce Fac,79688.74,-7862.09,Water & Waste
+4970439.64,6213001113,Community Services (including Community Incentive Grants),Library,Library Redevelopment- New,Library Fac Redev-Windsor Park,4979608.48,-9168.84,Libraries
+358471.41,1853000217,Public Works,Parks and Open Space,Parks Improvements,Community&Nghbor Parks-New,368436.63,-9965.22,Parks and Urban Forestry
+174199.37,1831100118,Public Works,Regional Streets,Traffic Engineering Improvements,Traffic Signals Improvements,188938.87,-14739.5,Road Maintenance
+14193001.34,3401204017,"Innovation, Transformation and Technology",Hardware,Communications Network Infrastructure,Public Safety Radio System,14208992.94,-15991.6,"Innovation, Transformation & Technology"
+201812.69,6322003016,Winnipeg Police Service,Police Headquarters,Police Headquarters,North Dist Police Station    M,229654.65,-27841.96,Police Service
+391933.39,2040000618,Sewage Disposal Utility,Treatment,Information Technology,Process Control Sys Upgrade,431157.63,-39224.24,Water & Waste
+1955109.59,6318010117,Public Works,Parks and Open Space,Community Parks,Kildonan Park Staff House,2013919.43,-58809.84,Parks and Urban Forestry
+134182.19,2010001218,Waterworks Utility,Distribution,Information Technology,Customer Billing Upgrade,209153.51,-74971.32,Water & Waste
+122349.94,2040001218,Sewage Disposal Utility,Collection,Information Technology,Customer Billing Upgrade,208557.16,-86207.22,Water & Waste
+9026.51,6331010417,Municipal Accommodations,Property Asset Management,Fire Safety Upgrading,2017 Fire Alarm Code Complianc,100802.53,-91776.02,Fire Service
+14540349.43,2013100118,Waterworks Utility,Distribution,Water Main Renewals,2018 Water Main Renewal Pro P,14636380.24,-96030.81,Water & Waste
+211745.19,6392000118,Municipal Accommodations,Property Asset Management,Indoor Aquatic Facilities - Maintenance and Repair,Indoor Aquatic Facilities,332478.21,-120733.02,Recreation
+1270.7,2104015018,Fire Paramedic Service,Equipment,Replacement,Power Stretchers,136277.9,-135007.2,Fire Service
+5106939.08,1806100418,Public Works,Local Streets,Street Renewals,LSR 18-R-02A AECOM,5246247,-139307.92,Road Maintenance
+210436.69,1832000114,Public Works,Regional Streets,Active Transportation Facilities,Rec Walkways & Bike Paths,359669.13,-149232.44,Road Maintenance
+186323.12,2076500117,Land Drainage and Flood Control Utility,Flood Control,Flood Pumping Station,Flood Pumping Station Rehab,374921.68,-188598.56,Misc Capital Expenditure
+3100000,4230010612,Transit,Rapid Transit,Rapid Transit Planning,Rapid Transit Planning - P,3318247.27,-218247.27,Public Transit

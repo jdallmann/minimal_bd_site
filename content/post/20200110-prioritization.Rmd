@@ -70,7 +70,7 @@ This list is a reasonable starting point... But, it's not perfect for what we ar
 ## some **E**xploratory **D**ata **A**nalysis
 Let's look at some data. The [City of Winnipeg Open Data portal](data.winnipeg.ca) has info on [operating budgets](https://data.winnipeg.ca/Assessment-Taxation-Corporate/Adopted-Operating-Budget-All-Services-unconsolidat/8mu8-qtp8) (up to 2018), and [large capital expenditures](https://data.winnipeg.ca/Assessment-Taxation-Corporate/Capital-Expenditures/8xrn-n992) (updated monthly, and with a minimum budget of 5 million). We don't have actual total operating expenditures, which would be ideal and the actual capital expenditures are limited to "big" projects. But, the operating budget should roughly line up with the City's actual operating expenditures, and as long as there aren't too many small capital expenditures, we will get an approximate picture. Either way, we'll take what we can get. (As an aside, operating expenses are the "keep the lights on and employees paid" type expenses. The capital expenses are funds spent on major projects like building bridges, libraries, road renewal, and bus rapid transit (BRT).)
 
-Summarizing the open data, we get these top areas of operating expenditure and net operating:^[We will consider the revenue side of the equation in the next post.]
+Summarizing the open data, we get these top areas of operating expenditure and net operating cost:^[We will consider the revenue side of the equation in the next post.]
 ```{r operating_budgets}
 budget_sum <- op_budget %>%
     filter(year == 2018,
@@ -231,6 +231,7 @@ op_budget %>%
                                          digits = 2)(opex)) %>%
     # View()
     DT::datatable(
+        rownames = FALSE,
         options = list(
             pageLength = 5,
             lengthMenu = c(5, 10, 15, 20)
@@ -256,6 +257,7 @@ cap_ex_sum %>%
                                          digits = 2)(capex)) %>%
     # View()
     DT::datatable(
+        rownames = FALSE,
         options = list(
             pageLength = 5,
             lengthMenu = c(5, 10, 15, 20)
