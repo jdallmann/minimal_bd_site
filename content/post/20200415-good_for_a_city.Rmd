@@ -59,7 +59,7 @@ scaled_op_ex %>%
 
 But, it looks like this breakdown does not include *capital expenses* (like building new roads and buildings) since it mirrors the 2018 operating expenses pretty closely. Plus, as we learned in a [previous post](https://jdallmann.org/post/20200110-prioritization/), when we include capital expenses, Public Works/road expenditures is much larger than the proportion in the provided breakdown. That makes the picture provided by the City a bit misleading since, if we stopped here, we'd think that most of our property taxes go to the police, but that isn't the case.
 
-To help correct for capital expenses, let's rescale the percentages and add a blanket "capital expenditures" category equal to the proportion in 2018---which will be a similar ratio in 2019. That gets us the following by % breakdown:^[Using the same data from our previous posts via the [Winnipeg Open Data portal](data.winnipeg.ca).]
+To help correct for capital expenses, let's rescale the percentages and add a blanket "capital expenditures" category equal to the proportion in 2018---which will be a similar ratio in 2019. That gets us the following by % breakdown:^[Using the same data from our previous posts via the [Winnipeg Open Data portal](data.winnipeg.ca).]^['Road Maintenace' should probably just be 'Roads' more generally in this case, since it includes new builds. Will update when I get a chance!]
 ```{r pct_op}
 scaled_op_ex %>%
     mutate(scaled_pct = scaled_pct / 100,
@@ -129,7 +129,7 @@ In the app below, select your home and you should be able to see what you pay ye
 
 A couple of things here are worth noting. First we spent *a ton* on the south west BRT road in 2019. This has already been panned in a lot of places---[here](https://www.dearwinnipeg.com/2019/01/29/should-broke-cities-be-building-new-brt-lines/) is a favorite from another blogger---and it is reoccurring issue: 
 
-**Roads are expensive**, they degrade quickly (and then are expensive to rebuild), investing in them often increases gridlock, and we can't afford to repair even the ones we have... 
+**Roads are expensive**, they degrade quickly (and then are expensive to rebuild), investing in them often increases gridlock---thankfully unlikely in this case, and we can't afford to repair even the ones we have... 
 
 Putting the magnitude of spends like these into context, with that \$357 million you could run any one city service for an entire year---even the heavy hitters. In fact, you know those libraries they were talking about closing (before they were yelled down) in the 2020 budget: that's absolutely nothing compared to this (big) road. *All* libraries together have a sub \$30M yearly operating budget. You could keep all of our libraries operating for 10 years without any additional operating investment for the cost of the South West Rapid Transit road. 
 
