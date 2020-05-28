@@ -18,6 +18,13 @@ library(shiny)
 ### DATA SOURCING
 #######################
 load("good_for_a_city-202005.RData")
+tax_pct <- tax_pct %>%
+    mutate(service = ifelse(service == "Road Maintenance", "Roads", service),
+           service = ifelse(service == "MIsc Capital Expenditure", "Misc Capital Expenditure", service)) %>%
+    group_by(service) %>%
+    summarise(scaled_pct = sum(scaled_pct)) %>%
+    ungroup()
+
 
 
 # Define UI for application that draws a histogram
