@@ -1,0 +1,9 @@
+_id: ccc4d0d0-a9a5-11ea-ae4c-5d6f5ab9404a
+honeypot: ''
+permalink: /post/20200110-prioritization/
+parent_id: ''
+content: "First test comment using 'staticman' as a comment system (https://staticman.net/)\r\nRecommend as an open source (\"free\") blog commenting resource.\r\n\r\nIt is a bit tricky to get set up using the Rmd > Hugo > Github > Netlify workflow, but it's documentation along with your theme's documentation (https://minimo.netlify.app/docs/comments-support/) and the thread (https://github.com/eduardoboucas/staticman/issues/306)\r\nshould get you started."
+author: winnipegR
+email: 2eab497572e8b6cb82afb00c02b408b3
+site: ''
+date: 1591634015989
