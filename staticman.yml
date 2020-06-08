@@ -1,6 +1,7 @@
 comments:
   allowedFields: ['author', 'content', 'email', 'parent_id', 'permalink', 'site']
   branch: 'master'
+  provider: "staticman_v2"
   commitMessage: "add [comment]: by {fields.author} <Staticman>\n\n{fields.permalink}#comment-{@id}"
   filename: '{@id}'
   format: 'yaml'
@@ -10,7 +11,7 @@ comments:
       options:
         format: 'timestamp'
   moderation: false
-  name: 'Winnipegr'
+  name: 'winnipegR'
   path: 'data/comments/{options.postId}'
   requiredFields: ['author', 'content', 'email', 'permalink']
   reCaptcha:

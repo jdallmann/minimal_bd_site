@@ -90,7 +90,7 @@ dataAttrs = "" # "data-isso='https://isso.example.com' data-isso-require-author=
 
 [params.comments.staticman]
 enable = true
-apiEndpoint = "https://dev.staticman.net/v2/entry/github/"
+apiEndpoint = "https://dev.staticman.net/v3/entry/github/"
 maxDepth = 2
 username = "jdallmann"
 repository = "minimal_bd_site"
@@ -101,8 +101,8 @@ enable = false
 issueTerm = "pathname" # pathname / url / title
 
 [params.comments.utterances.github]
-username = "MunifTanjim"
-repository = "minimo"
+username = "jdallmann"
+repository = "minimal_bd_site"
 
 [params.search]
 client = "fuse" # algolia / fuse / lunr
