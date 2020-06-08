@@ -1,0 +1,6 @@
+# _config.yml (defaults) for jekyll, I think.
+repository : "jdallmann/minimal_bd_site" # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
+comments:
+  provider : "staticman_v2"
+  staticman:
+    branch : "master"
