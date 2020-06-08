@@ -6,7 +6,7 @@ date: 2020-01-10
 weight: -200
 categories:  ["budget", "capex", "commentary", "eda", "financials", "prioritization", "Winnipeg"]
 tags: ["good for a city", "semi-serious", "analysis_prioritization"]
-comments: true
+comments: true 
 editor_options: 
   chunk_output_type: console
 ---
