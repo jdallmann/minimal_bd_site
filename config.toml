@@ -93,7 +93,7 @@ enable = true
 apiEndpoint = "https://api.staticman.net/v2/entry"
 maxDepth = 2
 username = "jdallmann"
-repository = "minimo"
+repository = "minimal_bd_site"
 
 # Utterances: https://utteranc.es
 [params.comments.utterances]
