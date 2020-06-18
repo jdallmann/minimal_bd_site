@@ -16,7 +16,7 @@ comments:
   requiredFields: ['author', 'content', 'email', 'permalink']
   reCaptcha:
     enabled: true
-    siteKey: '6Lfcb6YZAAAAADrkikmHCaTw1Sdrb0OmDHYJewWG'
-    secret: '6Lfcb6YZAAAAAK1M-sNrq_GOwI_teDBlmkM_q7JT'
+    siteKey: '6LddcaYZAAAAABOCbpje6EReJYy1wWeN6PqR2l4h'
+    secret: '6LddcaYZAAAAAK8ty-_0nM_Q60Xi1X_emvHCXYHr'
   transforms:
     email: md5
