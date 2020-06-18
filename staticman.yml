@@ -15,8 +15,8 @@ comments:
   path: 'data/comments/{options.postId}'
   requiredFields: ['author', 'content', 'email', 'permalink']
   reCaptcha:
-    enabled: false
-    # siteKey: ''
-    # secret: ''
+    enabled: true
+    siteKey: '6Lfcb6YZAAAAADrkikmHCaTw1Sdrb0OmDHYJewWG'
+    secret: '6Lfcb6YZAAAAAK1M-sNrq_GOwI_teDBlmkM_q7JT'
   transforms:
     email: md5
